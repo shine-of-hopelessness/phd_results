@@ -1,0 +1,4929 @@
+ Data for JOB [12126,1] offset 0
+
+ ========================   JOB MAP   ========================
+
+ Data for node: ivb100	Num slots: 4	Max slots: 0	Num procs: 4
+ 	Process OMPI jobid: [12126,1] App: 0 Process rank: 0
+ 	Process OMPI jobid: [12126,1] App: 0 Process rank: 1
+ 	Process OMPI jobid: [12126,1] App: 0 Process rank: 2
+ 	Process OMPI jobid: [12126,1] App: 0 Process rank: 3
+
+ Data for node: ivb103	Num slots: 4	Max slots: 0	Num procs: 4
+ 	Process OMPI jobid: [12126,1] App: 0 Process rank: 4
+ 	Process OMPI jobid: [12126,1] App: 0 Process rank: 5
+ 	Process OMPI jobid: [12126,1] App: 0 Process rank: 6
+ 	Process OMPI jobid: [12126,1] App: 0 Process rank: 7
+
+ Data for node: ivb104	Num slots: 4	Max slots: 0	Num procs: 4
+ 	Process OMPI jobid: [12126,1] App: 0 Process rank: 8
+ 	Process OMPI jobid: [12126,1] App: 0 Process rank: 9
+ 	Process OMPI jobid: [12126,1] App: 0 Process rank: 10
+ 	Process OMPI jobid: [12126,1] App: 0 Process rank: 11
+
+ Data for node: ivb105	Num slots: 4	Max slots: 0	Num procs: 4
+ 	Process OMPI jobid: [12126,1] App: 0 Process rank: 12
+ 	Process OMPI jobid: [12126,1] App: 0 Process rank: 13
+ 	Process OMPI jobid: [12126,1] App: 0 Process rank: 14
+ 	Process OMPI jobid: [12126,1] App: 0 Process rank: 15
+
+ =============================================================
+[ivb100:32091] MCW rank 1 bound to socket 0[core 1[hwt 0]]: [./B/./././././././.][./././././././././.]
+[ivb100:32091] MCW rank 2 bound to socket 0[core 2[hwt 0]]: [././B/././././././.][./././././././././.]
+[ivb100:32091] MCW rank 3 bound to socket 0[core 3[hwt 0]]: [./././B/./././././.][./././././././././.]
+[ivb100:32091] MCW rank 0 bound to socket 0[core 0[hwt 0]]: [B/././././././././.][./././././././././.]
+[ivb104:25843] MCW rank 10 bound to socket 0[core 2[hwt 0]]: [././B/././././././.][./././././././././.]
+[ivb104:25843] MCW rank 11 bound to socket 0[core 3[hwt 0]]: [./././B/./././././.][./././././././././.]
+[ivb104:25843] MCW rank 8 bound to socket 0[core 0[hwt 0]]: [B/././././././././.][./././././././././.]
+[ivb104:25843] MCW rank 9 bound to socket 0[core 1[hwt 0]]: [./B/./././././././.][./././././././././.]
+[ivb103:24715] MCW rank 4 bound to socket 0[core 0[hwt 0]]: [B/././././././././.][./././././././././.]
+[ivb103:24715] MCW rank 5 bound to socket 0[core 1[hwt 0]]: [./B/./././././././.][./././././././././.]
+[ivb103:24715] MCW rank 6 bound to socket 0[core 2[hwt 0]]: [././B/././././././.][./././././././././.]
+[ivb103:24715] MCW rank 7 bound to socket 0[core 3[hwt 0]]: [./././B/./././././.][./././././././././.]
+[ivb105:12495] MCW rank 12 bound to socket 0[core 0[hwt 0]]: [B/././././././././.][./././././././././.]
+[ivb105:12495] MCW rank 13 bound to socket 0[core 1[hwt 0]]: [./B/./././././././.][./././././././././.]
+[ivb105:12495] MCW rank 14 bound to socket 0[core 2[hwt 0]]: [././B/././././././.][./././././././././.]
+[ivb105:12495] MCW rank 15 bound to socket 0[core 3[hwt 0]]: [./././B/./././././.][./././././././././.]
+1
+0
+2
+3
+1
+2
+0
+3
+0
+1
+2
+3
+1
+0
+2
+3
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     3.1                                |
+|   \\  /    A nd           | Web:         http://www.extend-project.de       |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build    : 3.1-e2da948002a2
+Exec     : pimpleDyMFoam -parallel
+Date     : May 25 2016
+Time     : 08:16:18
+Host     : ivb100
+PID      : 32135
+CtrlDict : /home-2/vplatonov/foam/foam-extend-3.1/etc/controlDict
+Case     : /home/vplatonov/tests/screwPump-8mln
+nProcs   : 16
+Slaves : 
+15
+(
+ivb100.32149
+ivb100.32137
+ivb100.32144
+ivb103.24760
+ivb103.24755
+ivb103.24748
+ivb103.24749
+ivb104.25879
+ivb104.25878
+ivb104.25883
+ivb104.25888
+ivb105.12535
+ivb105.12527
+ivb105.12529
+ivb105.12540
+)
+
+Pstream initialized with:
+    floatTransfer     : 0
+    nProcsSimpleSum   : 0
+    commsType         : blocking
+SigFpe   : Enabling floating point exception trapping (FOAM_SIGFPE).
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create dynamic mesh for time = 0
+
+Selecting dynamicFvMesh mixerGgiFvMesh
+Initializing the GGI interpolator between master/shadow patches: stator-slider/rotor-slider
+void mixerGgiFvMesh::addZonesAndModifiers() : Zones and modifiers already present.  Skipping.
+Mixer mesh:
+    origin: (0 0 0)
+    axis  : (0 1 0)
+    rpm   : 2000
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type LESModel
+Selecting LES turbulence model Smagorinsky
+SmagorinskyCoeffs
+{
+    ce              1.048;
+    ck              0.094;
+}
+
+Reading field rAU if present
+
+
+Starting time loop
+
+Courant Number mean: 0 max: 0 velocity magnitude: 0
+Creating ggi check function object
+Time = 1e-06
+
+volume continuity errors : volume = 0.4378, max error = 3.21263e-07, sum local = 9.49988e-15, global = -2.82097e-18
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 7.02347e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 1, Final residual = 3.67375e-08, No Iterations 1
+smoothSolver:  Solving for Uz, Initial residual = 1, Final residual = 6.52382e-08, No Iterations 1
+Created persistent data with name p
+[2] Building level 0
+[3] Building level 0
+[0] Building level 0
+[1] Building level 0
+[8] Building level 0
+[12] Building level 0
+[6] Building level 0
+[10] Building level 0
+[13] Building level 0
+[5] Building level 0
+[11] Building level 0
+[14] Building level 0
+[4] Building level 0
+[9] Building level 0
+[15] Building level 0
+[7] Building level 0
+[6] Building level 1
+[3] Building level 1
+[7] Building level 1
+[15] Building level 1
+[13] Building level 1
+[14] Building level 1
+[4] Building level 1
+[5] Building level 1
+[12] Building level 1
+[11] Building level 1
+Creating AMGLevel 
+[8] Building level 1
+[10] Building level 1
+[9] Building level 1
+[2] Building level 1
+[1] Building level 1
+[0] Building level 1
+[7] Building level 2
+[6] Building level 2
+[15] Building level 2
+[13] Building level 2
+[11] Building level 2
+[3] Building level 2
+[12] Building level 2
+[10] Building level 2
+[14] Building level 2
+[9] Building level 2
+[8] Building level 2
+Creating AMGLevel 
+[2] Building level 2
+[5] Building level 2
+[4] Building level 2
+[1] Building level 2
+[0] Building level 2
+[7] Building level 3
+[6] Building level 3
+[15] Building level 3
+[11] Building level 3
+[10] Building level 3
+[13] Building level 3
+[3] Building level 3
+[12] Building level 3
+[14] Building level 3
+[8] Building level 3
+[9] Building level 3
+Creating AMGLevel 
+[2] Building level 3
+[5] Building level 3
+[0] Building level 3
+[1] Building level 3
+[4] Building level 3
+[7] Building level 4
+[6] Building level 4
+[15] Building level 4
+[7] Building level 5
+[13] Building level 4
+[10] Building level 4
+[3] Building level 4
+[11] Building level 4
+[9] Building level 4
+[14] Building level 4
+[8] Building level 4
+[12] Building level 4
+[6] Building level 5
+[2] Building level 4
+Creating AMGLevel 
+[1] Building level 4
+[0] Building level 4
+[5] Building level 4
+[4] Building level 4
+[7] Building level 6
+[7] Building level 7
+[15] Building level 5
+[6] Building level 6
+[7] Building level 8
+[13] Building level 5
+[7] Building level 9
+[10] Building level 5
+[3] Building level 5
+[11] Building level 5
+[7] Building level 10
+[7] Building level 11
+[9] Building level 5
+[8] Building level 5
+[14] Building level 5
+[6] Building level 7
+[12] Building level 5
+[15] Building level 6
+[6] Building level 8
+[2] Building level 5
+[1] Building level 5
+Creating AMGLevel 
+[0] Building level 5
+[4] Building level 5
+[5] Building level 5
+[6] Building level 9
+[13] Building level 6
+[6] Building level 10
+[6] Building level 11
+[10] Building level 6
+[3] Building level 6
+[11] Building level 6
+[15] Building level 7
+[9] Building level 6
+[8] Building level 6
+[14] Building level 6
+[13] Building level 7
+[12] Building level 6
+[15] Building level 8
+[10] Building level 7
+[2] Building level 6
+[3] Building level 7
+[5] Building level 6
+[1] Building level 6
+Creating AMGLevel 
+[4] Building level 6
+[0] Building level 6
+[11] Building level 7
+[9] Building level 7
+[13] Building level 8
+[8] Building level 7
+[14] Building level 7
+[15] Building level 9
+[13] Building level 9
+[10] Building level 8
+[3] Building level 8
+[15] Building level 10
+[13] Building level 10
+[9] Building level 8
+[8] Building level 8
+[12] Building level 7
+[11] Building level 8
+[14] Building level 8
+[15] Building level 11
+[13] Building level 11
+[5] Building level 7
+[10] Building level 9
+[2] Building level 7
+[9] Building level 9
+[4] Building level 7
+[1] Building level 7
+[3] Building level 9
+Creating AMGLevel 
+[0] Building level 7
+[8] Building level 9
+[14] Building level 9
+[11] Building level 9
+[10] Building level 10
+[12] Building level 8
+[8] Building level 10
+[9] Building level 10
+[14] Building level 10
+[11] Building level 10
+[3] Building level 10
+[8] Building level 11
+[10] Building level 11
+[9] Building level 11
+[5] Building level 8
+[14] Building level 11
+[11] Building level 11
+[3] Building level 11
+[2] Building level 8
+[4] Building level 8
+[12] Building level 9
+[1] Building level 8
+Creating AMGLevel 
+[0] Building level 8
+[12] Building level 10
+[5] Building level 9
+[2] Building level 9
+Creating AMGLevel 
+[0] Building level 9
+[4] Building level 9
+[12] Building level 11
+[1] Building level 9
+[2] Building level 10
+[5] Building level 10
+Creating AMGLevel 
+[0] Building level 10
+[4] Building level 10
+[2] Building level 11
+[1] Building level 10
+[5] Building level 11
+Creating AMGLevel 
+[0] Building level 11
+[4] Building level 11
+[1] Building level 11
+Creating AMGLevel 
+11 Level construction complete
+initial dot_x = 0
+GMRES:  Solving for topLevelCorr, Initial residual = 0.876599, Final residual = 0.881846, No Iterations 200
+Iter #1 residual = 1.17957
+Iter #2 residual = 0.568518
+Iter #3 residual = 0.258172
+Iter #4 residual = 0.131802
+Iter #5 residual = 0.0647576
+Iter #6 residual = 0.0363417
+Iter #7 residual = 0.0233576
+Iter #8 residual = 0.0156901
+Iter #9 residual = 0.0111934
+Iter #10 residual = 0.00797789
+Iter #11 residual = 0.00632356
+Iter #12 residual = 0.00459549
+Iter #13 residual = 0.00407584
+Iter #14 residual = 0.00288861
+Iter #15 residual = 0.00290447
+Iter #16 residual = 0.00192258
+Iter #17 residual = 0.00206216
+Iter #18 residual = 0.00128753
+Iter #19 residual = 0.00137061
+GPU: 19 iters: 5.83977 s: 0.368131 GB/s
+GPUAMG:  Solving for p, Initial residual = 1, Final residual = 0.000846553, No Iterations 19
+[3] Building level 0
+[1] Building level 0
+[0] Building level 0
+[2] Building level 0
+[7] Building level 0
+[10] Building level 0
+[12] Building level 0
+[6] Building level 0
+[8] Building level 0
+[15] Building level 0
+[5] Building level 0
+[11] Building level 0
+[14] Building level 0
+[4] Building level 0
+[9] Building level 0
+[13] Building level 0
+[7] Building level 1
+[6] Building level 1
+[15] Building level 1
+[4] Building level 1
+[11] Building level 1
+[3] Building level 1
+[2] Building level 1
+[8] Building level 1
+[9] Building level 1
+[0] Building level 1
+[10] Building level 1
+[1] Building level 1
+[12] Building level 1
+[14] Building level 1
+[13] Building level 1
+[5] Building level 1
+[7] Building level 2
+[15] Building level 2
+[6] Building level 2
+[11] Building level 2
+[3] Building level 2
+[4] Building level 2
+[2] Building level 2
+[13] Building level 2
+[8] Building level 2
+[14] Building level 2
+[0] Building level 2
+[9] Building level 2
+[10] Building level 2
+[1] Building level 2
+[12] Building level 2
+[5] Building level 2
+[7] Building level 3
+[6] Building level 3
+[15] Building level 3
+[11] Building level 3
+[7] Building level 4
+[3] Building level 3
+[13] Building level 3
+[8] Building level 3
+[2] Building level 3
+[0] Building level 3
+[4] Building level 3
+[9] Building level 3
+[10] Building level 3
+[14] Building level 3
+[1] Building level 3
+[12] Building level 3
+[5] Building level 3
+[7] Building level 5
+[6] Building level 4
+[7] Building level 6
+[15] Building level 4
+[7] Building level 7
+[7] Building level 8
+[7] Building level 9
+[7] Building level 10
+[7] Building level 11
+[11] Building level 4
+[8] Building level 4
+[3] Building level 4
+[0] Building level 4
+[6] Building level 5
+[13] Building level 4
+[9] Building level 4
+[2] Building level 4
+[4] Building level 4
+[14] Building level 4
+[10] Building level 4
+[1] Building level 4
+[15] Building level 5
+[6] Building level 6
+[5] Building level 4
+[12] Building level 4
+[6] Building level 7
+[8] Building level 5
+[6] Building level 8
+[11] Building level 5
+[6] Building level 9
+[6] Building level 10
+[6] Building level 11
+[15] Building level 6
+[3] Building level 5
+[13] Building level 5
+[0] Building level 5
+[9] Building level 5
+[2] Building level 5
+[8] Building level 6
+[15] Building level 7
+[4] Building level 5
+[14] Building level 5
+[11] Building level 6
+[10] Building level 5
+[15] Building level 8
+[1] Building level 5
+[8] Building level 7
+[15] Building level 9
+[13] Building level 6
+[9] Building level 6
+[15] Building level 10
+[3] Building level 6
+[15] Building level 11
+[0] Building level 6
+[8] Building level 8
+[5] Building level 5
+[11] Building level 7
+[8] Building level 9
+[8] Building level 10
+[8] Building level 11
+[12] Building level 5
+[9] Building level 7
+[2] Building level 6
+[14] Building level 6
+[4] Building level 6
+[3] Building level 7
+[13] Building level 7
+[0] Building level 7
+[11] Building level 8
+[9] Building level 8
+[10] Building level 6
+[11] Building level 9
+[13] Building level 8
+[1] Building level 6
+[9] Building level 9
+[9] Building level 10
+[3] Building level 8
+[11] Building level 10
+[13] Building level 9
+[9] Building level 11
+[0] Building level 8
+[11] Building level 11
+[13] Building level 10
+[2] Building level 7
+[14] Building level 7
+[3] Building level 9
+[13] Building level 11
+[4] Building level 7
+[0] Building level 9
+[3] Building level 10
+[3] Building level 11
+[0] Building level 10
+[5] Building level 6
+[0] Building level 11
+11 Level construction complete
+[14] Building level 8
+[10] Building level 7
+[2] Building level 8
+[1] Building level 7
+[4] Building level 8
+[2] Building level 9
+[12] Building level 6
+[14] Building level 9
+[14] Building level 10
+[4] Building level 9
+[2] Building level 10
+[14] Building level 11
+[10] Building level 8
+[4] Building level 10
+[2] Building level 11
+[1] Building level 8
+[4] Building level 11
+[5] Building level 7
+[10] Building level 9
+[1] Building level 9
+[10] Building level 10
+[10] Building level 11
+[1] Building level 10
+[12] Building level 7
+[1] Building level 11
+[5] Building level 8
+[5] Building level 9
+[5] Building level 10
+[12] Building level 8
+[5] Building level 11
+[12] Building level 9
+[12] Building level 10
+[12] Building level 11
+initial dot_x = 2.99664e+16
+Iter #1 residual = 0.349057
+Iter #2 residual = 0.149357
+Iter #3 residual = 0.104501
+Iter #4 residual = 0.0603534
+Iter #5 residual = 0.0429548
+Iter #6 residual = 0.0323749
+Iter #7 residual = 0.0274633
+Iter #8 residual = 0.0204587
+Iter #9 residual = 0.0194015
+Iter #10 residual = 0.0136789
+Iter #11 residual = 0.0143388
+Iter #12 residual = 0.00934319
+Iter #13 residual = 0.0106483
+Iter #14 residual = 0.00634704
+Iter #15 residual = 0.00732029
+Iter #16 residual = 0.0041326
+Iter #17 residual = 0.00450002
+Iter #18 residual = 0.00255731
+Iter #19 residual = 0.00270379
+Iter #20 residual = 0.00155221
+Iter #21 residual = 0.00161158
+Iter #22 residual = 0.000942046
+Iter #23 residual = 0.000972458
+Iter #24 residual = 0.000572142
+Iter #25 residual = 0.000585284
+Iter #26 residual = 0.000350572
+Iter #27 residual = 0.000358461
+GPU: 27 iters: 8.08863 s: 0.377689 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.269707, Final residual = 0.000215602, No Iterations 27
+time step continuity errors : sum local = 1.63562e-08, global = 6.26647e-10, cumulative = 6.26647e-10
+Moving mesh time step continuity errors : sum local = 1.63562e-08, global = 6.26647e-10, cumulative = 1.25329e-09
+ExecutionTime = 39.63 s  ClockTime = 53 s
+
+Courant Number mean: 0.00255163 max: 0.137679 velocity magnitude: 107.492
+GGI pair (stator-slider, rotor-slider) : 3.5193 6.99536 Diff = 0.000121719 or 0.00345861 %
+Time = 2e-06
+
+volume continuity errors : volume = 0.4378, max error = 2.7083e-07, sum local = 8.16388e-15, global = -2.62225e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.334981, Final residual = 2.693e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.302735, Final residual = 5.46841e-09, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.334951, Final residual = 1.68386e-09, No Iterations 2
+[2] Building level 0
+[1] Building level 0
+[0] Building level 0
+[3] Building level 0
+[10] Building level 0
+[13] Building level 0
+[5] Building level 0
+[15] Building level 0
+[7] Building level 0
+[11] Building level 0
+[14] Building level 0
+[6] Building level 0
+[8] Building level 0
+[12] Building level 0
+[4] Building level 0
+[9] Building level 0
+[15] Building level 1
+[7] Building level 1
+[6] Building level 1
+[4] Building level 1
+[9] Building level 1
+[14] Building level 1
+[13] Building level 1
+[11] Building level 1
+[8] Building level 1
+[10] Building level 1
+[0] Building level 1
+Reconstruction on level 1
+[3] Building level 1
+[1] Building level 1
+[12] Building level 1
+[2] Building level 1
+[5] Building level 1
+[7] Building level 2
+[6] Building level 2
+[15] Building level 2
+[11] Building level 2
+[10] Building level 2
+[12] Building level 2
+Creating AMGLevel 
+[13] Building level 2
+[14] Building level 2
+[0] Building level 2
+Reconstruction on level 2
+[3] Building level 2
+[9] Building level 2
+[8] Building level 2
+[5] Building level 2
+[1] Building level 2
+[2] Building level 2
+[4] Building level 2
+[7] Building level 3
+[6] Building level 3
+[15] Building level 3
+[11] Building level 3
+[10] Building level 3
+[12] Building level 3
+[13] Building level 3
+Creating AMGLevel 
+[3] Building level 3
+[0] Building level 3
+Reconstruction on level 3
+[14] Building level 3
+[9] Building level 3
+[8] Building level 3
+[5] Building level 3
+[1] Building level 3
+[2] Building level 3
+[4] Building level 3
+[7] Building level 4
+[6] Building level 4
+[15] Building level 4
+[10] Building level 4
+[11] Building level 4
+[7] Building level 5
+[13] Building level 4
+[12] Building level 4
+[3] Building level 4
+[9] Building level 4
+Creating AMGLevel 
+[14] Building level 4
+[8] Building level 4
+[0] Building level 4
+Reconstruction on level 4
+[1] Building level 4
+[5] Building level 4
+[2] Building level 4
+[4] Building level 4
+[6] Building level 5
+[7] Building level 6
+[15] Building level 5
+[7] Building level 7
+[7] Building level 8
+[6] Building level 6
+[10] Building level 5
+[11] Building level 5
+[13] Building level 5
+[9] Building level 5
+[7] Building level 9
+[12] Building level 5
+[14] Building level 5
+[3] Building level 5
+[8] Building level 5
+[7] Building level 10
+Creating AMGLevel 
+[0] Building level 5
+Reconstruction on level 5
+[7] Building level 11
+[1] Building level 5
+[5] Building level 5
+[6] Building level 7
+[2] Building level 5
+[4] Building level 5
+[15] Building level 6
+[6] Building level 8
+[6] Building level 9
+[10] Building level 6
+[13] Building level 6
+[11] Building level 6
+[6] Building level 10
+[9] Building level 6
+[14] Building level 6
+[6] Building level 11
+[12] Building level 6
+[3] Building level 6
+[15] Building level 7
+[8] Building level 6
+Creating AMGLevel 
+[0] Building level 6
+Reconstruction on level 6
+[5] Building level 6
+[1] Building level 6
+[4] Building level 6
+[2] Building level 6
+[15] Building level 8
+[9] Building level 7
+[13] Building level 7
+[11] Building level 7
+[10] Building level 7
+[14] Building level 7
+[15] Building level 9
+[8] Building level 7
+[12] Building level 7
+[3] Building level 7
+[15] Building level 10
+[9] Building level 8
+[5] Building level 7
+[13] Building level 8
+Creating AMGLevel 
+[0] Building level 7
+Reconstruction on level 7
+[14] Building level 8
+[11] Building level 8
+[15] Building level 11
+[10] Building level 8
+[4] Building level 7
+[8] Building level 8
+[9] Building level 9
+[12] Building level 8
+[2] Building level 7
+[13] Building level 9
+[1] Building level 7
+[14] Building level 9
+[9] Building level 10
+[8] Building level 9
+[3] Building level 8
+[11] Building level 9
+[10] Building level 9
+[13] Building level 10
+[5] Building level 8
+[12] Building level 9
+[9] Building level 11
+[14] Building level 10
+[8] Building level 10
+Creating AMGLevel 
+[0] Building level 8
+Reconstruction on level 8
+[13] Building level 11
+[11] Building level 10
+[10] Building level 10
+[4] Building level 8
+[3] Building level 9
+[12] Building level 10
+[8] Building level 11
+[14] Building level 11
+[2] Building level 8
+[11] Building level 11
+[1] Building level 8
+[10] Building level 11
+[5] Building level 9
+[12] Building level 11
+Creating AMGLevel 
+[0] Building level 9
+Reconstruction on level 9
+[3] Building level 10
+[4] Building level 9
+[5] Building level 10
+[2] Building level 9
+[3] Building level 11
+Creating AMGLevel 
+[1] Building level 9
+[0] Building level 10
+Reconstruction on level 10
+[4] Building level 10
+[5] Building level 11
+Creating AMGLevel 
+[2] Building level 10
+[0] Building level 11
+Reconstruction on level 11
+[1] Building level 10
+[4] Building level 11
+Creating AMGLevel 
+11 Level construction complete
+[2] Building level 11
+[1] Building level 11
+initial dot_x = 2.74539e+18
+Iter #1 residual = 0.211813
+Iter #2 residual = 0.101368
+Iter #3 residual = 0.0508004
+Iter #4 residual = 0.0266855
+Iter #5 residual = 0.0152083
+Iter #6 residual = 0.00899864
+Iter #7 residual = 0.00542788
+Iter #8 residual = 0.0034942
+Iter #9 residual = 0.00237858
+Iter #10 residual = 0.00165161
+Iter #11 residual = 0.00117207
+Iter #12 residual = 0.000971415
+Iter #13 residual = 0.000673909
+Iter #14 residual = 0.000691223
+GPU: 14 iters: 4.45148 s: 0.355852 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.443756, Final residual = 0.000427673, No Iterations 14
+[0] Building level 0
+[1] Building level 0
+[3] Building level 0
+[2] Building level 0
+[15] Building level 0
+[6] Building level 0
+[8] Building level 0
+[12] Building level 0
+[7] Building level 0
+[11] Building level 0
+[13] Building level 0
+[4] Building level 0
+[5] Building level 0
+[9] Building level 0
+[14] Building level 0
+[10] Building level 0
+[15] Building level 1
+[7] Building level 1
+[6] Building level 1
+[4] Building level 1
+[13] Building level 1
+[14] Building level 1
+[8] Building level 1
+[9] Building level 1
+[10] Building level 1
+[0] Building level 1
+[1] Building level 1
+[12] Building level 1
+[5] Building level 1
+[11] Building level 1
+[3] Building level 1
+[2] Building level 1
+[7] Building level 2
+[15] Building level 2
+[6] Building level 2
+[14] Building level 2
+[4] Building level 2
+[13] Building level 2
+[10] Building level 2
+[8] Building level 2
+[9] Building level 2
+[0] Building level 2
+[12] Building level 2
+[11] Building level 2
+[1] Building level 2
+[3] Building level 2
+[5] Building level 2
+[2] Building level 2
+[7] Building level 3
+[6] Building level 3
+[15] Building level 3
+[13] Building level 3
+[4] Building level 3
+[14] Building level 3
+[0] Building level 3
+[9] Building level 3
+[10] Building level 3
+[1] Building level 3
+[8] Building level 3
+[12] Building level 3
+[11] Building level 3
+[7] Building level 4
+[3] Building level 3
+[5] Building level 3
+[2] Building level 3
+[6] Building level 4
+[7] Building level 5
+[15] Building level 4
+[7] Building level 6
+[9] Building level 4
+[14] Building level 4
+[13] Building level 4
+[4] Building level 4
+[7] Building level 7
+[10] Building level 4
+[0] Building level 4
+[7] Building level 8
+[7] Building level 9
+[7] Building level 10
+[8] Building level 4
+[7] Building level 11
+[6] Building level 5
+[1] Building level 4
+[11] Building level 4
+[3] Building level 4
+[12] Building level 4
+[5] Building level 4
+[15] Building level 5
+[6] Building level 6
+[9] Building level 5
+[2] Building level 4
+[13] Building level 5
+[14] Building level 5
+[6] Building level 7
+[4] Building level 5
+[0] Building level 5
+[6] Building level 8
+[10] Building level 5
+[6] Building level 9
+[8] Building level 5
+[6] Building level 10
+[6] Building level 11
+[9] Building level 6
+[15] Building level 6
+[13] Building level 6
+[14] Building level 6
+[1] Building level 5
+[11] Building level 5
+[9] Building level 7
+[3] Building level 5
+[15] Building level 7
+[12] Building level 5
+[9] Building level 8
+[5] Building level 5
+[4] Building level 6
+[8] Building level 6
+[13] Building level 7
+[9] Building level 9
+[10] Building level 6
+[9] Building level 10
+[0] Building level 6
+[9] Building level 11
+[15] Building level 8
+[14] Building level 7
+[13] Building level 8
+[15] Building level 9
+[2] Building level 5
+[13] Building level 9
+[15] Building level 10
+[14] Building level 8
+[13] Building level 10
+[8] Building level 7
+[15] Building level 11
+[4] Building level 7
+[13] Building level 11
+[14] Building level 9
+[1] Building level 6
+[10] Building level 7
+[14] Building level 10
+[0] Building level 7
+[8] Building level 8
+[14] Building level 11
+[11] Building level 6
+[4] Building level 8
+[8] Building level 9
+[3] Building level 6
+[8] Building level 10
+[8] Building level 11
+[10] Building level 8
+[5] Building level 6
+[0] Building level 8
+[12] Building level 6
+[4] Building level 9
+[4] Building level 10
+[4] Building level 11
+[10] Building level 9
+[0] Building level 9
+[10] Building level 10
+[0] Building level 10
+[1] Building level 7
+[10] Building level 11
+[0] Building level 11
+11 Level construction complete
+[11] Building level 7
+[2] Building level 6
+[3] Building level 7
+[5] Building level 7
+[12] Building level 7
+[1] Building level 8
+[11] Building level 8
+[3] Building level 8
+[1] Building level 9
+[5] Building level 8
+[12] Building level 8
+[1] Building level 10
+[11] Building level 9
+[1] Building level 11
+[3] Building level 9
+[2] Building level 7
+[5] Building level 9
+[11] Building level 10
+[11] Building level 11
+[12] Building level 9
+[5] Building level 10
+[3] Building level 10
+[12] Building level 10
+[5] Building level 11
+[3] Building level 11
+[12] Building level 11
+[2] Building level 8
+[2] Building level 9
+[2] Building level 10
+[2] Building level 11
+initial dot_x = 2.52893e+18
+Iter #1 residual = 0.0466453
+Iter #2 residual = 0.0248949
+Iter #3 residual = 0.0162233
+Iter #4 residual = 0.0127782
+Iter #5 residual = 0.00956763
+Iter #6 residual = 0.00799013
+Iter #7 residual = 0.00617963
+Iter #8 residual = 0.00540768
+Iter #9 residual = 0.0041534
+Iter #10 residual = 0.00388772
+Iter #11 residual = 0.00286321
+Iter #12 residual = 0.0029774
+Iter #13 residual = 0.00200393
+Iter #14 residual = 0.00240415
+Iter #15 residual = 0.00138738
+Iter #16 residual = 0.00167195
+Iter #17 residual = 0.00085982
+Iter #18 residual = 0.000793741
+Iter #19 residual = 0.000475069
+Iter #20 residual = 0.000521206
+Iter #21 residual = 0.000282768
+Iter #22 residual = 0.000267322
+Iter #23 residual = 0.000159278
+Iter #24 residual = 0.000173652
+GPU: 24 iters: 7.35793 s: 0.369063 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.121224, Final residual = 9.46125e-05, No Iterations 24
+time step continuity errors : sum local = 1.59354e-08, global = -5.75581e-10, cumulative = 6.77712e-10
+Moving mesh time step continuity errors : sum local = 1.59354e-08, global = -5.75581e-10, cumulative = 1.02132e-10
+ExecutionTime = 67.23 s  ClockTime = 81 s
+
+Courant Number mean: 0.00274537 max: 0.226919 velocity magnitude: 112.551
+GGI pair (stator-slider, rotor-slider) : 5.63194 9.37409 Diff = 0.00569955 or 0.1012 %
+Time = 3e-06
+
+volume continuity errors : volume = 0.4378, max error = 3.27862e-07, sum local = 7.36566e-15, global = 4.39532e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.193487, Final residual = 1.06426e-08, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.131536, Final residual = 2.33658e-08, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.173367, Final residual = 5.81711e-09, No Iterations 2
+[1] Building level 0
+[2] Building level 0
+[3] Building level 0
+[0] Building level 0
+[8] Building level 0
+[14] Building level 0
+[5] Building level 0
+[10] Building level 0
+[13] Building level 0
+[7] Building level 0
+[9] Building level 0
+[12] Building level 0
+[4] Building level 0
+[11] Building level 0
+[15] Building level 0
+[6] Building level 0
+[15] Building level 1
+[7] Building level 1
+[6] Building level 1
+[4] Building level 1
+[14] Building level 1
+[13] Building level 1
+[8] Building level 1
+[11] Building level 1
+[10] Building level 1
+[3] Building level 1
+[0] Building level 1
+[1] Building level 1
+[12] Building level 1
+[2] Building level 1
+[9] Building level 1
+[5] Building level 1
+Reconstruction on level 1
+[10] Building level 2
+[5] Building level 2
+[10] Building level 3
+[5] Building level 3
+[7] Building level 2
+[6] Building level 2
+[15] Building level 2
+[11] Building level 2
+[12] Building level 2
+[13] Building level 2
+[14] Building level 2
+Creating AMGLevel 
+[0] Building level 2
+Reconstruction on level 2
+[9] Building level 2
+[8] Building level 2
+[4] Building level 2
+[2] Building level 2
+[3] Building level 2
+[1] Building level 2
+[10] Building level 4
+[5] Building level 4
+[10] Building level 5
+[7] Building level 3
+[5] Building level 5
+[6] Building level 3
+[15] Building level 3
+[10] Building level 6
+[11] Building level 3
+[5] Building level 6
+[13] Building level 3
+[12] Building level 3
+Creating AMGLevel 
+[14] Building level 3
+[9] Building level 3
+[0] Building level 3
+Reconstruction on level 3
+[8] Building level 3
+[10] Building level 7
+[1] Building level 3
+[4] Building level 3
+[2] Building level 3
+[3] Building level 3
+[5] Building level 7
+[10] Building level 8
+[10] Building level 9
+[5] Building level 8
+[10] Building level 10
+[5] Building level 9
+[10] Building level 11
+[7] Building level 4
+[5] Building level 10
+[5] Building level 11
+[6] Building level 4
+[15] Building level 4
+[11] Building level 4
+[7] Building level 5
+[13] Building level 4
+[8] Building level 4
+[9] Building level 4
+[12] Building level 4
+[14] Building level 4
+Creating AMGLevel 
+[0] Building level 4
+Reconstruction on level 4
+[4] Building level 4
+[1] Building level 4
+[2] Building level 4
+[3] Building level 4
+[6] Building level 5
+[7] Building level 6
+[7] Building level 7
+[15] Building level 5
+[11] Building level 5
+[7] Building level 8
+[6] Building level 6
+[7] Building level 9
+[13] Building level 5
+[8] Building level 5
+[7] Building level 10
+[9] Building level 5
+[7] Building level 11
+[14] Building level 5
+[12] Building level 5
+Creating AMGLevel 
+[0] Building level 5
+Reconstruction on level 5
+[6] Building level 7
+[4] Building level 5
+[1] Building level 5
+[2] Building level 5
+[3] Building level 5
+[6] Building level 8
+[11] Building level 6
+[15] Building level 6
+[6] Building level 9
+[8] Building level 6
+[13] Building level 6
+[6] Building level 10
+[9] Building level 6
+[6] Building level 11
+[14] Building level 6
+[4] Building level 6
+[12] Building level 6
+[11] Building level 7
+[15] Building level 7
+Creating AMGLevel 
+[0] Building level 6
+Reconstruction on level 6
+[8] Building level 7
+[13] Building level 7
+[9] Building level 7
+[1] Building level 6
+[2] Building level 6
+[3] Building level 6
+[11] Building level 8
+[15] Building level 8
+[8] Building level 8
+[14] Building level 7
+[13] Building level 8
+[4] Building level 7
+[9] Building level 8
+[11] Building level 9
+[8] Building level 9
+[12] Building level 7
+[15] Building level 9
+Creating AMGLevel 
+[13] Building level 9
+[0] Building level 7
+Reconstruction on level 7
+[9] Building level 9
+[8] Building level 10
+[11] Building level 10
+[15] Building level 10
+[14] Building level 8
+[8] Building level 11
+[13] Building level 10
+[9] Building level 10
+[11] Building level 11
+[4] Building level 8
+[1] Building level 7
+[15] Building level 11
+[3] Building level 7
+[2] Building level 7
+[12] Building level 8
+[13] Building level 11
+[14] Building level 9
+[9] Building level 11
+Creating AMGLevel 
+[0] Building level 8
+Reconstruction on level 8
+[4] Building level 9
+[14] Building level 10
+[12] Building level 9
+[4] Building level 10
+[14] Building level 11
+Creating AMGLevel 
+[12] Building level 10
+[1] Building level 8
+[0] Building level 9
+Reconstruction on level 9
+[2] Building level 8
+[3] Building level 8
+[4] Building level 11
+[12] Building level 11
+Creating AMGLevel 
+[0] Building level 10
+Reconstruction on level 10
+[1] Building level 9
+[2] Building level 9
+[3] Building level 9
+Creating AMGLevel 
+[0] Building level 11
+Reconstruction on level 11
+[1] Building level 10
+Creating AMGLevel 
+[2] Building level 10
+11 Level construction complete
+[3] Building level 10
+[1] Building level 11
+[2] Building level 11
+[3] Building level 11
+initial dot_x = 1.70165e+18
+Iter #1 residual = 0.0894485
+Iter #2 residual = 0.0435895
+Iter #3 residual = 0.02121
+Iter #4 residual = 0.0112966
+Iter #5 residual = 0.00659389
+Iter #6 residual = 0.00399963
+Iter #7 residual = 0.00259937
+Iter #8 residual = 0.00171819
+Iter #9 residual = 0.00154003
+Iter #10 residual = 0.000907765
+Iter #11 residual = 0.000935373
+Iter #12 residual = 0.000571128
+Iter #13 residual = 0.000493874
+Iter #14 residual = 0.000321063
+Iter #15 residual = 0.00041357
+Iter #16 residual = 0.000221848
+GPU: 16 iters: 5.06727 s: 0.357265 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.219667, Final residual = 0.000214028, No Iterations 16
+[1] Building level 0
+[3] Building level 0
+[2] Building level 0
+[0] Building level 0
+[10] Building level 0
+[15] Building level 0
+[4] Building level 0
+[5] Building level 0
+[11] Building level 0
+[12] Building level 0
+[9] Building level 0
+[13] Building level 0
+[7] Building level 0
+[8] Building level 0
+[14] Building level 0
+[6] Building level 0
+[15] Building level 1
+[7] Building level 1
+[6] Building level 1
+[4] Building level 1
+[9] Building level 1
+[14] Building level 1
+[13] Building level 1
+[8] Building level 1
+[10] Building level 1
+[11] Building level 1
+[0] Building level 1
+[1] Building level 1
+[12] Building level 1
+[3] Building level 1
+[5] Building level 1
+[2] Building level 1
+[7] Building level 2
+[15] Building level 2
+[6] Building level 2
+[4] Building level 2
+[14] Building level 2
+[13] Building level 2
+[10] Building level 2
+[8] Building level 2
+[11] Building level 2
+[9] Building level 2
+[3] Building level 2
+[12] Building level 2
+[0] Building level 2
+[1] Building level 2
+[5] Building level 2
+[2] Building level 2
+[7] Building level 3
+[6] Building level 3
+[15] Building level 3
+[13] Building level 3
+[14] Building level 3
+[8] Building level 3
+[9] Building level 3
+[11] Building level 3
+[4] Building level 3
+[3] Building level 3
+[10] Building level 3
+[1] Building level 3
+[0] Building level 3
+[7] Building level 4
+[12] Building level 3
+[2] Building level 3
+[5] Building level 3
+[7] Building level 5
+[6] Building level 4
+[15] Building level 4
+[8] Building level 4
+[14] Building level 4
+[7] Building level 6
+[13] Building level 4
+[9] Building level 4
+[7] Building level 7
+[11] Building level 4
+[7] Building level 8
+[4] Building level 4
+[10] Building level 4
+[7] Building level 9
+[7] Building level 10
+[7] Building level 11
+[3] Building level 4
+[6] Building level 5
+[0] Building level 4
+[1] Building level 4
+[2] Building level 4
+[12] Building level 4
+[15] Building level 5
+[8] Building level 5
+[5] Building level 4
+[6] Building level 6
+[14] Building level 5
+[13] Building level 5
+[9] Building level 5
+[6] Building level 7
+[11] Building level 5
+[8] Building level 6
+[6] Building level 8
+[4] Building level 5
+[15] Building level 6
+[6] Building level 9
+[10] Building level 5
+[6] Building level 10
+[6] Building level 11
+[9] Building level 6
+[3] Building level 5
+[14] Building level 6
+[13] Building level 6
+[0] Building level 5
+[8] Building level 7
+[1] Building level 5
+[15] Building level 7
+[8] Building level 8
+[9] Building level 7
+[8] Building level 9
+[12] Building level 5
+[2] Building level 5
+[8] Building level 10
+[14] Building level 7
+[13] Building level 7
+[8] Building level 11
+[15] Building level 8
+[11] Building level 6
+[9] Building level 8
+[5] Building level 5
+[4] Building level 6
+[9] Building level 9
+[15] Building level 9
+[14] Building level 8
+[9] Building level 10
+[13] Building level 8
+[15] Building level 10
+[9] Building level 11
+[10] Building level 6
+[15] Building level 11
+[14] Building level 9
+[3] Building level 6
+[13] Building level 9
+[14] Building level 10
+[13] Building level 10
+[0] Building level 6
+[14] Building level 11
+[13] Building level 11
+[11] Building level 7
+[4] Building level 7
+[1] Building level 6
+[3] Building level 7
+[10] Building level 7
+[2] Building level 6
+[11] Building level 8
+[12] Building level 6
+[4] Building level 8
+[5] Building level 6
+[0] Building level 7
+[11] Building level 9
+[10] Building level 8
+[4] Building level 9
+[3] Building level 8
+[11] Building level 10
+[4] Building level 10
+[11] Building level 11
+[4] Building level 11
+[1] Building level 7
+[10] Building level 9
+[0] Building level 8
+[3] Building level 9
+[10] Building level 10
+[3] Building level 10
+[10] Building level 11
+[0] Building level 9
+[3] Building level 11
+[2] Building level 7
+[12] Building level 7
+[0] Building level 10
+[5] Building level 7
+[1] Building level 8
+[0] Building level 11
+11 Level construction complete
+[1] Building level 9
+[12] Building level 8
+[2] Building level 8
+[5] Building level 8
+[1] Building level 10
+[1] Building level 11
+[2] Building level 9
+[12] Building level 9
+[5] Building level 9
+[12] Building level 10
+[2] Building level 10
+[5] Building level 10
+[12] Building level 11
+[2] Building level 11
+[5] Building level 11
+initial dot_x = 1.71643e+18
+Iter #1 residual = 0.0682714
+Iter #2 residual = 0.0242541
+Iter #3 residual = 0.0171696
+Iter #4 residual = 0.00903579
+Iter #5 residual = 0.00578042
+Iter #6 residual = 0.00457938
+Iter #7 residual = 0.00331557
+Iter #8 residual = 0.00309818
+Iter #9 residual = 0.00213856
+Iter #10 residual = 0.00260433
+Iter #11 residual = 0.00151426
+Iter #12 residual = 0.00214086
+Iter #13 residual = 0.00105
+Iter #14 residual = 0.000988174
+Iter #15 residual = 0.00059771
+Iter #16 residual = 0.000616929
+Iter #17 residual = 0.000373556
+Iter #18 residual = 0.000384853
+Iter #19 residual = 0.000233585
+Iter #20 residual = 0.00024248
+Iter #21 residual = 0.000146288
+Iter #22 residual = 0.000150121
+Iter #23 residual = 9.10354e-05
+Iter #24 residual = 9.24976e-05
+GPU: 24 iters: 7.23687 s: 0.375237 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.0727071, Final residual = 5.67154e-05, No Iterations 24
+time step continuity errors : sum local = 9.40098e-09, global = 3.55389e-10, cumulative = 4.57521e-10
+Moving mesh time step continuity errors : sum local = 9.40098e-09, global = 3.55389e-10, cumulative = 8.1291e-10
+ExecutionTime = 95.38 s  ClockTime = 110 s
+
+Courant Number mean: 0.0027975 max: 0.274725 velocity magnitude: 137.875
+GGI pair (stator-slider, rotor-slider) : 6.5163 9.75044 Diff = 0.00889171 or 0.136453 %
+Time = 4e-06
+
+volume continuity errors : volume = 0.4378, max error = 3.21144e-07, sum local = 7.13383e-15, global = -1.86587e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.0832586, Final residual = 1.1787e-08, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.0693244, Final residual = 2.50754e-08, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.076017, Final residual = 6.22236e-09, No Iterations 2
+[3] Building level 0
+[1] Building level 0
+[2] Building level 0
+[0] Building level 0
+[10] Building level 0
+[13] Building level 0
+[4] Building level 0
+[7] Building level 0
+[11] Building level 0
+[15] Building level 0
+[9] Building level 0
+[14] Building level 0
+[5] Building level 0
+[8] Building level 0
+[12] Building level 0
+[6] Building level 0
+[15] Building level 1
+[6] Building level 1
+[7] Building level 1
+[4] Building level 1
+[13] Building level 1
+[9] Building level 1
+[14] Building level 1
+[8] Building level 1
+[11] Building level 1
+[3] Building level 1
+[10] Building level 1
+[0] Building level 1
+[1] Building level 1
+[2] Building level 1
+[12] Building level 1
+[5] Building level 1
+[15] Building level 2
+[11] Building level 2
+[14] Building level 2
+[0] Building level 2
+Reconstruction on level 2
+[12] Building level 2
+[2] Building level 2
+[5] Building level 2
+[15] Building level 3
+Creating AMGLevel 
+[11] Building level 3
+[0] Building level 3
+Reconstruction on level 3
+[14] Building level 3
+[2] Building level 3
+[5] Building level 3
+[12] Building level 3
+[7] Building level 2
+[6] Building level 2
+[10] Building level 2
+[13] Building level 2
+[1] Building level 2
+[3] Building level 2
+[8] Building level 2
+[9] Building level 2
+[4] Building level 2
+[15] Building level 4
+[11] Building level 4
+[14] Building level 4
+Creating AMGLevel 
+[0] Building level 4
+Reconstruction on level 4
+[2] Building level 4
+[5] Building level 4
+[12] Building level 4
+[15] Building level 5
+[14] Building level 5
+[11] Building level 5
+Creating AMGLevel 
+[7] Building level 3
+[0] Building level 5
+Reconstruction on level 5
+[2] Building level 5
+[5] Building level 5
+[12] Building level 5
+[6] Building level 3
+[15] Building level 6
+[14] Building level 6
+[11] Building level 6
+Creating AMGLevel 
+[10] Building level 3
+[0] Building level 6
+Reconstruction on level 6
+[2] Building level 6
+[5] Building level 6
+[12] Building level 6
+[13] Building level 3
+[15] Building level 7
+[9] Building level 3
+[14] Building level 7
+[8] Building level 3
+[1] Building level 3
+[3] Building level 3
+[11] Building level 7
+Creating AMGLevel 
+[0] Building level 7
+Reconstruction on level 7
+[15] Building level 8
+[4] Building level 3
+[2] Building level 7
+[14] Building level 8
+[12] Building level 7
+[5] Building level 7
+[15] Building level 9
+[11] Building level 8
+[14] Building level 9
+Creating AMGLevel 
+[0] Building level 8
+Reconstruction on level 8
+[15] Building level 10
+[14] Building level 10
+[2] Building level 8
+[12] Building level 8
+[11] Building level 9
+[15] Building level 11
+[5] Building level 8
+[14] Building level 11
+Creating AMGLevel 
+[0] Building level 9
+Reconstruction on level 9
+[11] Building level 10
+[2] Building level 9
+[12] Building level 9
+Creating AMGLevel 
+[0] Building level 10
+Reconstruction on level 10
+[5] Building level 9
+[11] Building level 11
+[2] Building level 10
+[12] Building level 10
+[7] Building level 4
+Creating AMGLevel 
+[0] Building level 11
+Reconstruction on level 11
+[5] Building level 10
+[12] Building level 11
+[2] Building level 11
+Creating AMGLevel 
+11 Level construction complete
+[5] Building level 11
+[6] Building level 4
+[13] Building level 4
+[10] Building level 4
+[7] Building level 5
+[9] Building level 4
+[8] Building level 4
+[3] Building level 4
+[1] Building level 4
+[4] Building level 4
+[6] Building level 5
+[7] Building level 6
+[13] Building level 5
+[7] Building level 7
+[10] Building level 5
+[7] Building level 8
+[6] Building level 6
+[7] Building level 9
+[9] Building level 5
+[1] Building level 5
+[3] Building level 5
+[7] Building level 10
+[8] Building level 5
+[7] Building level 11
+[13] Building level 6
+[6] Building level 7
+[4] Building level 5
+[6] Building level 8
+[10] Building level 6
+[13] Building level 7
+[6] Building level 9
+[9] Building level 6
+[6] Building level 10
+[3] Building level 6
+[1] Building level 6
+[8] Building level 6
+[13] Building level 8
+[6] Building level 11
+[13] Building level 9
+[4] Building level 6
+[10] Building level 7
+[13] Building level 10
+[9] Building level 7
+[13] Building level 11
+[8] Building level 7
+[3] Building level 7
+[1] Building level 7
+[10] Building level 8
+[9] Building level 8
+[4] Building level 7
+[8] Building level 8
+[10] Building level 9
+[3] Building level 8
+[9] Building level 9
+[1] Building level 8
+[8] Building level 9
+[10] Building level 10
+[9] Building level 10
+[3] Building level 9
+[10] Building level 11
+[8] Building level 10
+[4] Building level 8
+[1] Building level 9
+[9] Building level 11
+[8] Building level 11
+[3] Building level 10
+[1] Building level 10
+[4] Building level 9
+[3] Building level 11
+[1] Building level 11
+[4] Building level 10
+[4] Building level 11
+initial dot_x = 3.49043e+17
+Iter #1 residual = 0.0800901
+Iter #2 residual = 0.040426
+Iter #3 residual = 0.0226672
+Iter #4 residual = 0.0136616
+Iter #5 residual = 0.00912325
+Iter #6 residual = 0.00537886
+Iter #7 residual = 0.00586716
+Iter #8 residual = 0.00271478
+Iter #9 residual = 0.00279216
+Iter #10 residual = 0.00129583
+Iter #11 residual = 0.000816073
+Iter #12 residual = 0.000530502
+Iter #13 residual = 0.000382571
+Iter #14 residual = 0.000293816
+Iter #15 residual = 0.000229111
+GPU: 15 iters: 4.82263 s: 0.351927 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.193587, Final residual = 0.000182421, No Iterations 15
+[1] Building level 0
+[2] Building level 0
+[3] Building level 0
+[0] Building level 0
+[10] Building level 0
+[14] Building level 0
+[5] Building level 0
+[9] Building level 0
+[12] Building level 0
+[6] Building level 0
+[8] Building level 0
+[13] Building level 0
+[7] Building level 0
+[11] Building level 0
+[15] Building level 0
+[4] Building level 0
+[15] Building level 1
+[6] Building level 1
+[7] Building level 1
+[4] Building level 1
+[14] Building level 1
+[13] Building level 1
+[11] Building level 1
+[8] Building level 1
+[9] Building level 1
+[0] Building level 1
+[3] Building level 1
+[1] Building level 1
+[2] Building level 1
+[5] Building level 1
+[10] Building level 1
+[12] Building level 1
+[7] Building level 2
+[15] Building level 2
+[6] Building level 2
+[14] Building level 2
+[13] Building level 2
+[11] Building level 2
+[9] Building level 2
+[8] Building level 2
+[0] Building level 2
+[3] Building level 2
+[4] Building level 2
+[1] Building level 2
+[10] Building level 2
+[12] Building level 2
+[5] Building level 2
+[2] Building level 2
+[7] Building level 3
+[6] Building level 3
+[15] Building level 3
+[14] Building level 3
+[13] Building level 3
+[9] Building level 3
+[11] Building level 3
+[8] Building level 3
+[3] Building level 3
+[0] Building level 3
+[4] Building level 3
+[1] Building level 3
+[7] Building level 4
+[10] Building level 3
+[2] Building level 3
+[5] Building level 3
+[12] Building level 3
+[6] Building level 4
+[7] Building level 5
+[14] Building level 4
+[15] Building level 4
+[9] Building level 4
+[7] Building level 6
+[13] Building level 4
+[7] Building level 7
+[8] Building level 4
+[11] Building level 4
+[7] Building level 8
+[0] Building level 4
+[3] Building level 4
+[7] Building level 9
+[6] Building level 5
+[7] Building level 10
+[7] Building level 11
+[1] Building level 4
+[4] Building level 4
+[2] Building level 4
+[6] Building level 6
+[10] Building level 4
+[9] Building level 5
+[14] Building level 5
+[5] Building level 4
+[12] Building level 4
+[13] Building level 5
+[15] Building level 5
+[6] Building level 7
+[8] Building level 5
+[6] Building level 8
+[6] Building level 9
+[6] Building level 10
+[6] Building level 11
+[11] Building level 5
+[0] Building level 5
+[9] Building level 6
+[3] Building level 5
+[14] Building level 6
+[13] Building level 6
+[15] Building level 6
+[9] Building level 7
+[8] Building level 6
+[1] Building level 5
+[4] Building level 5
+[14] Building level 7
+[9] Building level 8
+[2] Building level 5
+[9] Building level 9
+[13] Building level 7
+[9] Building level 10
+[14] Building level 8
+[9] Building level 11
+[11] Building level 6
+[8] Building level 7
+[10] Building level 5
+[15] Building level 7
+[14] Building level 9
+[0] Building level 6
+[3] Building level 6
+[5] Building level 5
+[13] Building level 8
+[14] Building level 10
+[14] Building level 11
+[8] Building level 8
+[13] Building level 9
+[8] Building level 9
+[13] Building level 10
+[15] Building level 8
+[8] Building level 10
+[12] Building level 5
+[8] Building level 11
+[13] Building level 11
+[11] Building level 7
+[15] Building level 9
+[4] Building level 6
+[1] Building level 6
+[0] Building level 7
+[15] Building level 10
+[3] Building level 7
+[15] Building level 11
+[2] Building level 6
+[11] Building level 8
+[0] Building level 8
+[3] Building level 8
+[11] Building level 9
+[10] Building level 6
+[4] Building level 7
+[0] Building level 9
+[5] Building level 6
+[11] Building level 10
+[1] Building level 7
+[3] Building level 9
+[11] Building level 11
+[0] Building level 10
+[3] Building level 10
+[0] Building level 11
+11 Level construction complete
+[3] Building level 11
+[4] Building level 8
+[2] Building level 7
+[12] Building level 6
+[1] Building level 8
+[4] Building level 9
+[4] Building level 10
+[10] Building level 7
+[5] Building level 7
+[1] Building level 9
+[4] Building level 11
+[2] Building level 8
+[1] Building level 10
+[1] Building level 11
+[2] Building level 9
+[10] Building level 8
+[2] Building level 10
+[12] Building level 7
+[5] Building level 8
+[2] Building level 11
+[10] Building level 9
+[10] Building level 10
+[5] Building level 9
+[10] Building level 11
+[5] Building level 10
+[5] Building level 11
+[12] Building level 8
+[12] Building level 9
+[12] Building level 10
+[12] Building level 11
+initial dot_x = 4.35782e+17
+Iter #1 residual = 0.0895184
+Iter #2 residual = 0.0299743
+Iter #3 residual = 0.0144202
+Iter #4 residual = 0.0131496
+Iter #5 residual = 0.00750296
+Iter #6 residual = 0.00580048
+Iter #7 residual = 0.00385178
+Iter #8 residual = 0.00426231
+Iter #9 residual = 0.00264448
+Iter #10 residual = 0.00212944
+Iter #11 residual = 0.00153947
+Iter #12 residual = 0.0020505
+Iter #13 residual = 0.00120606
+Iter #14 residual = 0.00091397
+Iter #15 residual = 0.00070051
+Iter #16 residual = 0.000726564
+Iter #17 residual = 0.000490502
+Iter #18 residual = 0.000667358
+Iter #19 residual = 0.000390477
+Iter #20 residual = 0.000290088
+Iter #21 residual = 0.000231428
+Iter #22 residual = 0.000208962
+Iter #23 residual = 0.000162084
+Iter #24 residual = 0.000158047
+Iter #25 residual = 0.000117463
+Iter #26 residual = 0.000120899
+GPU: 26 iters: 8.09499 s: 0.363414 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.087192, Final residual = 8.65986e-05, No Iterations 26
+time step continuity errors : sum local = 1.20087e-08, global = 7.89738e-10, cumulative = 1.60265e-09
+Moving mesh time step continuity errors : sum local = 1.20087e-08, global = 7.89738e-10, cumulative = 2.39239e-09
+ExecutionTime = 124.18 s  ClockTime = 139 s
+
+Courant Number mean: 0.00278058 max: 0.291111 velocity magnitude: 153.106
+GGI pair (stator-slider, rotor-slider) : 6.53014 9.28152 Diff = 0.0101478 or 0.155399 %
+Time = 5e-06
+
+volume continuity errors : volume = 0.4378, max error = 2.92118e-07, sum local = 7.00206e-15, global = 1.60672e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.0385854, Final residual = 7.73411e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.0352063, Final residual = 1.31277e-08, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.0269845, Final residual = 3.91949e-09, No Iterations 2
+[0] Building level 0
+[3] Building level 0
+[2] Building level 0
+[1] Building level 0
+[9] Building level 0
+[15] Building level 0
+[6] Building level 0
+[11] Building level 0
+[13] Building level 0
+[7] Building level 0
+[8] Building level 0
+[14] Building level 0
+[4] Building level 0
+[10] Building level 0
+[12] Building level 0
+[5] Building level 0
+[6] Building level 1
+[7] Building level 1
+[4] Building level 1
+[15] Building level 1
+[11] Building level 1
+[3] Building level 1
+[10] Building level 1
+[9] Building level 1
+[12] Building level 1
+[2] Building level 1
+[0] Building level 1
+[8] Building level 1
+[1] Building level 1
+[14] Building level 1
+[13] Building level 1
+[5] Building level 1
+[15] Building level 2
+[11] Building level 2
+[10] Building level 2
+[12] Building level 2
+[3] Building level 2
+[13] Building level 2
+[0] Building level 2
+Reconstruction on level 2
+[1] Building level 2
+[2] Building level 2
+[5] Building level 2
+[15] Building level 3
+[10] Building level 3
+[11] Building level 3
+Creating AMGLevel 
+[3] Building level 3
+[13] Building level 3
+[0] Building level 3
+Reconstruction on level 3
+[5] Building level 3
+[12] Building level 3
+[1] Building level 3
+[2] Building level 3
+[7] Building level 2
+[6] Building level 2
+[14] Building level 2
+[9] Building level 2
+[8] Building level 2
+[4] Building level 2
+[10] Building level 4
+[15] Building level 4
+[11] Building level 4
+Creating AMGLevel 
+[3] Building level 4
+[13] Building level 4
+[0] Building level 4
+Reconstruction on level 4
+[12] Building level 4
+[1] Building level 4
+[5] Building level 4
+[2] Building level 4
+[10] Building level 5
+[15] Building level 5
+[11] Building level 5
+[13] Building level 5
+Creating AMGLevel 
+[3] Building level 5
+[0] Building level 5
+Reconstruction on level 5
+[7] Building level 3
+[12] Building level 5
+[1] Building level 5
+[2] Building level 5
+[5] Building level 5
+[6] Building level 3
+[10] Building level 6
+[15] Building level 6
+[13] Building level 6
+[11] Building level 6
+Creating AMGLevel 
+[0] Building level 6
+Reconstruction on level 6
+[3] Building level 6
+[12] Building level 6
+[1] Building level 6
+[2] Building level 6
+[5] Building level 6
+[9] Building level 3
+[8] Building level 3
+[15] Building level 7
+[10] Building level 7
+[14] Building level 3
+[13] Building level 7
+[11] Building level 7
+Creating AMGLevel 
+[0] Building level 7
+Reconstruction on level 7
+[3] Building level 7
+[12] Building level 7
+[10] Building level 8
+[4] Building level 3
+[1] Building level 7
+[2] Building level 7
+[13] Building level 8
+[15] Building level 8
+[11] Building level 8
+[5] Building level 7
+Creating AMGLevel 
+[0] Building level 8
+Reconstruction on level 8
+[3] Building level 8
+[13] Building level 9
+[10] Building level 9
+[15] Building level 9
+[12] Building level 8
+[11] Building level 9
+[13] Building level 10
+[1] Building level 8
+[10] Building level 10
+[2] Building level 8
+Creating AMGLevel 
+[0] Building level 9
+Reconstruction on level 9
+[15] Building level 10
+[3] Building level 9
+[11] Building level 10
+[5] Building level 8
+[13] Building level 11
+[12] Building level 9
+[10] Building level 11
+[15] Building level 11
+Creating AMGLevel 
+[0] Building level 10
+Reconstruction on level 10
+[11] Building level 11
+[3] Building level 10
+[1] Building level 9
+[2] Building level 9
+[7] Building level 4
+[12] Building level 10
+[5] Building level 9
+Creating AMGLevel 
+[0] Building level 11
+Reconstruction on level 11
+[3] Building level 11
+[1] Building level 10
+[12] Building level 11
+[2] Building level 10
+Creating AMGLevel 
+11 Level construction complete
+[1] Building level 11
+[5] Building level 10
+[2] Building level 11
+[5] Building level 11
+[6] Building level 4
+[14] Building level 4
+[7] Building level 5
+[9] Building level 4
+[8] Building level 4
+[4] Building level 4
+[7] Building level 6
+[6] Building level 5
+[7] Building level 7
+[14] Building level 5
+[9] Building level 5
+[7] Building level 8
+[8] Building level 5
+[6] Building level 6
+[7] Building level 9
+[7] Building level 10
+[7] Building level 11
+[6] Building level 7
+[4] Building level 5
+[14] Building level 6
+[9] Building level 6
+[6] Building level 8
+[8] Building level 6
+[6] Building level 9
+[14] Building level 7
+[6] Building level 10
+[6] Building level 11
+[9] Building level 7
+[8] Building level 7
+[14] Building level 8
+[4] Building level 6
+[14] Building level 9
+[9] Building level 8
+[8] Building level 8
+[14] Building level 10
+[9] Building level 9
+[8] Building level 9
+[14] Building level 11
+[9] Building level 10
+[8] Building level 10
+[9] Building level 11
+[8] Building level 11
+[4] Building level 7
+[4] Building level 8
+[4] Building level 9
+[4] Building level 10
+[4] Building level 11
+initial dot_x = 1.55956e+16
+Iter #1 residual = 0.048449
+Iter #2 residual = 0.0222958
+Iter #3 residual = 0.0111136
+Iter #4 residual = 0.00619642
+Iter #5 residual = 0.00394714
+Iter #6 residual = 0.00259167
+Iter #7 residual = 0.00187167
+Iter #8 residual = 0.00133112
+Iter #9 residual = 0.00106923
+Iter #10 residual = 0.000779238
+Iter #11 residual = 0.000964357
+Iter #12 residual = 0.000509259
+Iter #13 residual = 0.000616557
+Iter #14 residual = 0.000324632
+Iter #15 residual = 0.00034406
+Iter #16 residual = 0.000190275
+GPU: 16 iters: 5.11978 s: 0.353601 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.17251, Final residual = 0.000136909, No Iterations 16
+[1] Building level 0
+[3] Building level 0
+[2] Building level 0
+[0] Building level 0
+[9] Building level 0
+[13] Building level 0
+[11] Building level 0
+[15] Building level 0
+[10] Building level 0
+[12] Building level 0
+[6] Building level 0
+[8] Building level 0
+[14] Building level 0
+[5] Building level 0
+[7] Building level 0
+[4] Building level 0
+[15] Building level 1
+[7] Building level 1
+[6] Building level 1
+[4] Building level 1
+[14] Building level 1
+[13] Building level 1
+[9] Building level 1
+[11] Building level 1
+[8] Building level 1
+[10] Building level 1
+[0] Building level 1
+[1] Building level 1
+[3] Building level 1
+[12] Building level 1
+[2] Building level 1
+[5] Building level 1
+[7] Building level 2
+[15] Building level 2
+[6] Building level 2
+[4] Building level 2
+[14] Building level 2
+[11] Building level 2
+[13] Building level 2
+[8] Building level 2
+[9] Building level 2
+[10] Building level 2
+[0] Building level 2
+[3] Building level 2
+[1] Building level 2
+[12] Building level 2
+[2] Building level 2
+[5] Building level 2
+[7] Building level 3
+[6] Building level 3
+[15] Building level 3
+[13] Building level 3
+[9] Building level 3
+[14] Building level 3
+[8] Building level 3
+[4] Building level 3
+[0] Building level 3
+[10] Building level 3
+[11] Building level 3
+[3] Building level 3
+[1] Building level 3
+[7] Building level 4
+[12] Building level 3
+[2] Building level 3
+[5] Building level 3
+[6] Building level 4
+[7] Building level 5
+[15] Building level 4
+[9] Building level 4
+[13] Building level 4
+[8] Building level 4
+[7] Building level 6
+[14] Building level 4
+[4] Building level 4
+[7] Building level 7
+[0] Building level 4
+[11] Building level 4
+[7] Building level 8
+[6] Building level 5
+[1] Building level 4
+[7] Building level 9
+[7] Building level 10
+[3] Building level 4
+[10] Building level 4
+[7] Building level 11
+[2] Building level 4
+[12] Building level 4
+[6] Building level 6
+[9] Building level 5
+[15] Building level 5
+[13] Building level 5
+[8] Building level 5
+[5] Building level 4
+[6] Building level 7
+[14] Building level 5
+[6] Building level 8
+[4] Building level 5
+[6] Building level 9
+[6] Building level 10
+[6] Building level 11
+[0] Building level 5
+[9] Building level 6
+[1] Building level 5
+[11] Building level 5
+[13] Building level 6
+[3] Building level 5
+[10] Building level 5
+[8] Building level 6
+[15] Building level 6
+[9] Building level 7
+[14] Building level 6
+[13] Building level 7
+[8] Building level 7
+[9] Building level 8
+[2] Building level 5
+[4] Building level 6
+[9] Building level 9
+[12] Building level 5
+[15] Building level 7
+[9] Building level 10
+[8] Building level 8
+[13] Building level 8
+[9] Building level 11
+[8] Building level 9
+[0] Building level 6
+[14] Building level 7
+[13] Building level 9
+[1] Building level 6
+[8] Building level 10
+[15] Building level 8
+[13] Building level 10
+[11] Building level 6
+[3] Building level 6
+[8] Building level 11
+[13] Building level 11
+[10] Building level 6
+[15] Building level 9
+[14] Building level 8
+[4] Building level 7
+[5] Building level 5
+[15] Building level 10
+[14] Building level 9
+[15] Building level 11
+[14] Building level 10
+[14] Building level 11
+[0] Building level 7
+[4] Building level 8
+[1] Building level 7
+[2] Building level 6
+[11] Building level 7
+[4] Building level 9
+[3] Building level 7
+[12] Building level 6
+[10] Building level 7
+[4] Building level 10
+[4] Building level 11
+[0] Building level 8
+[1] Building level 8
+[11] Building level 8
+[0] Building level 9
+[3] Building level 8
+[1] Building level 9
+[10] Building level 8
+[0] Building level 10
+[11] Building level 9
+[1] Building level 10
+[0] Building level 11
+[11] Building level 10
+[2] Building level 7
+[3] Building level 9
+11 Level construction complete
+[1] Building level 11
+[10] Building level 9
+[11] Building level 11
+[3] Building level 10
+[12] Building level 7
+[5] Building level 6
+[10] Building level 10
+[3] Building level 11
+[10] Building level 11
+[2] Building level 8
+[12] Building level 8
+[2] Building level 9
+[12] Building level 9
+[2] Building level 10
+[12] Building level 10
+[2] Building level 11
+[12] Building level 11
+[5] Building level 7
+[5] Building level 8
+[5] Building level 9
+[5] Building level 10
+[5] Building level 11
+initial dot_x = 3.51722e+16
+Iter #1 residual = 0.0487696
+Iter #2 residual = 0.0169894
+Iter #3 residual = 0.0112696
+Iter #4 residual = 0.00521112
+Iter #5 residual = 0.0037672
+Iter #6 residual = 0.00247087
+Iter #7 residual = 0.00221574
+Iter #8 residual = 0.00145323
+Iter #9 residual = 0.00149571
+Iter #10 residual = 0.000925692
+Iter #11 residual = 0.00107657
+Iter #12 residual = 0.000606248
+Iter #13 residual = 0.000664556
+Iter #14 residual = 0.00037691
+Iter #15 residual = 0.000399281
+Iter #16 residual = 0.000232654
+Iter #17 residual = 0.000245599
+Iter #18 residual = 0.000145358
+Iter #19 residual = 0.000153134
+Iter #20 residual = 9.18546e-05
+Iter #21 residual = 9.77431e-05
+GPU: 21 iters: 6.62097 s: 0.358875 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.0725527, Final residual = 5.89713e-05, No Iterations 21
+time step continuity errors : sum local = 6.82339e-09, global = -3.31093e-10, cumulative = 2.06129e-09
+Moving mesh time step continuity errors : sum local = 6.82339e-09, global = -3.31093e-10, cumulative = 1.7302e-09
+ExecutionTime = 156.16 s  ClockTime = 180 s
+
+Courant Number mean: 0.00274578 max: 0.289809 velocity magnitude: 158.496
+GGI pair (stator-slider, rotor-slider) : 6.31904 8.66225 Diff = 0.0102719 or 0.162555 %
+Time = 6e-06
+
+volume continuity errors : volume = 0.4378, max error = 3.64704e-07, sum local = 6.93529e-15, global = -1.29742e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.036513, Final residual = 5.13342e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.025862, Final residual = 4.24654e-09, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.01857, Final residual = 2.58538e-09, No Iterations 2
+[2] Building level 0
+[3] Building level 0
+[0] Building level 0
+[1] Building level 0
+[9] Building level 0
+[13] Building level 0
+[6] Building level 0
+[11] Building level 0
+[15] Building level 0
+[5] Building level 0
+[8] Building level 0
+[14] Building level 0
+[7] Building level 0
+[10] Building level 0
+[12] Building level 0
+[4] Building level 0
+[15] Building level 1
+[6] Building level 1
+[7] Building level 1
+[4] Building level 1
+[14] Building level 1
+[13] Building level 1
+[3] Building level 1
+[9] Building level 1
+[0] Building level 1
+[8] Building level 1
+[11] Building level 1
+[1] Building level 1
+[2] Building level 1
+[5] Building level 1
+[12] Building level 1
+[10] Building level 1
+[15] Building level 2
+[11] Building level 2
+[4] Building level 2
+[3] Building level 2
+[0] Building level 2
+Reconstruction on level 2
+[10] Building level 2
+[5] Building level 2
+[12] Building level 2
+[2] Building level 2
+[1] Building level 2
+[5] Building level 3
+[5] Building level 4
+[15] Building level 3
+[10] Building level 3
+[11] Building level 3
+[3] Building level 3
+Creating AMGLevel 
+[2] Building level 3
+[12] Building level 3
+[0] Building level 3
+Reconstruction on level 3
+[1] Building level 3
+[4] Building level 3
+[5] Building level 5
+[7] Building level 2
+[6] Building level 2
+[5] Building level 6
+[13] Building level 2
+[14] Building level 2
+[9] Building level 2
+[8] Building level 2
+[5] Building level 7
+[5] Building level 8
+[5] Building level 9
+[15] Building level 4
+[5] Building level 10
+Creating AMGLevel 
+[3] Building level 4
+[0] Building level 4
+Reconstruction on level 4
+[10] Building level 4
+[5] Building level 11
+[11] Building level 4
+[12] Building level 4
+[2] Building level 4
+[4] Building level 4
+[1] Building level 4
+[15] Building level 5
+Creating AMGLevel 
+[3] Building level 5
+[7] Building level 3
+[0] Building level 5
+Reconstruction on level 5
+[10] Building level 5
+[12] Building level 5
+[11] Building level 5
+[2] Building level 5
+[4] Building level 5
+[1] Building level 5
+[6] Building level 3
+[15] Building level 6
+Creating AMGLevel 
+[0] Building level 6
+Reconstruction on level 6
+[3] Building level 6
+[10] Building level 6
+[11] Building level 6
+[12] Building level 6
+[2] Building level 6
+[4] Building level 6
+[1] Building level 6
+[13] Building level 3
+[14] Building level 3
+[9] Building level 3
+[15] Building level 7
+[8] Building level 3
+Creating AMGLevel 
+[3] Building level 7
+[10] Building level 7
+[0] Building level 7
+Reconstruction on level 7
+[11] Building level 7
+[12] Building level 7
+[2] Building level 7
+[4] Building level 7
+[1] Building level 7
+[15] Building level 8
+Creating AMGLevel 
+[0] Building level 8
+Reconstruction on level 8
+[3] Building level 8
+[10] Building level 8
+[12] Building level 8
+[11] Building level 8
+[4] Building level 8
+[2] Building level 8
+[1] Building level 8
+[15] Building level 9
+Creating AMGLevel 
+[0] Building level 9
+Reconstruction on level 9
+[3] Building level 9
+[12] Building level 9
+[10] Building level 9
+[11] Building level 9
+[15] Building level 10
+Creating AMGLevel 
+[0] Building level 10
+Reconstruction on level 10
+[3] Building level 10
+[4] Building level 9
+[12] Building level 10
+[7] Building level 4
+[2] Building level 9
+[10] Building level 10
+[11] Building level 10
+[1] Building level 9
+[15] Building level 11
+Creating AMGLevel 
+[0] Building level 11
+Reconstruction on level 11
+[3] Building level 11
+[12] Building level 11
+[10] Building level 11
+[11] Building level 11
+[4] Building level 10
+[2] Building level 10
+[1] Building level 10
+Creating AMGLevel 
+11 Level construction complete
+[2] Building level 11
+[4] Building level 11
+[1] Building level 11
+[6] Building level 4
+[7] Building level 5
+[13] Building level 4
+[14] Building level 4
+[8] Building level 4
+[9] Building level 4
+[6] Building level 5
+[7] Building level 6
+[7] Building level 7
+[6] Building level 6
+[7] Building level 8
+[7] Building level 9
+[13] Building level 5
+[7] Building level 10
+[14] Building level 5
+[8] Building level 5
+[9] Building level 5
+[7] Building level 11
+[6] Building level 7
+[6] Building level 8
+[6] Building level 9
+[6] Building level 10
+[13] Building level 6
+[6] Building level 11
+[8] Building level 6
+[14] Building level 6
+[9] Building level 6
+[13] Building level 7
+[8] Building level 7
+[14] Building level 7
+[9] Building level 7
+[13] Building level 8
+[8] Building level 8
+[14] Building level 8
+[9] Building level 8
+[13] Building level 9
+[8] Building level 9
+[9] Building level 9
+[14] Building level 9
+[13] Building level 10
+[8] Building level 10
+[9] Building level 10
+[14] Building level 10
+[13] Building level 11
+[8] Building level 11
+[9] Building level 11
+[14] Building level 11
+initial dot_x = 1.18085e+15
+Iter #1 residual = 0.0258182
+Iter #2 residual = 0.0108691
+Iter #3 residual = 0.00504645
+Iter #4 residual = 0.00308909
+Iter #5 residual = 0.00199361
+Iter #6 residual = 0.00158186
+Iter #7 residual = 0.00108532
+Iter #8 residual = 0.00075088
+Iter #9 residual = 0.000666626
+Iter #10 residual = 0.000525437
+Iter #11 residual = 0.000518229
+Iter #12 residual = 0.000459379
+Iter #13 residual = 0.000480684
+Iter #14 residual = 0.000466201
+Iter #15 residual = 0.000503411
+Iter #16 residual = 0.000519781
+Iter #17 residual = 0.00057079
+Iter #18 residual = 0.000613827
+Iter #19 residual = 0.000680076
+Iter #20 residual = 0.000749492
+Iter #21 residual = 0.000834092
+Iter #22 residual = 0.000931318
+Iter #23 residual = 0.00103878
+Iter #24 residual = 0.00116715
+Iter #25 residual = 0.00130383
+Iter #26 residual = 0.00146853
+Iter #27 residual = 0.00164271
+Iter #28 residual = 0.00185113
+Iter #29 residual = 0.00207328
+Iter #30 residual = 0.00233555
+Iter #31 residual = 0.00261853
+Iter #32 residual = 0.0029482
+Iter #33 residual = 0.00330793
+Iter #34 residual = 0.00372263
+Iter #35 residual = 0.004179
+Iter #36 residual = 0.00470101
+Iter #37 residual = 0.00527958
+Iter #38 residual = 0.00593726
+Iter #39 residual = 0.00666947
+Iter #40 residual = 0.00749908
+Iter #41 residual = 0.00842531
+Iter #42 residual = 0.00947204
+Iter #43 residual = 0.0106432
+Iter #44 residual = 0.0119644
+Iter #45 residual = 0.0134447
+Iter #46 residual = 0.0151129
+Iter #47 residual = 0.0169835
+Iter #48 residual = 0.0190897
+Iter #49 residual = 0.0214537
+Iter #50 residual = 0.0241135
+GPU: 50 iters: 15.0648 s: 0.375536 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.12849, Final residual = 0.0271001, No Iterations 50
+[2] Building level 0
+[3] Building level 0
+[0] Building level 0
+[1] Building level 0
+[13] Building level 0
+[4] Building level 0
+[10] Building level 0
+[14] Building level 0
+[6] Building level 0
+[9] Building level 0
+[12] Building level 0
+[5] Building level 0
+[11] Building level 0
+[15] Building level 0
+[7] Building level 0
+[8] Building level 0
+[7] Building level 1
+[6] Building level 1
+[4] Building level 1
+[15] Building level 1
+[11] Building level 1
+[10] Building level 1
+[3] Building level 1
+[12] Building level 1
+[9] Building level 1
+[8] Building level 1
+[0] Building level 1
+[2] Building level 1
+[1] Building level 1
+[13] Building level 1
+[14] Building level 1
+[5] Building level 1
+[7] Building level 2
+[6] Building level 2
+[15] Building level 2
+[11] Building level 2
+[4] Building level 2
+[9] Building level 2
+[10] Building level 2
+[8] Building level 2
+[3] Building level 2
+[13] Building level 2
+[12] Building level 2
+[14] Building level 2
+[2] Building level 2
+[0] Building level 2
+[1] Building level 2
+[5] Building level 2
+[7] Building level 3
+[6] Building level 3
+[15] Building level 3
+[9] Building level 3
+[11] Building level 3
+[8] Building level 3
+[13] Building level 3
+[4] Building level 3
+[10] Building level 3
+[3] Building level 3
+[0] Building level 3
+[14] Building level 3
+[7] Building level 4
+[12] Building level 3
+[2] Building level 3
+[1] Building level 3
+[5] Building level 3
+[6] Building level 4
+[7] Building level 5
+[9] Building level 4
+[7] Building level 6
+[15] Building level 4
+[7] Building level 7
+[8] Building level 4
+[13] Building level 4
+[11] Building level 4
+[7] Building level 8
+[4] Building level 4
+[6] Building level 5
+[7] Building level 9
+[3] Building level 4
+[7] Building level 10
+[7] Building level 11
+[10] Building level 4
+[14] Building level 4
+[0] Building level 4
+[2] Building level 4
+[1] Building level 4
+[12] Building level 4
+[6] Building level 6
+[9] Building level 5
+[6] Building level 7
+[15] Building level 5
+[8] Building level 5
+[6] Building level 8
+[5] Building level 4
+[6] Building level 9
+[13] Building level 5
+[6] Building level 10
+[6] Building level 11
+[11] Building level 5
+[4] Building level 5
+[3] Building level 5
+[9] Building level 6
+[10] Building level 5
+[14] Building level 5
+[0] Building level 5
+[8] Building level 6
+[15] Building level 6
+[9] Building level 7
+[2] Building level 5
+[1] Building level 5
+[13] Building level 6
+[12] Building level 5
+[9] Building level 8
+[9] Building level 9
+[9] Building level 10
+[8] Building level 7
+[3] Building level 6
+[9] Building level 11
+[11] Building level 6
+[4] Building level 6
+[15] Building level 7
+[8] Building level 8
+[14] Building level 6
+[13] Building level 7
+[10] Building level 6
+[0] Building level 6
+[8] Building level 9
+[8] Building level 10
+[15] Building level 8
+[8] Building level 11
+[13] Building level 8
+[3] Building level 7
+[11] Building level 7
+[15] Building level 9
+[5] Building level 5
+[2] Building level 6
+[13] Building level 9
+[4] Building level 7
+[15] Building level 10
+[14] Building level 7
+[1] Building level 6
+[13] Building level 10
+[15] Building level 11
+[13] Building level 11
+[12] Building level 6
+[3] Building level 8
+[11] Building level 8
+[0] Building level 7
+[10] Building level 7
+[4] Building level 8
+[14] Building level 8
+[3] Building level 9
+[11] Building level 9
+[4] Building level 9
+[3] Building level 10
+[14] Building level 9
+[11] Building level 10
+[4] Building level 10
+[2] Building level 7
+[3] Building level 11
+[0] Building level 8
+[11] Building level 11
+[4] Building level 11
+[10] Building level 8
+[14] Building level 10
+[1] Building level 7
+[14] Building level 11
+[0] Building level 9
+[10] Building level 9
+[0] Building level 10
+[12] Building level 7
+[10] Building level 10
+[0] Building level 11
+[10] Building level 11
+11 Level construction complete
+[2] Building level 8
+[1] Building level 8
+[5] Building level 6
+[12] Building level 8
+[2] Building level 9
+[1] Building level 9
+[2] Building level 10
+[1] Building level 10
+[12] Building level 9
+[2] Building level 11
+[1] Building level 11
+[12] Building level 10
+[12] Building level 11
+[5] Building level 7
+[5] Building level 8
+[5] Building level 9
+[5] Building level 10
+[5] Building level 11
+initial dot_x = 3.27562e+16
+Iter #1 residual = 0.0436349
+Iter #2 residual = 0.0391583
+Iter #3 residual = 0.0413667
+Iter #4 residual = 0.0449635
+Iter #5 residual = 0.0501368
+Iter #6 residual = 0.0560494
+Iter #7 residual = 0.0629581
+Iter #8 residual = 0.0706316
+Iter #9 residual = 0.0794358
+Iter #10 residual = 0.0891814
+Iter #11 residual = 0.100305
+Iter #12 residual = 0.112649
+Iter #13 residual = 0.126682
+Iter #14 residual = 0.142303
+Iter #15 residual = 0.160006
+Iter #16 residual = 0.179766
+Iter #17 residual = 0.202103
+Iter #18 residual = 0.227088
+Iter #19 residual = 0.255281
+Iter #20 residual = 0.286864
+Iter #21 residual = 0.322456
+Iter #22 residual = 0.36237
+Iter #23 residual = 0.407312
+Iter #24 residual = 0.457748
+Iter #25 residual = 0.514501
+Iter #26 residual = 0.578225
+Iter #27 residual = 0.649902
+Iter #28 residual = 0.730409
+Iter #29 residual = 0.820939
+Iter #30 residual = 0.922644
+Iter #31 residual = 1.03699
+Iter #32 residual = 1.16547
+Iter #33 residual = 1.30991
+Iter #34 residual = 1.47221
+Iter #35 residual = 1.65467
+Iter #36 residual = 1.85967
+Iter #37 residual = 2.09012
+Iter #38 residual = 2.3491
+Iter #39 residual = 2.64019
+Iter #40 residual = 2.96752
+Iter #41 residual = 3.33504
+Iter #42 residual = 3.74829
+Iter #43 residual = 4.21294
+Iter #44 residual = 4.73477
+Iter #45 residual = 5.32153
+Iter #46 residual = 5.98093
+Iter #47 residual = 6.72203
+Iter #48 residual = 7.55497
+Iter #49 residual = 8.49114
+Iter #50 residual = 9.5433
+GPU: 50 iters: 15.0559 s: 0.375759 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.0738459, Final residual = 10.7259, No Iterations 50
+time step continuity errors : sum local = 0.00111973, global = 0.000253011, cumulative = 0.000253013
+Moving mesh time step continuity errors : sum local = 0.00111973, global = 0.000253011, cumulative = 0.000506024
+ExecutionTime = 209.36 s  ClockTime = 234 s
+
+Courant Number mean: 0.00400516 max: 327.329 velocity magnitude: 428966
+GGI pair (stator-slider, rotor-slider) : 14.1955 21.6446 Diff = -0.0163544 or 0.115208 %
+Time = 7e-06
+
+volume continuity errors : volume = 0.4378, max error = 2.59564e-07, sum local = 6.88163e-15, global = -1.89819e-20
+smoothSolver:  Solving for Ux, Initial residual = 0.463278, Final residual = 2.72504e-08, No Iterations 8
+smoothSolver:  Solving for Uy, Initial residual = 0.809034, Final residual = 3.22152e-08, No Iterations 9
+smoothSolver:  Solving for Uz, Initial residual = 0.720994, Final residual = 7.56063e-08, No Iterations 8
+[1] Building level 0
+[3] Building level 0
+[2] Building level 0
+[0] Building level 0
+[10] Building level 0
+[15] Building level 0
+[4] Building level 0
+[9] Building level 0
+[14] Building level 0
+[7] Building level 0
+[11] Building level 0
+[13] Building level 0
+[6] Building level 0
+[8] Building level 0
+[12] Building level 0
+[5] Building level 0
+[15] Building level 1
+[6] Building level 1
+[7] Building level 1
+[4] Building level 1
+[14] Building level 1
+[13] Building level 1
+[9] Building level 1
+[8] Building level 1
+[0] Building level 1
+Reconstruction on level 1
+[1] Building level 1
+[10] Building level 1
+[2] Building level 1
+[11] Building level 1
+[12] Building level 1
+[5] Building level 1
+[3] Building level 1
+[7] Building level 2
+[6] Building level 2
+[15] Building level 2
+[10] Building level 2
+Creating AMGLevel 
+[11] Building level 2
+[12] Building level 2
+[13] Building level 2
+[0] Building level 2
+Reconstruction on level 2
+[14] Building level 2
+[1] Building level 2
+[3] Building level 2
+[9] Building level 2
+[8] Building level 2
+[2] Building level 2
+[5] Building level 2
+[4] Building level 2
+[7] Building level 3
+[6] Building level 3
+[15] Building level 3
+[10] Building level 3
+[11] Building level 3
+[12] Building level 3
+Creating AMGLevel 
+[13] Building level 3
+[0] Building level 3
+Reconstruction on level 3
+[14] Building level 3
+[5] Building level 3
+[9] Building level 3
+[8] Building level 3
+[3] Building level 3
+[1] Building level 3
+[2] Building level 3
+[4] Building level 3
+[7] Building level 4
+[6] Building level 4
+[15] Building level 4
+[11] Building level 4
+[10] Building level 4
+[12] Building level 4
+[13] Building level 4
+Creating AMGLevel 
+[0] Building level 4
+Reconstruction on level 4
+[7] Building level 5
+[14] Building level 4
+[9] Building level 4
+[5] Building level 4
+[8] Building level 4
+[3] Building level 4
+[1] Building level 4
+[2] Building level 4
+[4] Building level 4
+[6] Building level 5
+[7] Building level 6
+[15] Building level 5
+[11] Building level 5
+[10] Building level 5
+[7] Building level 7
+[13] Building level 5
+[12] Building level 5
+Creating AMGLevel 
+[0] Building level 5
+Reconstruction on level 5
+[7] Building level 8
+[14] Building level 5
+[8] Building level 5
+[6] Building level 6
+[9] Building level 5
+[7] Building level 9
+[5] Building level 5
+[7] Building level 10
+[1] Building level 5
+[3] Building level 5
+[7] Building level 11
+[2] Building level 5
+[4] Building level 5
+[15] Building level 6
+[6] Building level 7
+[11] Building level 6
+[10] Building level 6
+[13] Building level 6
+[6] Building level 8
+[12] Building level 6
+Creating AMGLevel 
+[0] Building level 6
+Reconstruction on level 6
+[14] Building level 6
+[8] Building level 6
+[9] Building level 6
+[6] Building level 9
+[5] Building level 6
+[15] Building level 7
+[6] Building level 10
+[11] Building level 7
+[10] Building level 7
+[13] Building level 7
+[6] Building level 11
+[1] Building level 6
+[4] Building level 6
+[3] Building level 6
+[2] Building level 6
+[12] Building level 7
+[15] Building level 8
+[14] Building level 7
+Creating AMGLevel 
+[0] Building level 7
+Reconstruction on level 7
+[9] Building level 7
+[11] Building level 8
+[13] Building level 8
+[8] Building level 7
+[10] Building level 8
+[5] Building level 7
+[15] Building level 9
+[13] Building level 9
+[11] Building level 9
+[10] Building level 9
+[14] Building level 8
+[12] Building level 8
+[9] Building level 8
+[8] Building level 8
+[15] Building level 10
+Creating AMGLevel 
+[4] Building level 7
+[0] Building level 8
+Reconstruction on level 8
+[13] Building level 10
+[1] Building level 7
+[3] Building level 7
+[11] Building level 10
+[10] Building level 10
+[15] Building level 11
+[14] Building level 9
+[9] Building level 9
+[8] Building level 9
+[2] Building level 7
+[13] Building level 11
+[12] Building level 9
+[5] Building level 8
+[10] Building level 11
+[11] Building level 11
+Creating AMGLevel 
+[0] Building level 9
+Reconstruction on level 9
+[9] Building level 10
+[8] Building level 10
+[14] Building level 10
+[12] Building level 10
+[4] Building level 8
+[5] Building level 9
+[8] Building level 11
+[9] Building level 11
+Creating AMGLevel 
+[0] Building level 10
+Reconstruction on level 10
+[14] Building level 11
+[12] Building level 11
+[3] Building level 8
+[1] Building level 8
+[2] Building level 8
+Creating AMGLevel 
+[0] Building level 11
+Reconstruction on level 11
+[5] Building level 10
+[4] Building level 9
+Creating AMGLevel 
+11 Level construction complete
+[5] Building level 11
+[1] Building level 9
+[3] Building level 9
+[4] Building level 10
+[2] Building level 9
+[4] Building level 11
+[1] Building level 10
+[3] Building level 10
+[2] Building level 10
+[1] Building level 11
+[3] Building level 11
+[2] Building level 11
+initial dot_x = 4.88707e+21
+Iter #1 residual = 0.204872
+Iter #2 residual = 0.10325
+Iter #3 residual = 0.0662608
+Iter #4 residual = 0.0484809
+Iter #5 residual = 0.0361308
+Iter #6 residual = 0.0299301
+Iter #7 residual = 0.0233941
+Iter #8 residual = 0.0212188
+Iter #9 residual = 0.0165395
+Iter #10 residual = 0.0159823
+Iter #11 residual = 0.0120076
+Iter #12 residual = 0.0123623
+Iter #13 residual = 0.00876684
+Iter #14 residual = 0.00976796
+Iter #15 residual = 0.00640417
+Iter #16 residual = 0.00783325
+Iter #17 residual = 0.00466405
+Iter #18 residual = 0.00474033
+Iter #19 residual = 0.00325996
+Iter #20 residual = 0.00401739
+Iter #21 residual = 0.00236649
+Iter #22 residual = 0.00293943
+Iter #23 residual = 0.00162686
+Iter #24 residual = 0.00187453
+Iter #25 residual = 0.00103669
+Iter #26 residual = 0.000970192
+Iter #27 residual = 0.000635695
+Iter #28 residual = 0.000737322
+GPU: 28 iters: 8.63729 s: 0.366797 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.495011, Final residual = 0.000431181, No Iterations 28
+[2] Building level 0
+[1] Building level 0
+[0] Building level 0
+[3] Building level 0
+[8] Building level 0
+[15] Building level 0
+[7] Building level 0
+[11] Building level 0
+[14] Building level 0
+[5] Building level 0
+[9] Building level 0
+[13] Building level 0
+[6] Building level 0
+[10] Building level 0
+[12] Building level 0
+[4] Building level 0
+[15] Building level 1
+[6] Building level 1
+[7] Building level 1
+[4] Building level 1
+[9] Building level 1
+[11] Building level 1
+[13] Building level 1
+[8] Building level 1
+[14] Building level 1
+[3] Building level 1
+[0] Building level 1
+[1] Building level 1
+[12] Building level 1
+[5] Building level 1
+[10] Building level 1
+[2] Building level 1
+[7] Building level 2
+[15] Building level 2
+[6] Building level 2
+[13] Building level 2
+[14] Building level 2
+[9] Building level 2
+[11] Building level 2
+[3] Building level 2
+[8] Building level 2
+[4] Building level 2
+[0] Building level 2
+[12] Building level 2
+[1] Building level 2
+[10] Building level 2
+[5] Building level 2
+[2] Building level 2
+[7] Building level 3
+[15] Building level 3
+[6] Building level 3
+[9] Building level 3
+[13] Building level 3
+[14] Building level 3
+[8] Building level 3
+[11] Building level 3
+[3] Building level 3
+[0] Building level 3
+[4] Building level 3
+[1] Building level 3
+[12] Building level 3
+[5] Building level 3
+[7] Building level 4
+[10] Building level 3
+[2] Building level 3
+[6] Building level 4
+[15] Building level 4
+[7] Building level 5
+[9] Building level 4
+[14] Building level 4
+[13] Building level 4
+[8] Building level 4
+[7] Building level 6
+[0] Building level 4
+[11] Building level 4
+[3] Building level 4
+[7] Building level 7
+[4] Building level 4
+[7] Building level 8
+[1] Building level 4
+[6] Building level 5
+[7] Building level 9
+[7] Building level 10
+[7] Building level 11
+[5] Building level 4
+[15] Building level 5
+[9] Building level 5
+[12] Building level 4
+[2] Building level 4
+[10] Building level 4
+[8] Building level 5
+[14] Building level 5
+[13] Building level 5
+[6] Building level 6
+[0] Building level 5
+[6] Building level 7
+[9] Building level 6
+[11] Building level 5
+[15] Building level 6
+[3] Building level 5
+[6] Building level 8
+[8] Building level 6
+[6] Building level 9
+[4] Building level 5
+[6] Building level 10
+[14] Building level 6
+[6] Building level 11
+[9] Building level 7
+[13] Building level 6
+[1] Building level 5
+[15] Building level 7
+[9] Building level 8
+[8] Building level 7
+[9] Building level 9
+[9] Building level 10
+[5] Building level 5
+[9] Building level 11
+[0] Building level 6
+[8] Building level 8
+[14] Building level 7
+[13] Building level 7
+[15] Building level 8
+[8] Building level 9
+[11] Building level 6
+[12] Building level 5
+[8] Building level 10
+[15] Building level 9
+[2] Building level 5
+[10] Building level 5
+[8] Building level 11
+[14] Building level 8
+[13] Building level 8
+[15] Building level 10
+[3] Building level 6
+[15] Building level 11
+[14] Building level 9
+[13] Building level 9
+[14] Building level 10
+[13] Building level 10
+[0] Building level 7
+[4] Building level 6
+[14] Building level 11
+[13] Building level 11
+[1] Building level 6
+[11] Building level 7
+[0] Building level 8
+[3] Building level 7
+[5] Building level 6
+[0] Building level 9
+[4] Building level 7
+[0] Building level 10
+[11] Building level 8
+[0] Building level 11
+11 Level construction complete
+[12] Building level 6
+[3] Building level 8
+[1] Building level 7
+[10] Building level 6
+[2] Building level 6
+[11] Building level 9
+[11] Building level 10
+[3] Building level 9
+[11] Building level 11
+[4] Building level 8
+[5] Building level 7
+[3] Building level 10
+[3] Building level 11
+[1] Building level 8
+[4] Building level 9
+[4] Building level 10
+[4] Building level 11
+[1] Building level 9
+[5] Building level 8
+[10] Building level 7
+[12] Building level 7
+[1] Building level 10
+[1] Building level 11
+[2] Building level 7
+[5] Building level 9
+[5] Building level 10
+[5] Building level 11
+[10] Building level 8
+[12] Building level 8
+[2] Building level 8
+[10] Building level 9
+[12] Building level 9
+[10] Building level 10
+[2] Building level 9
+[10] Building level 11
+[12] Building level 10
+[12] Building level 11
+[2] Building level 10
+[2] Building level 11
+initial dot_x = 4.19563e+22
+Iter #1 residual = 0.0467964
+Iter #2 residual = 0.0244654
+Iter #3 residual = 0.0147303
+Iter #4 residual = 0.00940061
+Iter #5 residual = 0.00640305
+Iter #6 residual = 0.00476933
+Iter #7 residual = 0.00364266
+Iter #8 residual = 0.00295858
+Iter #9 residual = 0.00258633
+Iter #10 residual = 0.00203971
+Iter #11 residual = 0.00168525
+Iter #12 residual = 0.00148871
+Iter #13 residual = 0.00121414
+Iter #14 residual = 0.00113758
+Iter #15 residual = 0.00100494
+Iter #16 residual = 0.000843329
+Iter #17 residual = 0.000675483
+Iter #18 residual = 0.000650607
+Iter #19 residual = 0.000499374
+Iter #20 residual = 0.000515868
+Iter #21 residual = 0.00042649
+Iter #22 residual = 0.000404218
+Iter #23 residual = 0.00027688
+Iter #24 residual = 0.000315903
+Iter #25 residual = 0.000202499
+Iter #26 residual = 0.00025125
+Iter #27 residual = 0.000152153
+Iter #28 residual = 0.000204274
+GPU: 28 iters: 8.57872 s: 0.369301 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.113106, Final residual = 0.000105991, No Iterations 28
+time step continuity errors : sum local = 4.06206e-07, global = 2.36554e-08, cumulative = 0.000506047
+Moving mesh time step continuity errors : sum local = 4.06206e-07, global = 2.36554e-08, cumulative = 0.000506071
+ExecutionTime = 244.13 s  ClockTime = 269 s
+
+Courant Number mean: 0.00346733 max: 52.3192 velocity magnitude: 115681
+GGI pair (stator-slider, rotor-slider) : 9.0879 11.1908 Diff = 0.556312 or 6.12147 %
+Time = 8e-06
+
+volume continuity errors : volume = 0.4378, max error = 2.76601e-07, sum local = 6.84158e-15, global = -1.45393e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.827142, Final residual = 8.39444e-08, No Iterations 21
+smoothSolver:  Solving for Uy, Initial residual = 0.776393, Final residual = 8.64533e-08, No Iterations 22
+smoothSolver:  Solving for Uz, Initial residual = 0.831336, Final residual = 6.18524e-08, No Iterations 20
+[3] Building level 0
+[1] Building level 0
+[2] Building level 0
+[0] Building level 0
+[12] Building level 0
+[8] Building level 0
+[13] Building level 0
+[7] Building level 0
+[15] Building level 0
+[5] Building level 0
+[11] Building level 0
+[10] Building level 0
+[14] Building level 0
+[6] Building level 0
+[9] Building level 0
+[4] Building level 0
+[6] Building level 1
+[7] Building level 1
+[4] Building level 1
+[15] Building level 1
+[11] Building level 1
+[10] Building level 1
+[3] Building level 1
+[2] Building level 1
+[12] Building level 1
+[8] Building level 1
+[0] Building level 1
+Reconstruction on level 1
+[9] Building level 1
+[13] Building level 1
+[14] Building level 1
+[1] Building level 1
+[5] Building level 1
+[7] Building level 2
+[6] Building level 2
+[15] Building level 2
+[12] Building level 2
+Creating AMGLevel 
+[10] Building level 2
+[11] Building level 2
+[13] Building level 2
+[14] Building level 2
+[0] Building level 2
+Reconstruction on level 2
+[9] Building level 2
+[8] Building level 2
+[5] Building level 2
+[3] Building level 2
+[1] Building level 2
+[2] Building level 2
+[4] Building level 2
+[7] Building level 3
+[6] Building level 3
+[15] Building level 3
+[10] Building level 3
+[11] Building level 3
+Creating AMGLevel 
+[12] Building level 3
+[0] Building level 3
+Reconstruction on level 3
+[13] Building level 3
+[14] Building level 3
+[9] Building level 3
+[8] Building level 3
+[5] Building level 3
+[3] Building level 3
+[1] Building level 3
+[4] Building level 3
+[2] Building level 3
+[7] Building level 4
+[6] Building level 4
+[15] Building level 4
+[11] Building level 4
+[10] Building level 4
+[13] Building level 4
+[12] Building level 4
+Creating AMGLevel 
+[14] Building level 4
+[0] Building level 4
+Reconstruction on level 4
+[9] Building level 4
+[8] Building level 4
+[7] Building level 5
+[5] Building level 4
+[3] Building level 4
+[1] Building level 4
+[4] Building level 4
+[2] Building level 4
+[6] Building level 5
+[7] Building level 6
+[15] Building level 5
+[7] Building level 7
+[11] Building level 5
+[13] Building level 5
+[10] Building level 5
+[14] Building level 5
+[12] Building level 5
+[9] Building level 5
+Creating AMGLevel 
+[7] Building level 8
+[8] Building level 5
+[0] Building level 5
+Reconstruction on level 5
+[6] Building level 6
+[7] Building level 9
+[5] Building level 5
+[3] Building level 5
+[7] Building level 10
+[1] Building level 5
+[4] Building level 5
+[7] Building level 11
+[2] Building level 5
+[6] Building level 7
+[15] Building level 6
+[13] Building level 6
+[11] Building level 6
+[10] Building level 6
+[6] Building level 8
+[14] Building level 6
+[9] Building level 6
+[8] Building level 6
+[12] Building level 6
+Creating AMGLevel 
+[6] Building level 9
+[0] Building level 6
+Reconstruction on level 6
+[6] Building level 10
+[15] Building level 7
+[5] Building level 6
+[6] Building level 11
+[3] Building level 6
+[4] Building level 6
+[1] Building level 6
+[13] Building level 7
+[11] Building level 7
+[14] Building level 7
+[10] Building level 7
+[2] Building level 6
+[9] Building level 7
+[8] Building level 7
+[12] Building level 7
+[15] Building level 8
+Creating AMGLevel 
+[0] Building level 7
+Reconstruction on level 7
+[13] Building level 8
+[14] Building level 8
+[11] Building level 8
+[15] Building level 9
+[9] Building level 8
+[8] Building level 8
+[10] Building level 8
+[5] Building level 7
+[12] Building level 8
+[4] Building level 7
+[13] Building level 9
+[3] Building level 7
+[14] Building level 9
+[15] Building level 10
+[11] Building level 9
+[8] Building level 9
+[9] Building level 9
+[1] Building level 7
+[10] Building level 9
+[13] Building level 10
+[15] Building level 11
+Creating AMGLevel 
+[0] Building level 8
+Reconstruction on level 8
+[14] Building level 10
+[12] Building level 9
+[2] Building level 7
+[8] Building level 10
+[9] Building level 10
+[11] Building level 10
+[13] Building level 11
+[10] Building level 10
+[14] Building level 11
+[5] Building level 8
+[12] Building level 10
+[8] Building level 11
+[9] Building level 11
+[11] Building level 11
+Creating AMGLevel 
+[0] Building level 9
+Reconstruction on level 9
+[4] Building level 8
+[3] Building level 8
+[10] Building level 11
+[12] Building level 11
+[1] Building level 8
+[5] Building level 9
+Creating AMGLevel 
+[0] Building level 10
+Reconstruction on level 10
+[2] Building level 8
+[4] Building level 9
+[3] Building level 9
+Creating AMGLevel 
+[0] Building level 11
+Reconstruction on level 11
+[5] Building level 10
+[1] Building level 9
+[4] Building level 10
+Creating AMGLevel 
+11 Level construction complete
+[3] Building level 10
+[5] Building level 11
+[2] Building level 9
+[1] Building level 10
+[4] Building level 11
+[3] Building level 11
+[2] Building level 10
+[1] Building level 11
+[2] Building level 11
+initial dot_x = 4.01218e+22
+Iter #1 residual = 0.412273
+Iter #2 residual = 0.240811
+Iter #3 residual = 0.152523
+Iter #4 residual = 0.0976166
+Iter #5 residual = 0.0653527
+Iter #6 residual = 0.0446172
+Iter #7 residual = 0.0323562
+Iter #8 residual = 0.023864
+Iter #9 residual = 0.0187074
+Iter #10 residual = 0.0146162
+Iter #11 residual = 0.0115594
+Iter #12 residual = 0.00906168
+Iter #13 residual = 0.00723337
+Iter #14 residual = 0.00580495
+Iter #15 residual = 0.00481899
+Iter #16 residual = 0.00388935
+Iter #17 residual = 0.00337357
+Iter #18 residual = 0.00270512
+Iter #19 residual = 0.0024389
+Iter #20 residual = 0.00193046
+Iter #21 residual = 0.00179235
+Iter #22 residual = 0.00139959
+Iter #23 residual = 0.00132502
+Iter #24 residual = 0.00102364
+Iter #25 residual = 0.00097953
+Iter #26 residual = 0.000752192
+Iter #27 residual = 0.00072268
+GPU: 27 iters: 8.28827 s: 0.368591 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.647664, Final residual = 0.00055432, No Iterations 27
+[0] Building level 0
+[3] Building level 0
+[1] Building level 0
+[2] Building level 0
+[14] Building level 0
+[7] Building level 0
+[11] Building level 0
+[9] Building level 0
+[13] Building level 0
+[4] Building level 0
+[10] Building level 0
+[15] Building level 0
+[6] Building level 0
+[8] Building level 0
+[12] Building level 0
+[5] Building level 0
+[15] Building level 1
+[6] Building level 1
+[7] Building level 1
+[4] Building level 1
+[9] Building level 1
+[14] Building level 1
+[8] Building level 1
+[13] Building level 1
+[0] Building level 1
+[1] Building level 1
+[10] Building level 1
+[11] Building level 1
+[12] Building level 1
+[3] Building level 1
+[2] Building level 1
+[5] Building level 1
+[7] Building level 2
+[15] Building level 2
+[6] Building level 2
+[13] Building level 2
+[14] Building level 2
+[9] Building level 2
+[8] Building level 2
+[11] Building level 2
+[10] Building level 2
+[4] Building level 2
+[12] Building level 2
+[0] Building level 2
+[1] Building level 2
+[3] Building level 2
+[5] Building level 2
+[2] Building level 2
+[7] Building level 3
+[15] Building level 3
+[6] Building level 3
+[14] Building level 3
+[8] Building level 3
+[13] Building level 3
+[9] Building level 3
+[10] Building level 3
+[11] Building level 3
+[0] Building level 3
+[1] Building level 3
+[3] Building level 3
+[4] Building level 3
+[12] Building level 3
+[7] Building level 4
+[5] Building level 3
+[2] Building level 3
+[6] Building level 4
+[7] Building level 5
+[15] Building level 4
+[8] Building level 4
+[9] Building level 4
+[14] Building level 4
+[7] Building level 6
+[13] Building level 4
+[7] Building level 7
+[0] Building level 4
+[10] Building level 4
+[7] Building level 8
+[7] Building level 9
+[3] Building level 4
+[7] Building level 10
+[11] Building level 4
+[7] Building level 11
+[1] Building level 4
+[4] Building level 4
+[6] Building level 5
+[12] Building level 4
+[5] Building level 4
+[15] Building level 5
+[8] Building level 5
+[9] Building level 5
+[6] Building level 6
+[2] Building level 4
+[14] Building level 5
+[13] Building level 5
+[6] Building level 7
+[15] Building level 6
+[6] Building level 8
+[0] Building level 5
+[10] Building level 5
+[6] Building level 9
+[8] Building level 6
+[6] Building level 10
+[9] Building level 6
+[6] Building level 11
+[1] Building level 5
+[3] Building level 5
+[11] Building level 5
+[4] Building level 5
+[14] Building level 6
+[13] Building level 6
+[12] Building level 5
+[15] Building level 7
+[8] Building level 7
+[9] Building level 7
+[5] Building level 5
+[8] Building level 8
+[15] Building level 8
+[9] Building level 8
+[14] Building level 7
+[8] Building level 9
+[13] Building level 7
+[8] Building level 10
+[0] Building level 6
+[9] Building level 9
+[15] Building level 9
+[10] Building level 6
+[8] Building level 11
+[9] Building level 10
+[15] Building level 10
+[9] Building level 11
+[15] Building level 11
+[14] Building level 8
+[13] Building level 8
+[1] Building level 6
+[3] Building level 6
+[2] Building level 5
+[11] Building level 6
+[4] Building level 6
+[14] Building level 9
+[13] Building level 9
+[14] Building level 10
+[13] Building level 10
+[13] Building level 11
+[14] Building level 11
+[12] Building level 6
+[0] Building level 7
+[10] Building level 7
+[1] Building level 7
+[5] Building level 6
+[11] Building level 7
+[4] Building level 7
+[3] Building level 7
+[0] Building level 8
+[10] Building level 8
+[1] Building level 8
+[12] Building level 7
+[0] Building level 9
+[10] Building level 9
+[11] Building level 8
+[3] Building level 8
+[10] Building level 10
+[0] Building level 10
+[1] Building level 9
+[10] Building level 11
+[4] Building level 8
+[0] Building level 11
+[11] Building level 9
+[5] Building level 7
+[3] Building level 9
+11 Level construction complete
+[2] Building level 6
+[1] Building level 10
+[1] Building level 11
+[11] Building level 10
+[3] Building level 10
+[12] Building level 8
+[4] Building level 9
+[11] Building level 11
+[3] Building level 11
+[4] Building level 10
+[4] Building level 11
+[12] Building level 9
+[5] Building level 8
+[12] Building level 10
+[12] Building level 11
+[5] Building level 9
+[5] Building level 10
+[5] Building level 11
+[2] Building level 7
+[2] Building level 8
+[2] Building level 9
+[2] Building level 10
+[2] Building level 11
+initial dot_x = 7.94177e+23
+Iter #1 residual = 0.0576611
+Iter #2 residual = 0.0347271
+Iter #3 residual = 0.023688
+Iter #4 residual = 0.0168398
+Iter #5 residual = 0.0125349
+Iter #6 residual = 0.00962959
+Iter #7 residual = 0.00724729
+Iter #8 residual = 0.00509763
+Iter #9 residual = 0.00444594
+Iter #10 residual = 0.00341554
+Iter #11 residual = 0.00309629
+Iter #12 residual = 0.00243662
+Iter #13 residual = 0.00227966
+Iter #14 residual = 0.00178817
+Iter #15 residual = 0.00175741
+Iter #16 residual = 0.00131052
+Iter #17 residual = 0.00134513
+Iter #18 residual = 0.000995549
+Iter #19 residual = 0.0010447
+Iter #20 residual = 0.000752184
+Iter #21 residual = 0.000800704
+Iter #22 residual = 0.000568052
+Iter #23 residual = 0.000605178
+Iter #24 residual = 0.000428113
+Iter #25 residual = 0.000457403
+Iter #26 residual = 0.000322254
+Iter #27 residual = 0.000342837
+Iter #28 residual = 0.000244159
+Iter #29 residual = 0.00025719
+Iter #30 residual = 0.000185265
+Iter #31 residual = 0.000193435
+GPU: 31 iters: 9.47287 s: 0.370276 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.143093, Final residual = 0.0001412, No Iterations 31
+time step continuity errors : sum local = 1.04061e-06, global = 1.21849e-07, cumulative = 0.000506193
+Moving mesh time step continuity errors : sum local = 1.04061e-06, global = 1.21849e-07, cumulative = 0.000506315
+ExecutionTime = 282.65 s  ClockTime = 308 s
+
+Courant Number mean: 0.0151316 max: 399.447 velocity magnitude: 572645
+GGI pair (stator-slider, rotor-slider) : 60.9796 66.8929 Diff = -1.66361 or 2.72815 %
+Time = 9e-06
+
+volume continuity errors : volume = 0.4378, max error = 3.38546e-07, sum local = 6.82929e-15, global = -6.85547e-19
+smoothSolver:  Solving for Ux, Initial residual = 0.753873, Final residual = 7.96429e-08, No Iterations 60
+smoothSolver:  Solving for Uy, Initial residual = 0.72169, Final residual = 8.52244e-08, No Iterations 67
+smoothSolver:  Solving for Uz, Initial residual = 0.731307, Final residual = 9.84044e-08, No Iterations 59
+[1] Building level 0
+[2] Building level 0
+[0] Building level 0
+[3] Building level 0
+[4] Building level 0
+[10] Building level 0
+[12] Building level 0
+[8] Building level 0
+[13] Building level 0
+[7] Building level 0
+[11] Building level 0
+[14] Building level 0
+[6] Building level 0
+[9] Building level 0
+[15] Building level 0
+[5] Building level 0
+[6] Building level 1
+[7] Building level 1
+[15] Building level 1
+[4] Building level 1
+[13] Building level 1
+[14] Building level 1
+[8] Building level 1
+[9] Building level 1
+[0] Building level 1
+Reconstruction on level 1
+[11] Building level 1
+[5] Building level 1
+[3] Building level 1
+[1] Building level 1
+[2] Building level 1
+[10] Building level 1
+[12] Building level 1
+[7] Building level 2
+[6] Building level 2
+[15] Building level 2
+[11] Building level 2
+[10] Building level 2
+Creating AMGLevel 
+[12] Building level 2
+[13] Building level 2
+[14] Building level 2
+[9] Building level 2
+[0] Building level 2
+Reconstruction on level 2
+[8] Building level 2
+[5] Building level 2
+[4] Building level 2
+[3] Building level 2
+[1] Building level 2
+[2] Building level 2
+[7] Building level 3
+[6] Building level 3
+[15] Building level 3
+[10] Building level 3
+[11] Building level 3
+Creating AMGLevel 
+[0] Building level 3
+Reconstruction on level 3
+[13] Building level 3
+[14] Building level 3
+[8] Building level 3
+[9] Building level 3
+[12] Building level 3
+[3] Building level 3
+[5] Building level 3
+[1] Building level 3
+[4] Building level 3
+[2] Building level 3
+[7] Building level 4
+[6] Building level 4
+[15] Building level 4
+[11] Building level 4
+[10] Building level 4
+[13] Building level 4
+Creating AMGLevel 
+[9] Building level 4
+[14] Building level 4
+[0] Building level 4
+Reconstruction on level 4
+[8] Building level 4
+[7] Building level 5
+[12] Building level 4
+[5] Building level 4
+[3] Building level 4
+[1] Building level 4
+[2] Building level 4
+[4] Building level 4
+[6] Building level 5
+[7] Building level 6
+[15] Building level 5
+[7] Building level 7
+[11] Building level 5
+[10] Building level 5
+[13] Building level 5
+[9] Building level 5
+[8] Building level 5
+[14] Building level 5
+[7] Building level 8
+Creating AMGLevel 
+[0] Building level 5
+Reconstruction on level 5
+[6] Building level 6
+[7] Building level 9
+[5] Building level 5
+[12] Building level 5
+[3] Building level 5
+[7] Building level 10
+[7] Building level 11
+[1] Building level 5
+[4] Building level 5
+[2] Building level 5
+[6] Building level 7
+[15] Building level 6
+[11] Building level 6
+[10] Building level 6
+[13] Building level 6
+[8] Building level 6
+[9] Building level 6
+[6] Building level 8
+[14] Building level 6
+Creating AMGLevel 
+[0] Building level 6
+Reconstruction on level 6
+[6] Building level 9
+[5] Building level 6
+[12] Building level 6
+[6] Building level 10
+[3] Building level 6
+[6] Building level 11
+[15] Building level 7
+[11] Building level 7
+[8] Building level 7
+[13] Building level 7
+[9] Building level 7
+[4] Building level 6
+[1] Building level 6
+[10] Building level 7
+[14] Building level 7
+[2] Building level 6
+[5] Building level 7
+Creating AMGLevel 
+[0] Building level 7
+Reconstruction on level 7
+[15] Building level 8
+[11] Building level 8
+[8] Building level 8
+[13] Building level 8
+[9] Building level 8
+[12] Building level 7
+[10] Building level 8
+[3] Building level 7
+[8] Building level 9
+[15] Building level 9
+[14] Building level 8
+[11] Building level 9
+[9] Building level 9
+[13] Building level 9
+[8] Building level 10
+[5] Building level 8
+[4] Building level 7
+[10] Building level 9
+Creating AMGLevel 
+[15] Building level 10
+[0] Building level 8
+Reconstruction on level 8
+[9] Building level 10
+[13] Building level 10
+[14] Building level 9
+[11] Building level 10
+[1] Building level 7
+[8] Building level 11
+[12] Building level 8
+[9] Building level 11
+[10] Building level 10
+[15] Building level 11
+[2] Building level 7
+[5] Building level 9
+[13] Building level 11
+[11] Building level 11
+[14] Building level 10
+[3] Building level 8
+Creating AMGLevel 
+[0] Building level 9
+Reconstruction on level 9
+[10] Building level 11
+[5] Building level 10
+[12] Building level 9
+[14] Building level 11
+[4] Building level 8
+Creating AMGLevel 
+[0] Building level 10
+Reconstruction on level 10
+[5] Building level 11
+[1] Building level 8
+[3] Building level 9
+[12] Building level 10
+[2] Building level 8
+Creating AMGLevel 
+[0] Building level 11
+Reconstruction on level 11
+[4] Building level 9
+[12] Building level 11
+[3] Building level 10
+Creating AMGLevel 
+11 Level construction complete
+[1] Building level 9
+[2] Building level 9
+[4] Building level 10
+[3] Building level 11
+[1] Building level 10
+[4] Building level 11
+[2] Building level 10
+[1] Building level 11
+[2] Building level 11
+initial dot_x = 7.64498e+23
+Iter #1 residual = 0.679685
+Iter #2 residual = 0.388797
+Iter #3 residual = 0.259593
+Iter #4 residual = 0.179502
+Iter #5 residual = 0.153944
+Iter #6 residual = 0.122751
+Iter #7 residual = 0.102548
+Iter #8 residual = 0.0731671
+Iter #9 residual = 0.0616529
+Iter #10 residual = 0.0470137
+Iter #11 residual = 0.0417126
+Iter #12 residual = 0.0323113
+Iter #13 residual = 0.0289311
+Iter #14 residual = 0.022977
+Iter #15 residual = 0.0205603
+Iter #16 residual = 0.0166389
+Iter #17 residual = 0.0148854
+Iter #18 residual = 0.0122103
+Iter #19 residual = 0.0109155
+Iter #20 residual = 0.00904479
+Iter #21 residual = 0.00806845
+Iter #22 residual = 0.00674304
+Iter #23 residual = 0.00599388
+Iter #24 residual = 0.00505101
+Iter #25 residual = 0.00450828
+Iter #26 residual = 0.00383774
+Iter #27 residual = 0.00334654
+Iter #28 residual = 0.00293061
+Iter #29 residual = 0.00250366
+Iter #30 residual = 0.00224381
+Iter #31 residual = 0.00187742
+Iter #32 residual = 0.00172064
+Iter #33 residual = 0.00140815
+Iter #34 residual = 0.00132052
+Iter #35 residual = 0.00105464
+Iter #36 residual = 0.00101364
+GPU: 36 iters: 10.8708 s: 0.374702 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.924442, Final residual = 0.000787571, No Iterations 36
+[2] Building level 0
+[0] Building level 0
+[1] Building level 0
+[3] Building level 0
+[15] Building level 0
+[5] Building level 0
+[9] Building level 0
+[8] Building level 0
+[14] Building level 0
+[6] Building level 0
+[10] Building level 0
+[13] Building level 0
+[4] Building level 0
+[11] Building level 0
+[12] Building level 0
+[7] Building level 0
+[15] Building level 1
+[7] Building level 1
+[6] Building level 1
+[4] Building level 1
+[11] Building level 1
+[3] Building level 1
+[10] Building level 1
+[12] Building level 1
+[2] Building level 1
+[9] Building level 1
+[1] Building level 1
+[8] Building level 1
+[0] Building level 1
+[13] Building level 1
+[14] Building level 1
+[5] Building level 1
+[7] Building level 2
+[15] Building level 2
+[6] Building level 2
+[4] Building level 2
+[10] Building level 2
+[11] Building level 2
+[9] Building level 2
+[12] Building level 2
+[3] Building level 2
+[1] Building level 2
+[8] Building level 2
+[0] Building level 2
+[14] Building level 2
+[13] Building level 2
+[2] Building level 2
+[5] Building level 2
+[7] Building level 3
+[6] Building level 3
+[15] Building level 3
+[9] Building level 3
+[4] Building level 3
+[10] Building level 3
+[8] Building level 3
+[11] Building level 3
+[1] Building level 3
+[14] Building level 3
+[13] Building level 3
+[3] Building level 3
+[0] Building level 3
+[12] Building level 3
+[7] Building level 4
+[2] Building level 3
+[5] Building level 3
+[6] Building level 4
+[7] Building level 5
+[15] Building level 4
+[7] Building level 6
+[9] Building level 4
+[7] Building level 7
+[14] Building level 4
+[4] Building level 4
+[11] Building level 4
+[13] Building level 4
+[7] Building level 8
+[8] Building level 4
+[7] Building level 9
+[10] Building level 4
+[6] Building level 5
+[7] Building level 10
+[0] Building level 4
+[7] Building level 11
+[1] Building level 4
+[3] Building level 4
+[12] Building level 4
+[15] Building level 5
+[6] Building level 6
+[2] Building level 4
+[9] Building level 5
+[5] Building level 4
+[6] Building level 7
+[6] Building level 8
+[15] Building level 6
+[14] Building level 5
+[8] Building level 5
+[6] Building level 9
+[13] Building level 5
+[6] Building level 10
+[4] Building level 5
+[6] Building level 11
+[11] Building level 5
+[1] Building level 5
+[0] Building level 5
+[9] Building level 6
+[10] Building level 5
+[15] Building level 7
+[3] Building level 5
+[12] Building level 5
+[9] Building level 7
+[15] Building level 8
+[8] Building level 6
+[9] Building level 8
+[14] Building level 6
+[15] Building level 9
+[15] Building level 10
+[9] Building level 9
+[13] Building level 6
+[15] Building level 11
+[4] Building level 6
+[9] Building level 10
+[11] Building level 6
+[9] Building level 11
+[2] Building level 5
+[1] Building level 6
+[0] Building level 6
+[8] Building level 7
+[10] Building level 6
+[5] Building level 5
+[14] Building level 7
+[8] Building level 8
+[3] Building level 6
+[8] Building level 9
+[13] Building level 7
+[12] Building level 6
+[11] Building level 7
+[8] Building level 10
+[14] Building level 8
+[8] Building level 11
+[4] Building level 7
+[0] Building level 7
+[1] Building level 7
+[10] Building level 7
+[13] Building level 8
+[14] Building level 9
+[14] Building level 10
+[14] Building level 11
+[13] Building level 9
+[13] Building level 10
+[4] Building level 8
+[0] Building level 8
+[11] Building level 8
+[3] Building level 7
+[1] Building level 8
+[13] Building level 11
+[4] Building level 9
+[11] Building level 9
+[12] Building level 7
+[0] Building level 9
+[2] Building level 6
+[10] Building level 8
+[1] Building level 9
+[4] Building level 10
+[11] Building level 10
+[5] Building level 6
+[0] Building level 10
+[11] Building level 11
+[4] Building level 11
+[10] Building level 9
+[1] Building level 10
+[3] Building level 8
+[0] Building level 11
+[1] Building level 11
+11 Level construction complete
+[10] Building level 10
+[10] Building level 11
+[12] Building level 8
+[3] Building level 9
+[3] Building level 10
+[12] Building level 9
+[3] Building level 11
+[12] Building level 10
+[12] Building level 11
+[5] Building level 7
+[2] Building level 7
+[2] Building level 8
+[5] Building level 8
+[5] Building level 9
+[2] Building level 9
+[5] Building level 10
+[5] Building level 11
+[2] Building level 10
+[2] Building level 11
+initial dot_x = 9.50786e+25
+Iter #1 residual = 0.0510333
+Iter #2 residual = 0.0313032
+Iter #3 residual = 0.0224679
+Iter #4 residual = 0.0198471
+Iter #5 residual = 0.0147167
+Iter #6 residual = 0.0107871
+Iter #7 residual = 0.0088959
+Iter #8 residual = 0.00684801
+Iter #9 residual = 0.00589173
+Iter #10 residual = 0.00458813
+Iter #11 residual = 0.00407108
+Iter #12 residual = 0.00317451
+Iter #13 residual = 0.00286806
+Iter #14 residual = 0.00225261
+Iter #15 residual = 0.00205251
+Iter #16 residual = 0.0016283
+Iter #17 residual = 0.00149287
+Iter #18 residual = 0.00119222
+Iter #19 residual = 0.00110293
+Iter #20 residual = 0.000882365
+Iter #21 residual = 0.000870102
+Iter #22 residual = 0.000629787
+Iter #23 residual = 0.0006292
+Iter #24 residual = 0.000476609
+Iter #25 residual = 0.000492981
+Iter #26 residual = 0.000347132
+Iter #27 residual = 0.000363612
+Iter #28 residual = 0.000255543
+Iter #29 residual = 0.00025392
+Iter #30 residual = 0.000189048
+Iter #31 residual = 0.000192587
+Iter #32 residual = 0.000141863
+Iter #33 residual = 0.000148385
+GPU: 33 iters: 10.0342 s: 0.372113 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.120117, Final residual = 0.000108892, No Iterations 33
+time step continuity errors : sum local = 3.49215e-06, global = -3.8535e-07, cumulative = 0.000505929
+Moving mesh time step continuity errors : sum local = 3.49215e-06, global = -3.8535e-07, cumulative = 0.000505544
+ExecutionTime = 335.21 s  ClockTime = 362 s
+
+Courant Number mean: 0.0560009 max: 2439.8 velocity magnitude: 975766
+GGI pair (stator-slider, rotor-slider) : 354.763 414.663 Diff = 30.8947 or 8.70855 %
+Time = 1e-05
+
+volume continuity errors : volume = 0.4378, max error = 2.82957e-07, sum local = 6.82908e-15, global = -1.76474e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.736475, Final residual = 8.92211e-08, No Iterations 82
+smoothSolver:  Solving for Uy, Initial residual = 0.793974, Final residual = 9.80982e-08, No Iterations 96
+smoothSolver:  Solving for Uz, Initial residual = 0.703612, Final residual = 8.69063e-08, No Iterations 81
+[2] Building level 0
+[0] Building level 0
+[3] Building level 0
+[1] Building level 0
+[14] Building level 0
+[7] Building level 0
+[11] Building level 0
+[10] Building level 0
+[13] Building level 0
+[4] Building level 0
+[8] Building level 0
+[15] Building level 0
+[6] Building level 0
+[9] Building level 0
+[12] Building level 0
+[5] Building level 0
+[6] Building level 1
+[7] Building level 1
+[15] Building level 1
+[4] Building level 1
+[13] Building level 1
+[14] Building level 1
+[9] Building level 1
+[8] Building level 1
+[0] Building level 1
+Reconstruction on level 1
+[5] Building level 1
+[11] Building level 1
+[1] Building level 1
+[3] Building level 1
+[10] Building level 1
+[12] Building level 1
+[2] Building level 1
+[7] Building level 2
+[15] Building level 2
+[6] Building level 2
+Creating AMGLevel 
+[11] Building level 2
+[10] Building level 2
+[12] Building level 2
+[13] Building level 2
+[0] Building level 2
+Reconstruction on level 2
+[14] Building level 2
+[9] Building level 2
+[8] Building level 2
+[5] Building level 2
+[4] Building level 2
+[3] Building level 2
+[2] Building level 2
+[1] Building level 2
+[7] Building level 3
+[15] Building level 3
+[6] Building level 3
+[11] Building level 3
+[10] Building level 3
+Creating AMGLevel 
+[0] Building level 3
+Reconstruction on level 3
+[13] Building level 3
+[12] Building level 3
+[14] Building level 3
+[8] Building level 3
+[9] Building level 3
+[5] Building level 3
+[4] Building level 3
+[3] Building level 3
+[2] Building level 3
+[1] Building level 3
+[7] Building level 4
+[15] Building level 4
+[6] Building level 4
+[11] Building level 4
+[10] Building level 4
+Creating AMGLevel 
+[7] Building level 5
+[13] Building level 4
+[0] Building level 4
+Reconstruction on level 4
+[8] Building level 4
+[9] Building level 4
+[14] Building level 4
+[5] Building level 4
+[12] Building level 4
+[3] Building level 4
+[4] Building level 4
+[1] Building level 4
+[2] Building level 4
+[7] Building level 6
+[15] Building level 5
+[6] Building level 5
+[7] Building level 7
+[11] Building level 5
+[10] Building level 5
+[7] Building level 8
+[13] Building level 5
+[9] Building level 5
+[8] Building level 5
+Creating AMGLevel 
+[0] Building level 5
+Reconstruction on level 5
+[14] Building level 5
+[7] Building level 9
+[7] Building level 10
+[5] Building level 5
+[12] Building level 5
+[7] Building level 11
+[3] Building level 5
+[6] Building level 6
+[4] Building level 5
+[15] Building level 6
+[1] Building level 5
+[2] Building level 5
+[11] Building level 6
+[13] Building level 6
+[10] Building level 6
+[6] Building level 7
+[9] Building level 6
+[8] Building level 6
+[14] Building level 6
+Creating AMGLevel 
+[0] Building level 6
+Reconstruction on level 6
+[15] Building level 7
+[5] Building level 6
+[11] Building level 7
+[6] Building level 8
+[12] Building level 6
+[3] Building level 6
+[13] Building level 7
+[6] Building level 9
+[4] Building level 6
+[15] Building level 8
+[10] Building level 7
+[8] Building level 7
+[9] Building level 7
+[1] Building level 6
+[14] Building level 7
+[6] Building level 10
+[11] Building level 8
+[2] Building level 6
+[15] Building level 9
+Creating AMGLevel 
+[0] Building level 7
+Reconstruction on level 7
+[6] Building level 11
+[13] Building level 8
+[5] Building level 7
+[11] Building level 9
+[8] Building level 8
+[9] Building level 8
+[15] Building level 10
+[10] Building level 8
+[12] Building level 7
+[14] Building level 8
+[13] Building level 9
+[11] Building level 10
+[15] Building level 11
+[8] Building level 9
+[9] Building level 9
+[3] Building level 7
+[4] Building level 7
+Creating AMGLevel 
+[10] Building level 9
+[0] Building level 8
+Reconstruction on level 8
+[13] Building level 10
+[14] Building level 9
+[11] Building level 11
+[8] Building level 10
+[5] Building level 8
+[9] Building level 10
+[1] Building level 7
+[13] Building level 11
+[10] Building level 10
+[12] Building level 8
+[14] Building level 10
+[8] Building level 11
+[9] Building level 11
+[2] Building level 7
+Creating AMGLevel 
+[0] Building level 9
+Reconstruction on level 9
+[5] Building level 9
+[10] Building level 11
+[14] Building level 11
+[3] Building level 8
+[4] Building level 8
+Creating AMGLevel 
+[12] Building level 9
+[0] Building level 10
+Reconstruction on level 10
+[5] Building level 10
+[1] Building level 8
+Creating AMGLevel 
+[0] Building level 11
+Reconstruction on level 11
+[12] Building level 10
+[5] Building level 11
+[3] Building level 9
+[4] Building level 9
+[2] Building level 8
+Creating AMGLevel 
+11 Level construction complete
+[12] Building level 11
+[1] Building level 9
+[3] Building level 10
+[4] Building level 10
+[2] Building level 9
+[3] Building level 11
+[1] Building level 10
+[4] Building level 11
+[2] Building level 10
+[1] Building level 11
+[2] Building level 11
+initial dot_x = 9.2746e+25
+Iter #1 residual = 0.675209
+Iter #2 residual = 0.55642
+Iter #3 residual = 0.477043
+Iter #4 residual = 0.419671
+Iter #5 residual = 0.37695
+Iter #6 residual = 0.315248
+Iter #7 residual = 0.212913
+Iter #8 residual = 0.143443
+Iter #9 residual = 0.0973663
+Iter #10 residual = 0.0753117
+Iter #11 residual = 0.0535015
+Iter #12 residual = 0.0399367
+Iter #13 residual = 0.0285586
+Iter #14 residual = 0.0226669
+Iter #15 residual = 0.0179582
+Iter #16 residual = 0.0153478
+Iter #17 residual = 0.0124867
+Iter #18 residual = 0.0108665
+Iter #19 residual = 0.00899735
+Iter #20 residual = 0.00788312
+Iter #21 residual = 0.00659378
+Iter #22 residual = 0.00580459
+Iter #23 residual = 0.00487235
+Iter #24 residual = 0.00430583
+Iter #25 residual = 0.00361729
+Iter #26 residual = 0.00320695
+Iter #27 residual = 0.00269596
+Iter #28 residual = 0.00239239
+Iter #29 residual = 0.00201167
+Iter #30 residual = 0.00178963
+Iter #31 residual = 0.00150435
+Iter #32 residual = 0.00134041
+Iter #33 residual = 0.00112666
+Iter #34 residual = 0.00100513
+GPU: 34 iters: 10.4607 s: 0.367758 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.895817, Final residual = 0.000844765, No Iterations 34
+[1] Building level 0
+[2] Building level 0
+[0] Building level 0
+[3] Building level 0
+[11] Building level 0
+[14] Building level 0
+[6] Building level 0
+[8] Building level 0
+[15] Building level 0
+[4] Building level 0
+[9] Building level 0
+[13] Building level 0
+[7] Building level 0
+[10] Building level 0
+[12] Building level 0
+[5] Building level 0
+[15] Building level 1
+[7] Building level 1
+[6] Building level 1
+[4] Building level 1
+[11] Building level 1
+[3] Building level 1
+[10] Building level 1
+[9] Building level 1
+[12] Building level 1
+[1] Building level 1
+[2] Building level 1
+[0] Building level 1
+[8] Building level 1
+[13] Building level 1
+[14] Building level 1
+[5] Building level 1
+[7] Building level 2
+[15] Building level 2
+[6] Building level 2
+[4] Building level 2
+[10] Building level 2
+[11] Building level 2
+[9] Building level 2
+[12] Building level 2
+[8] Building level 2
+[1] Building level 2
+[3] Building level 2
+[0] Building level 2
+[13] Building level 2
+[14] Building level 2
+[2] Building level 2
+[5] Building level 2
+[7] Building level 3
+[15] Building level 3
+[6] Building level 3
+[4] Building level 3
+[9] Building level 3
+[10] Building level 3
+[8] Building level 3
+[7] Building level 4
+[0] Building level 3
+[11] Building level 3
+[12] Building level 3
+[1] Building level 3
+[3] Building level 3
+[13] Building level 3
+[14] Building level 3
+[2] Building level 3
+[5] Building level 3
+[7] Building level 5
+[6] Building level 4
+[15] Building level 4
+[7] Building level 6
+[9] Building level 4
+[7] Building level 7
+[4] Building level 4
+[7] Building level 8
+[7] Building level 9
+[7] Building level 10
+[7] Building level 11
+[8] Building level 4
+[0] Building level 4
+[3] Building level 4
+[10] Building level 4
+[6] Building level 5
+[1] Building level 4
+[11] Building level 4
+[13] Building level 4
+[14] Building level 4
+[2] Building level 4
+[15] Building level 5
+[12] Building level 4
+[6] Building level 6
+[9] Building level 5
+[5] Building level 4
+[4] Building level 5
+[6] Building level 7
+[8] Building level 5
+[15] Building level 6
+[6] Building level 8
+[6] Building level 9
+[6] Building level 10
+[0] Building level 5
+[6] Building level 11
+[9] Building level 6
+[1] Building level 5
+[3] Building level 5
+[10] Building level 5
+[11] Building level 5
+[15] Building level 7
+[13] Building level 5
+[14] Building level 5
+[9] Building level 7
+[8] Building level 6
+[2] Building level 5
+[15] Building level 8
+[4] Building level 6
+[9] Building level 8
+[12] Building level 5
+[15] Building level 9
+[9] Building level 9
+[15] Building level 10
+[9] Building level 10
+[9] Building level 11
+[15] Building level 11
+[0] Building level 6
+[8] Building level 7
+[4] Building level 7
+[3] Building level 6
+[8] Building level 8
+[1] Building level 6
+[11] Building level 6
+[10] Building level 6
+[13] Building level 6
+[5] Building level 5
+[8] Building level 9
+[14] Building level 6
+[4] Building level 8
+[8] Building level 10
+[8] Building level 11
+[0] Building level 7
+[4] Building level 9
+[12] Building level 6
+[2] Building level 6
+[4] Building level 10
+[4] Building level 11
+[3] Building level 7
+[13] Building level 7
+[11] Building level 7
+[1] Building level 7
+[10] Building level 7
+[0] Building level 8
+[14] Building level 7
+[13] Building level 8
+[0] Building level 9
+[3] Building level 8
+[1] Building level 8
+[11] Building level 8
+[0] Building level 10
+[10] Building level 8
+[0] Building level 11
+[14] Building level 8
+[13] Building level 9
+[12] Building level 7
+[3] Building level 9
+11 Level construction complete
+[13] Building level 10
+[1] Building level 9
+[13] Building level 11
+[11] Building level 9
+[2] Building level 7
+[10] Building level 9
+[14] Building level 9
+[5] Building level 6
+[3] Building level 10
+[11] Building level 10
+[1] Building level 10
+[3] Building level 11
+[14] Building level 10
+[10] Building level 10
+[1] Building level 11
+[11] Building level 11
+[14] Building level 11
+[10] Building level 11
+[12] Building level 8
+[2] Building level 8
+[12] Building level 9
+[12] Building level 10
+[2] Building level 9
+[12] Building level 11
+[2] Building level 10
+[5] Building level 7
+[2] Building level 11
+[5] Building level 8
+[5] Building level 9
+[5] Building level 10
+[5] Building level 11
+initial dot_x = 2.41503e+28
+Iter #1 residual = 0.054877
+Iter #2 residual = 0.0268245
+Iter #3 residual = 0.0151418
+Iter #4 residual = 0.0107447
+Iter #5 residual = 0.00889618
+Iter #6 residual = 0.00655941
+Iter #7 residual = 0.00449435
+Iter #8 residual = 0.00337422
+Iter #9 residual = 0.00262702
+Iter #10 residual = 0.00207243
+Iter #11 residual = 0.00168346
+Iter #12 residual = 0.00135385
+Iter #13 residual = 0.00114384
+Iter #14 residual = 0.000929124
+Iter #15 residual = 0.000804675
+Iter #16 residual = 0.00065349
+Iter #17 residual = 0.000577826
+Iter #18 residual = 0.000465914
+Iter #19 residual = 0.000420786
+Iter #20 residual = 0.000335349
+Iter #21 residual = 0.000309798
+Iter #22 residual = 0.000256227
+Iter #23 residual = 0.000240882
+Iter #24 residual = 0.000172958
+Iter #25 residual = 0.000172292
+GPU: 25 iters: 7.60993 s: 0.37171 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.160225, Final residual = 0.000123661, No Iterations 25
+time step continuity errors : sum local = 6.02164e-05, global = 5.51016e-06, cumulative = 0.000511054
+Moving mesh time step continuity errors : sum local = 6.02164e-05, global = 5.51016e-06, cumulative = 0.000516564
+ExecutionTime = 395.87 s  ClockTime = 428 s
+
+GGI pair (stator-slider, rotor-slider) : 5880.81 5730.65 Diff = -498.583 or 8.47813 %
+End
+
+Finalising parallel run

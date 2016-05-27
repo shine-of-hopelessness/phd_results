@@ -1,0 +1,222 @@
+ Data for JOB [55602,1] offset 0
+
+ ========================   JOB MAP   ========================
+
+ Data for node: ivb100	Num slots: 4	Max slots: 0	Num procs: 4
+ 	Process OMPI jobid: [55602,1] App: 0 Process rank: 0
+ 	Process OMPI jobid: [55602,1] App: 0 Process rank: 1
+ 	Process OMPI jobid: [55602,1] App: 0 Process rank: 2
+ 	Process OMPI jobid: [55602,1] App: 0 Process rank: 3
+
+ Data for node: ivb103	Num slots: 4	Max slots: 0	Num procs: 4
+ 	Process OMPI jobid: [55602,1] App: 0 Process rank: 4
+ 	Process OMPI jobid: [55602,1] App: 0 Process rank: 5
+ 	Process OMPI jobid: [55602,1] App: 0 Process rank: 6
+ 	Process OMPI jobid: [55602,1] App: 0 Process rank: 7
+
+ =============================================================
+[ivb100:35639] MCW rank 0 bound to socket 0[core 0[hwt 0]]: [B/././././././././.][./././././././././.]
+[ivb100:35639] MCW rank 1 bound to socket 0[core 1[hwt 0]]: [./B/./././././././.][./././././././././.]
+[ivb100:35639] MCW rank 2 bound to socket 0[core 2[hwt 0]]: [././B/././././././.][./././././././././.]
+[ivb100:35639] MCW rank 3 bound to socket 0[core 3[hwt 0]]: [./././B/./././././.][./././././././././.]
+[ivb103:28146] MCW rank 6 bound to socket 0[core 2[hwt 0]]: [././B/././././././.][./././././././././.]
+[ivb103:28146] MCW rank 7 bound to socket 0[core 3[hwt 0]]: [./././B/./././././.][./././././././././.]
+[ivb103:28146] MCW rank 4 bound to socket 0[core 0[hwt 0]]: [B/././././././././.][./././././././././.]
+[ivb103:28146] MCW rank 5 bound to socket 0[core 1[hwt 0]]: [./B/./././././././.][./././././././././.]
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     3.1                                |
+|   \\  /    A nd           | Web:         http://www.extend-project.de       |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build    : 3.1-e2da948002a2
+Exec     : pimpleDyMFoam -parallel
+Date     : May 25 2016
+Time     : 10:12:13
+Host     : ivb100
+PID      : 35682
+CtrlDict : /home-2/vplatonov/foam/foam-extend-3.1/etc/controlDict
+Case     : /home/vplatonov/tests/screwPump-8mln
+nProcs   : 8
+Slaves : 
+7
+(
+ivb100.35677
+ivb100.35678
+ivb100.35680
+ivb103.28180
+ivb103.28181
+ivb103.28179
+ivb103.28183
+)
+
+Pstream initialized with:
+    floatTransfer     : 0
+    nProcsSimpleSum   : 0
+    commsType         : blocking
+SigFpe   : Enabling floating point exception trapping (FOAM_SIGFPE).
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create dynamic mesh for time = 0
+
+Selecting dynamicFvMesh mixerGgiFvMesh
+Initializing the GGI interpolator between master/shadow patches: stator-slider/rotor-slider
+void mixerGgiFvMesh::addZonesAndModifiers() : Zones and modifiers already present.  Skipping.
+Mixer mesh:
+    origin: (0 0 0)
+    axis  : (0 1 0)
+    rpm   : 2000
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type LESModel
+Selecting LES turbulence model Smagorinsky
+SmagorinskyCoeffs
+{
+    ce              1.048;
+    ck              0.094;
+}
+
+Reading field rAU if present
+
+
+Starting time loop
+
+Courant Number mean: 0 max: 0 velocity magnitude: 0
+Creating ggi check function object
+Time = 1e-06
+
+volume continuity errors : volume = 0.4378, max error = 5.3993e-07, sum local = 9.49986e-15, global = -2.89628e-18
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 4.04307e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 1, Final residual = 2.73207e-08, No Iterations 1
+smoothSolver:  Solving for Uz, Initial residual = 1, Final residual = 4.13995e-08, No Iterations 1
+[5] Building level 0
+[7] Building level 0
+[4] Building level 0
+[6] Building level 0
+[3] Building level 0
+[2] Building level 0
+Created persistent data with name p
+[0] Building level 0
+[1] Building level 0
+[2] Building level 1
+Creating AMGLevel 
+[3] Building level 1
+[0] Building level 1
+[7] Building level 1
+[5] Building level 1
+[4] Building level 1
+[6] Building level 1
+[1] Building level 1
+Creating AMGLevel 
+[0] Building level 2
+[5] Building level 2
+[2] Building level 2
+[3] Building level 2
+[7] Building level 2
+[4] Building level 2
+[6] Building level 2
+[1] Building level 2
+Creating AMGLevel 
+[0] Building level 3
+[5] Building level 3
+[3] Building level 3
+[2] Building level 3
+[4] Building level 3
+[7] Building level 3
+Creating AMGLevel 
+[6] Building level 3
+[0] Building level 4
+[5] Building level 4
+[3] Building level 4
+[4] Building level 4
+[7] Building level 4
+[2] Building level 4
+Creating AMGLevel 
+[0] Building level 5
+[1] Building level 3
+[5] Building level 5
+Creating AMGLevel 
+[0] Building level 6
+[4] Building level 5
+[3] Building level 5
+Creating AMGLevel 
+[0] Building level 7
+[7] Building level 5
+[2] Building level 5
+Creating AMGLevel 
+[0] Building level 8
+[5] Building level 6
+Creating AMGLevel 
+[0] Building level 9
+Creating AMGLevel 
+[0] Building level 10
+[6] Building level 4
+Creating AMGLevel 
+[0] Building level 11
+[4] Building level 6
+Creating AMGLevel 
+[0] Building level 12
+Creating AMGLevel 
+12 Level construction complete
+[3] Building level 6
+[7] Building level 6
+[5] Building level 7
+[2] Building level 6
+[4] Building level 7
+[5] Building level 8
+[3] Building level 7
+[4] Building level 8
+[7] Building level 7
+[5] Building level 9
+[2] Building level 7
+[4] Building level 9
+[5] Building level 10
+[3] Building level 8
+[4] Building level 10
+[5] Building level 11
+[7] Building level 8
+[4] Building level 11
+[5] Building level 12
+[4] Building level 12
+[3] Building level 9
+[2] Building level 8
+[7] Building level 9
+[3] Building level 10
+[7] Building level 10
+[3] Building level 11
+[2] Building level 9
+[7] Building level 11
+[3] Building level 12
+[7] Building level 12
+[2] Building level 10
+[2] Building level 11
+[2] Building level 12
+[6] Building level 5
+[1] Building level 4
+[6] Building level 6
+[6] Building level 7
+[1] Building level 5
+[6] Building level 8
+[6] Building level 9
+[6] Building level 10
+[6] Building level 11
+[6] Building level 12
+[1] Building level 6
+[1] Building level 7
+[1] Building level 8
+[1] Building level 9
+[1] Building level 10
+[1] Building level 11
+[1] Building level 12
+GMRES:  Solving for topLevelCorr, Initial residual = 0.877663, Final residual = 0.889967, No Iterations 200
+GPU: 50 iters: 14.5698 s: 0.746904 GB/s
+PCGAMG:  Solving for p, Initial residual = 1, Final residual = 0.00103895, No Iterations 50
+slurmstepd: *** JOB 7741 ON ivb100 CANCELLED AT 2016-05-25T10:29:27 DUE TO TIME LIMIT ***

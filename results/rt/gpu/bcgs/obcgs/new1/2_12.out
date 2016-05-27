@@ -1,0 +1,309 @@
+ Data for JOB [9158,1] offset 0
+
+ ========================   JOB MAP   ========================
+
+ Data for node: ivb108	Num slots: 6	Max slots: 0	Num procs: 6
+ 	Process OMPI jobid: [9158,1] App: 0 Process rank: 0
+ 	Process OMPI jobid: [9158,1] App: 0 Process rank: 1
+ 	Process OMPI jobid: [9158,1] App: 0 Process rank: 2
+ 	Process OMPI jobid: [9158,1] App: 0 Process rank: 3
+ 	Process OMPI jobid: [9158,1] App: 0 Process rank: 4
+ 	Process OMPI jobid: [9158,1] App: 0 Process rank: 5
+
+ Data for node: ivb109	Num slots: 6	Max slots: 0	Num procs: 6
+ 	Process OMPI jobid: [9158,1] App: 0 Process rank: 6
+ 	Process OMPI jobid: [9158,1] App: 0 Process rank: 7
+ 	Process OMPI jobid: [9158,1] App: 0 Process rank: 8
+ 	Process OMPI jobid: [9158,1] App: 0 Process rank: 9
+ 	Process OMPI jobid: [9158,1] App: 0 Process rank: 10
+ 	Process OMPI jobid: [9158,1] App: 0 Process rank: 11
+
+ =============================================================
+[ivb108:04547] MCW rank 0 bound to socket 0[core 0[hwt 0]]: [B/././././././././.][./././././././././.]
+[ivb108:04547] MCW rank 1 bound to socket 0[core 1[hwt 0]]: [./B/./././././././.][./././././././././.]
+[ivb108:04547] MCW rank 2 bound to socket 0[core 2[hwt 0]]: [././B/././././././.][./././././././././.]
+[ivb108:04547] MCW rank 3 bound to socket 0[core 3[hwt 0]]: [./././B/./././././.][./././././././././.]
+[ivb108:04547] MCW rank 4 bound to socket 0[core 4[hwt 0]]: [././././B/././././.][./././././././././.]
+[ivb108:04547] MCW rank 5 bound to socket 0[core 5[hwt 0]]: [./././././B/./././.][./././././././././.]
+[ivb109:20331] MCW rank 11 bound to socket 0[core 5[hwt 0]]: [./././././B/./././.][./././././././././.]
+[ivb109:20331] MCW rank 6 bound to socket 0[core 0[hwt 0]]: [B/././././././././.][./././././././././.]
+[ivb109:20331] MCW rank 7 bound to socket 0[core 1[hwt 0]]: [./B/./././././././.][./././././././././.]
+[ivb109:20331] MCW rank 8 bound to socket 0[core 2[hwt 0]]: [././B/././././././.][./././././././././.]
+[ivb109:20331] MCW rank 9 bound to socket 0[core 3[hwt 0]]: [./././B/./././././.][./././././././././.]
+[ivb109:20331] MCW rank 10 bound to socket 0[core 4[hwt 0]]: [././././B/././././.][./././././././././.]
+0
+1
+2
+3
+4
+5
+2
+0
+1
+3
+4
+5
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     3.1                                |
+|   \\  /    A nd           | Web:         http://www.extend-project.de       |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build    : 3.1-e2da948002a2
+Exec     : interFoam -parallel
+Date     : May 17 2016
+Time     : 14:47:04
+Host     : ivb108
+PID      : 4611
+CtrlDict : /home-2/vplatonov/foam/foam-extend-3.1/etc/controlDict
+Case     : /home/vplatonov/tests/rt12mln
+nProcs   : 12
+Slaves : 
+11
+(
+ivb108.4598
+ivb108.4617
+ivb108.4599
+ivb108.4605
+ivb108.4622
+ivb109.20381
+ivb109.20383
+ivb109.20382
+ivb109.20387
+ivb109.20393
+ivb109.20398
+)
+
+Pstream initialized with:
+    floatTransfer     : 0
+    nProcsSimpleSum   : 0
+    commsType         : blocking
+SigFpe   : Enabling floating point exception trapping (FOAM_SIGFPE).
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+Reading g
+Reading field pd
+
+Reading field alpha1
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Reading transportProperties
+
+Selecting incompressible transport model Newtonian
+Selecting incompressible transport model Newtonian
+Calculating field g.h
+
+Selecting turbulence model type laminar
+time step continuity errors : sum local = 0, global = 0, cumulative = 0
+Created persistent data with name pcorr
+OGPUBICGS:  Solving for pcorr, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 0, global = 0, cumulative = 0
+Courant Number mean: 0 max: 0 velocity magnitude: 0
+
+Starting time loop
+
+Courant Number mean: 0 max: 0 velocity magnitude: 0
+Time = 0.001
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = 0  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = 0  Max(alpha1) = 1
+Created persistent data with name pd
+Computing AINV with droptol 0.02
+GPU: 1 iters: 0.0259309 s: 17.1617 GB/s
+Total exec time 0.0259309 Total comm time 0.00300032
+OGPUBICGS:  Solving for pd, Initial residual = 1, Final residual = 0.0491214, No Iterations 1
+Computing AINV with droptol 0.02
+GPU: 26 iters: 0.265799 s: 43.5309 GB/s
+Total exec time 0.29173 Total comm time 0.0541245
+OGPUBICGS:  Solving for pd, Initial residual = 0.033386, Final residual = 0.00155018, No Iterations 26
+GPU: 619 iters: 5.91606 s: 46.5625 GB/s
+Total exec time 6.20779 Total comm time 1.11656
+OGPUBICGS:  Solving for pd, Initial residual = 0.01293, Final residual = 6.4352e-08, No Iterations 619
+time step continuity errors : sum local = 7.26174e-12, global = -4.68391e-24, cumulative = -4.68391e-24
+ExecutionTime = 55.55 s  ClockTime = 71 s
+
+Courant Number mean: 4.83086e-06 max: 0.00215177 velocity magnitude: 0.0336214
+Time = 0.002
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = 0  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = 0  Max(alpha1) = 1
+GPU: 477 iters: 4.58779 s: 46.2693 GB/s
+Total exec time 10.7956 Total comm time 1.95954
+OGPUBICGS:  Solving for pd, Initial residual = 0.005028, Final residual = 0.000220693, No Iterations 477
+GPU: 464 iters: 4.44531 s: 46.4509 GB/s
+Total exec time 15.2409 Total comm time 2.75715
+OGPUBICGS:  Solving for pd, Initial residual = 0.00391519, Final residual = 0.000174876, No Iterations 464
+GPU: 646 iters: 6.18163 s: 46.5058 GB/s
+Total exec time 21.4225 Total comm time 3.90486
+OGPUBICGS:  Solving for pd, Initial residual = 0.00346291, Final residual = 8.79363e-08, No Iterations 646
+time step continuity errors : sum local = 4.11138e-08, global = -4.11123e-08, cumulative = -4.11123e-08
+ExecutionTime = 82.65 s  ClockTime = 98 s
+
+Courant Number mean: 1.35188e-05 max: 0.219244 velocity magnitude: 1.71285
+Time = 0.003
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275424  Min(alpha1) = -1.08823e-30  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275426  Min(alpha1) = -1.32683e-30  Max(alpha1) = 1
+GPU: 502 iters: 4.79294 s: 46.6101 GB/s
+Total exec time 26.2155 Total comm time 4.76867
+OGPUBICGS:  Solving for pd, Initial residual = 0.00745222, Final residual = 0.000359012, No Iterations 502
+GPU: 158 iters: 1.51377 s: 46.4488 GB/s
+Total exec time 27.7292 Total comm time 5.03204
+OGPUBICGS:  Solving for pd, Initial residual = 0.00527323, Final residual = 0.000248446, No Iterations 158
+GPU: 636 iters: 6.07884 s: 46.5602 GB/s
+Total exec time 33.8081 Total comm time 6.1425
+OGPUBICGS:  Solving for pd, Initial residual = 0.00520365, Final residual = 9.17195e-08, No Iterations 636
+time step continuity errors : sum local = 2.22625e-08, global = -2.22606e-08, cumulative = -6.33729e-08
+ExecutionTime = 106.76 s  ClockTime = 123 s
+
+Courant Number mean: 1.63259e-05 max: 0.131095 velocity magnitude: 1.02418
+Time = 0.004
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275427  Min(alpha1) = -4.25207e-30  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275428  Min(alpha1) = -7.28767e-30  Max(alpha1) = 1
+GPU: 498 iters: 4.74206 s: 46.7348 GB/s
+Total exec time 38.5501 Total comm time 6.97665
+OGPUBICGS:  Solving for pd, Initial residual = 0.00840724, Final residual = 0.00034824, No Iterations 498
+GPU: 615 iters: 5.86943 s: 46.6291 GB/s
+Total exec time 44.4196 Total comm time 8.03646
+OGPUBICGS:  Solving for pd, Initial residual = 0.00700233, Final residual = 0.000348302, No Iterations 615
+GPU: 636 iters: 6.05293 s: 46.7595 GB/s
+Total exec time 50.4725 Total comm time 9.12871
+OGPUBICGS:  Solving for pd, Initial residual = 0.00669763, Final residual = 9.69832e-08, No Iterations 636
+time step continuity errors : sum local = 1.05129e-08, global = -1.05124e-08, cumulative = -7.38852e-08
+ExecutionTime = 134.93 s  ClockTime = 151 s
+
+Courant Number mean: 2.02961e-05 max: 0.0751415 velocity magnitude: 0.587043
+Time = 0.005
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275429  Min(alpha1) = -2.13514e-29  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275429  Min(alpha1) = -1.04807e-29  Max(alpha1) = 1
+GPU: 469 iters: 4.49984 s: 46.3825 GB/s
+Total exec time 54.9723 Total comm time 9.96247
+OGPUBICGS:  Solving for pd, Initial residual = 0.00674026, Final residual = 0.000233896, No Iterations 469
+GPU: 129 iters: 1.2344 s: 46.5062 GB/s
+Total exec time 56.2067 Total comm time 10.1774
+OGPUBICGS:  Solving for pd, Initial residual = 0.00582047, Final residual = 0.000269065, No Iterations 129
+GPU: 676 iters: 6.4499 s: 46.6414 GB/s
+Total exec time 62.6566 Total comm time 11.3264
+OGPUBICGS:  Solving for pd, Initial residual = 0.00567094, Final residual = 2.15699e-08, No Iterations 676
+time step continuity errors : sum local = 2.47799e-09, global = -2.4769e-09, cumulative = -7.63621e-08
+ExecutionTime = 158.93 s  ClockTime = 175 s
+
+Courant Number mean: 2.44106e-05 max: 0.0302488 velocity magnitude: 0.308147
+Time = 0.006
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275429  Min(alpha1) = -2.79197e-29  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275429  Min(alpha1) = -2.55369e-29  Max(alpha1) = 1
+GPU: 497 iters: 4.74847 s: 46.578 GB/s
+Total exec time 67.4051 Total comm time 12.1668
+OGPUBICGS:  Solving for pd, Initial residual = 0.00746451, Final residual = 0.000320228, No Iterations 497
+GPU: 499 iters: 4.79952 s: 46.268 GB/s
+Total exec time 72.2046 Total comm time 13.0812
+OGPUBICGS:  Solving for pd, Initial residual = 0.00574517, Final residual = 4.43489e-05, No Iterations 499
+GPU: 617 iters: 5.91515 s: 46.4192 GB/s
+Total exec time 78.1198 Total comm time 14.1526
+OGPUBICGS:  Solving for pd, Initial residual = 0.00541081, Final residual = 8.16753e-08, No Iterations 617
+time step continuity errors : sum local = 1.20259e-11, global = 8.62369e-12, cumulative = -7.63535e-08
+ExecutionTime = 186.19 s  ClockTime = 203 s
+
+Courant Number mean: 2.93375e-05 max: 0.0323172 velocity magnitude: 0.252478
+Time = 0.007
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275429  Min(alpha1) = -6.82232e-29  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275429  Min(alpha1) = -5.37018e-29  Max(alpha1) = 1
+GPU: 565 iters: 5.40319 s: 46.5346 GB/s
+Total exec time 83.523 Total comm time 15.1645
+OGPUBICGS:  Solving for pd, Initial residual = 0.0071203, Final residual = 0.000205087, No Iterations 565
+GPU: 431 iters: 4.12804 s: 46.4634 GB/s
+Total exec time 87.651 Total comm time 15.9405
+OGPUBICGS:  Solving for pd, Initial residual = 0.00450861, Final residual = 8.21207e-05, No Iterations 431
+GPU: 595 iters: 5.68548 s: 46.5723 GB/s
+Total exec time 93.3365 Total comm time 17.0526
+OGPUBICGS:  Solving for pd, Initial residual = 0.00405796, Final residual = 9.13073e-08, No Iterations 595
+time step continuity errors : sum local = 1.48561e-10, global = 1.40907e-10, cumulative = -7.62126e-08
+ExecutionTime = 213.11 s  ClockTime = 231 s
+
+Courant Number mean: 3.44336e-05 max: 0.00975526 velocity magnitude: 0.130265
+Time = 0.008
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275429  Min(alpha1) = -3.9283e-29  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275429  Min(alpha1) = -2.80896e-29  Max(alpha1) = 1
+GPU: 511 iters: 4.89344 s: 46.4713 GB/s
+Total exec time 98.2299 Total comm time 17.9401
+OGPUBICGS:  Solving for pd, Initial residual = 0.00758453, Final residual = 0.000355236, No Iterations 511
+GPU: 435 iters: 4.1732 s: 46.3872 GB/s
+Total exec time 102.403 Total comm time 18.6998
+OGPUBICGS:  Solving for pd, Initial residual = 0.00460321, Final residual = 0.000161532, No Iterations 435
+GPU: 622 iters: 5.95546 s: 46.4786 GB/s
+Total exec time 108.359 Total comm time 19.7709
+OGPUBICGS:  Solving for pd, Initial residual = 0.00421007, Final residual = 5.53798e-08, No Iterations 622
+time step continuity errors : sum local = 1.58188e-10, global = 1.56347e-10, cumulative = -7.60562e-08
+ExecutionTime = 240.25 s  ClockTime = 258 s
+
+Courant Number mean: 3.9548e-05 max: 0.0090267 velocity magnitude: 0.140182
+Time = 0.009
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275429  Min(alpha1) = -3.50829e-29  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275429  Min(alpha1) = -5.58e-29  Max(alpha1) = 1
+GPU: 515 iters: 4.92371 s: 46.5471 GB/s
+Total exec time 113.282 Total comm time 20.6547
+OGPUBICGS:  Solving for pd, Initial residual = 0.00748466, Final residual = 0.00021441, No Iterations 515
+GPU: 503 iters: 4.80006 s: 46.6336 GB/s
+Total exec time 118.082 Total comm time 21.5048
+OGPUBICGS:  Solving for pd, Initial residual = 0.00456221, Final residual = 0.000107141, No Iterations 503
+GPU: 573 iters: 5.50259 s: 46.341 GB/s
+Total exec time 123.585 Total comm time 22.4983
+OGPUBICGS:  Solving for pd, Initial residual = 0.00402583, Final residual = 9.53793e-08, No Iterations 573
+time step continuity errors : sum local = 5.2669e-12, global = 2.67272e-12, cumulative = -7.60536e-08
+ExecutionTime = 267.42 s  ClockTime = 286 s
+
+Courant Number mean: 4.46729e-05 max: 0.00970748 velocity magnitude: 0.149191
+Time = 0.01
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275429  Min(alpha1) = -3.98859e-29  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275429  Min(alpha1) = -3.79056e-29  Max(alpha1) = 1
+GPU: 483 iters: 4.61603 s: 46.5647 GB/s
+Total exec time 128.201 Total comm time 23.3201
+OGPUBICGS:  Solving for pd, Initial residual = 0.00802044, Final residual = 0.000397291, No Iterations 483
+GPU: 446 iters: 4.24522 s: 46.7534 GB/s
+Total exec time 132.446 Total comm time 24.055
+OGPUBICGS:  Solving for pd, Initial residual = 0.00472201, Final residual = 0.000161007, No Iterations 446
+GPU: 632 iters: 6.04752 s: 46.507 GB/s
+Total exec time 138.494 Total comm time 25.1458
+OGPUBICGS:  Solving for pd, Initial residual = 0.00417256, Final residual = 6.62347e-08, No Iterations 632
+time step continuity errors : sum local = 4.58336e-11, global = -4.21605e-11, cumulative = -7.60957e-08
+ExecutionTime = 293.75 s  ClockTime = 312 s
+
+End
+
+Finalising parallel run

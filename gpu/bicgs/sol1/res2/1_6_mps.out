@@ -1,0 +1,478 @@
+ Data for JOB [45403,1] offset 0
+
+ ========================   JOB MAP   ========================
+
+ Data for node: ivb124	Num slots: 6	Max slots: 0	Num procs: 6
+ 	Process OMPI jobid: [45403,1] App: 0 Process rank: 0
+ 	Process OMPI jobid: [45403,1] App: 0 Process rank: 1
+ 	Process OMPI jobid: [45403,1] App: 0 Process rank: 2
+ 	Process OMPI jobid: [45403,1] App: 0 Process rank: 3
+ 	Process OMPI jobid: [45403,1] App: 0 Process rank: 4
+ 	Process OMPI jobid: [45403,1] App: 0 Process rank: 5
+
+ =============================================================
+[ivb124:23161] MCW rank 3 bound to socket 0[core 3[hwt 0]]: [./././B/./././././.][./././././././././.]
+[ivb124:23161] MCW rank 4 bound to socket 0[core 4[hwt 0]]: [././././B/././././.][./././././././././.]
+[ivb124:23161] MCW rank 5 bound to socket 0[core 5[hwt 0]]: [./././././B/./././.][./././././././././.]
+[ivb124:23161] MCW rank 0 bound to socket 0[core 0[hwt 0]]: [B/././././././././.][./././././././././.]
+[ivb124:23161] MCW rank 1 bound to socket 0[core 1[hwt 0]]: [./B/./././././././.][./././././././././.]
+[ivb124:23161] MCW rank 2 bound to socket 0[core 2[hwt 0]]: [././B/././././././.][./././././././././.]
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     3.1                                |
+|   \\  /    A nd           | Web:         http://www.extend-project.de       |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build    : 3.1-e2da948002a2
+Exec     : pimpleDyMFoam -parallel
+Date     : May 27 2016
+Time     : 05:25:07
+Host     : ivb124
+PID      : 23203
+CtrlDict : /home-2/vplatonov/foam/foam-extend-3.1/etc/controlDict
+Case     : /home/vplatonov/tests/3D-mesh1-of3.1
+nProcs   : 6
+Slaves : 
+5
+(
+ivb124.23205
+ivb124.23216
+ivb124.23208
+ivb124.23211
+ivb124.23219
+)
+
+Pstream initialized with:
+    floatTransfer     : 0
+    nProcsSimpleSum   : 0
+    commsType         : blocking
+SigFpe   : Enabling floating point exception trapping (FOAM_SIGFPE).
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create dynamic mesh for time = 0
+
+Selecting dynamicFvMesh dynamicMotionSolverFvMesh
+Selecting motion solver: displacementLaplacian
+Selecting motion diffusion: quadratic
+Selecting motion diffusion: inverseDistance
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type LESModel
+Selecting LES turbulence model oneEqEddy
+oneEqEddyCoeffs
+{
+    ce              1.048;
+    ck              0.094;
+}
+
+Reading field rAU if present
+
+
+Starting time loop
+
+Courant Number mean: 0 max: 0.0007592825 velocity magnitude: 0.4779
+Reading old state
+Before setting displacements
+GAMGPCG:  Solving for cellDisplacementx, Initial residual = 0, Final residual = 0, No Iterations 0
+GAMGPCG:  Solving for cellDisplacementy, Initial residual = 0, Final residual = 0, No Iterations 0
+GAMGPCG:  Solving for cellDisplacementz, Initial residual = 0, Final residual = 0, No Iterations 0
+Time = 5e-06
+
+GAMGPCG:  Solving for cellDisplacementx, Initial residual = 0, Final residual = 0, No Iterations 0
+GAMGPCG:  Solving for cellDisplacementy, Initial residual = 0, Final residual = 0, No Iterations 0
+GAMGPCG:  Solving for cellDisplacementz, Initial residual = 0, Final residual = 0, No Iterations 0
+volume continuity errors : volume = 4.535015, max error = 0, sum local = 0, global = 0
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 2.285051e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 1, Final residual = 2.172388e-08, No Iterations 1
+smoothSolver:  Solving for Uz, Initial residual = 0.9999962, Final residual = 4.2334e-08, No Iterations 1
+Created persistent data with name p
+Computing AINV with droptol 0.02
+GPU: 498 iters: 25.2996 s: 20.28607 GB/s
+Total exec time 25.2996
+ Total comm time 0.4987251Pre time 0.03726438 Post time 0.4614607
+GPUBICGS:  Solving for p, Initial residual = 1, Final residual = 0.009414712, No Iterations 498
+Computing AINV with droptol 0.02
+GPU: 124 iters: 6.418311 s: 19.91054 GB/s
+Total exec time 31.71791
+ Total comm time 0.6342151Pre time 0.0459944 Post time 0.5882207
+GPUBICGS:  Solving for p, Initial residual = 0.0004689227, Final residual = 9.268931e-06, No Iterations 124
+time step continuity errors : sum local = 2.083975e-09, global = -9.777038e-10, cumulative = -9.777038e-10
+Moving mesh time step continuity errors : sum local = 2.083975e-09, global = -9.777038e-10, cumulative = -1.955408e-09
+GPU: 35 iters: 1.826159 s: 19.75202 GB/s
+Total exec time 33.54407
+ Total comm time 0.6648763Pre time 0.04849456 Post time 0.6163817
+GPUBICGS:  Solving for p, Initial residual = 0.000109349, Final residual = 9.862093e-06, No Iterations 35
+GPU: 449 iters: 23.12019 s: 20.01415 GB/s
+Total exec time 56.66425
+ Total comm time 1.087403Pre time 0.08117821 Post time 1.006224
+GPUBICGS:  Solving for p, Initial residual = 4.578704e-05, Final residual = 9.612065e-08, No Iterations 449
+time step continuity errors : sum local = 2.162463e-11, global = -2.071292e-12, cumulative = -1.957479e-09
+Moving mesh time step continuity errors : sum local = 2.162463e-11, global = -2.071292e-12, cumulative = -1.95955e-09
+smoothSolver:  Solving for k, Initial residual = 1, Final residual = 1.262931e-11, No Iterations 2
+ExecutionTime = 145.25 s  ClockTime = 148 s
+
+Courant Number mean: 7.682859e-05 max: 0.002864325 velocity magnitude: 0.954844
+yForce = -5.170012
+Y= -7.981908e-12
+Vy= -3.192761e-06
+Time = 1e-05
+
+GAMGPCG:  Solving for cellDisplacementx, Initial residual = 0, Final residual = 0, No Iterations 0
+Total solver time is 0
+Total solver time is 0
+Total solver time is 1
+GAMGPCG:  Solving for cellDisplacementy, Initial residual = 1, Final residual = 3.310245e-09, No Iterations 1
+GAMGPCG:  Solving for cellDisplacementz, Initial residual = 0, Final residual = 0, No Iterations 0
+volume continuity errors : volume = 4.535015, max error = 9.703405e-09, sum local = 6.20489e-15, global = 6.171885e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.9975289, Final residual = 4.954908e-07, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.3328827, Final residual = 1.447036e-06, No Iterations 1
+smoothSolver:  Solving for Uz, Initial residual = 0.3318134, Final residual = 3.704266e-07, No Iterations 1
+GPU: 443 iters: 22.81889 s: 20.00743 GB/s
+Total exec time 79.48314
+ Total comm time 1.5411Pre time 0.1126062 Post time 1.428494
+GPUBICGS:  Solving for p, Initial residual = 0.003644661, Final residual = 3.357533e-05, No Iterations 443
+GPU: 174 iters: 8.992763 s: 19.9406 GB/s
+Total exec time 88.4759
+ Total comm time 1.706225Pre time 0.1247625 Post time 1.581462
+GPUBICGS:  Solving for p, Initial residual = 0.0013909, Final residual = 1.389637e-05, No Iterations 174
+time step continuity errors : sum local = 1.049063e-09, global = -9.713447e-10, cumulative = -2.930895e-09
+Moving mesh time step continuity errors : sum local = 1.049063e-09, global = -9.713447e-10, cumulative = -3.90224e-09
+GPU: 179 iters: 9.222671 s: 20.00223 GB/s
+Total exec time 97.69857
+ Total comm time 1.888864Pre time 0.1378235 Post time 1.751041
+GPUBICGS:  Solving for p, Initial residual = 0.0003116433, Final residual = 9.721981e-06, No Iterations 179
+GPU: 609 iters: 31.38618 s: 19.99682 GB/s
+Total exec time 129.0848
+ Total comm time 2.509616Pre time 0.1817745 Post time 2.327841
+GPUBICGS:  Solving for p, Initial residual = 0.0001171207, Final residual = 8.774608e-08, No Iterations 609
+time step continuity errors : sum local = 6.61352e-12, global = -1.009961e-12, cumulative = -3.903249e-09
+Moving mesh time step continuity errors : sum local = 6.61352e-12, global = -1.009961e-12, cumulative = -3.904259e-09
+smoothSolver:  Solving for k, Initial residual = 0.008782868, Final residual = 4.663737e-09, No Iterations 1
+ExecutionTime = 248.96 s  ClockTime = 252 s
+
+Courant Number mean: 7.683209e-05 max: 0.002856896 velocity magnitude: 0.9523675
+yForce = 10.97472
+Y= -7.001984e-12
+Vy= 3.584725e-06
+Time = 1.5e-05
+
+GAMGPCG:  Solving for cellDisplacementx, Initial residual = 0, Final residual = 0, No Iterations 0
+Total solver time is 0
+Total solver time is 0
+Total solver time is 1
+GAMGPCG:  Solving for cellDisplacementy, Initial residual = 0.1797342, Final residual = 1.800929e-09, No Iterations 1
+GAMGPCG:  Solving for cellDisplacementz, Initial residual = 0, Final residual = 0, No Iterations 0
+volume continuity errors : volume = 4.535015, max error = 9.811909e-09, sum local = 6.940482e-15, global = 3.794262e-19
+smoothSolver:  Solving for Ux, Initial residual = 0.9921804, Final residual = 4.933075e-07, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.1844033, Final residual = 8.681334e-07, No Iterations 1
+smoothSolver:  Solving for Uz, Initial residual = 0.9461003, Final residual = 1.180463e-06, No Iterations 1
+GPU: 518 iters: 26.70076 s: 19.99347 GB/s
+Total exec time 155.7855
+ Total comm time 3.0015Pre time 0.2203447 Post time 2.781155
+GPUBICGS:  Solving for p, Initial residual = 0.002799851, Final residual = 2.056951e-05, No Iterations 518
+GPU: 118 iters: 6.095881 s: 19.9493 GB/s
+Total exec time 161.8814
+ Total comm time 3.114891Pre time 0.2286234 Post time 2.886267
+GPUBICGS:  Solving for p, Initial residual = 0.09488333, Final residual = 0.0009061409, No Iterations 118
+time step continuity errors : sum local = 3.256181e-10, global = -6.599276e-11, cumulative = -3.970252e-09
+Moving mesh time step continuity errors : sum local = 3.256181e-10, global = -6.599276e-11, cumulative = -4.036245e-09
+GPU: 155 iters: 8.000774 s: 19.96557 GB/s
+Total exec time 169.8822
+ Total comm time 3.264638Pre time 0.2397987 Post time 3.024839
+GPUBICGS:  Solving for p, Initial residual = 0.02189126, Final residual = 0.0001943005, No Iterations 155
+GPU: 652 iters: 33.63109 s: 19.97969 GB/s
+Total exec time 203.5133
+ Total comm time 3.890183Pre time 0.2854016 Post time 3.604781
+GPUBICGS:  Solving for p, Initial residual = 0.007333146, Final residual = 9.837323e-08, No Iterations 652
+time step continuity errors : sum local = 3.196004e-14, global = -4.171649e-15, cumulative = -4.036249e-09
+Moving mesh time step continuity errors : sum local = 3.196004e-14, global = -4.171649e-15, cumulative = -4.036253e-09
+smoothSolver:  Solving for k, Initial residual = 0.003835884, Final residual = 2.147255e-09, No Iterations 1
+ExecutionTime = 355.5 s  ClockTime = 360 s
+
+Courant Number mean: 7.68329e-05 max: 0.002858845 velocity magnitude: 0.9530171
+yForce = -3.993944
+Y= 4.755436e-12
+Vy= 1.118245e-06
+Time = 2e-05
+
+GAMGPCG:  Solving for cellDisplacementx, Initial residual = 0, Final residual = 0, No Iterations 0
+Total solver time is 0
+Total solver time is 0
+Total solver time is 1
+GAMGPCG:  Solving for cellDisplacementy, Initial residual = 1, Final residual = 3.111117e-09, No Iterations 1
+GAMGPCG:  Solving for cellDisplacementz, Initial residual = 0, Final residual = 0, No Iterations 0
+volume continuity errors : volume = 4.535015, max error = 1.138506e-08, sum local = 6.961644e-15, global = -7.068139e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.05057172, Final residual = 5.06313e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.01295743, Final residual = 9.190989e-08, No Iterations 1
+smoothSolver:  Solving for Uz, Initial residual = 0.882366, Final residual = 9.49358e-07, No Iterations 1
+GPU: 42 iters: 2.188891 s: 19.77458 GB/s
+Total exec time 205.7022
+ Total comm time 3.927052Pre time 0.2883897 Post time 3.638662
+GPUBICGS:  Solving for p, Initial residual = 0.2265105, Final residual = 0.001933821, No Iterations 42
+GPU: 120 iters: 6.225726 s: 19.8643 GB/s
+Total exec time 211.9279
+ Total comm time 4.043726Pre time 0.2974238 Post time 3.746302
+GPUBICGS:  Solving for p, Initial residual = 0.01209381, Final residual = 0.0001207522, No Iterations 120
+time step continuity errors : sum local = 3.254685e-11, global = 4.293317e-13, cumulative = -4.035824e-09
+Moving mesh time step continuity errors : sum local = 3.254685e-11, global = 4.293317e-13, cumulative = -4.035395e-09
+GPU: 155 iters: 8.012626 s: 19.93604 GB/s
+Total exec time 219.9405
+ Total comm time 4.206Pre time 0.3086956 Post time 3.897305
+GPUBICGS:  Solving for p, Initial residual = 0.004193108, Final residual = 3.917333e-05, No Iterations 155
+GPU: 526 iters: 27.14021 s: 19.97352 GB/s
+Total exec time 247.0807
+ Total comm time 4.726686Pre time 0.3453414 Post time 4.381345
+GPUBICGS:  Solving for p, Initial residual = 0.001778356, Final residual = 9.301602e-08, No Iterations 526
+time step continuity errors : sum local = 2.4985e-14, global = -2.321885e-15, cumulative = -4.035397e-09
+Moving mesh time step continuity errors : sum local = 2.4985e-14, global = -2.321885e-15, cumulative = -4.035399e-09
+smoothSolver:  Solving for k, Initial residual = 0.002273483, Final residual = 1.353655e-09, No Iterations 1
+ExecutionTime = 431.08 s  ClockTime = 436 s
+
+Courant Number mean: 7.683348e-05 max: 0.002856738 velocity magnitude: 0.9523148
+yForce = -0.3791163
+Y= 9.761343e-12
+Vy= 8.841182e-07
+Time = 2.5e-05
+
+GAMGPCG:  Solving for cellDisplacementx, Initial residual = 0, Final residual = 0, No Iterations 0
+Total solver time is 0
+Total solver time is 0
+Total solver time is 1
+GAMGPCG:  Solving for cellDisplacementy, Initial residual = 0.5170719, Final residual = 2.592341e-09, No Iterations 1
+GAMGPCG:  Solving for cellDisplacementz, Initial residual = 0, Final residual = 0, No Iterations 0
+volume continuity errors : volume = 4.535015, max error = 9.751774e-09, sum local = 7.038733e-15, global = 5.431403e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.02707274, Final residual = 1.780077e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.004492942, Final residual = 3.158538e-08, No Iterations 1
+smoothSolver:  Solving for Uz, Initial residual = 0.7577711, Final residual = 5.322881e-07, No Iterations 1
+GPU: 9 iters: 0.491718 s: 18.8629 GB/s
+Total exec time 247.5724
+ Total comm time 4.734496Pre time 0.3459758 Post time 4.38852
+GPUBICGS:  Solving for p, Initial residual = 0.1534127, Final residual = 0.001459238, No Iterations 9
+GPU: 118 iters: 6.099869 s: 19.93626 GB/s
+Total exec time 253.6723
+ Total comm time 4.8579Pre time 0.3542113 Post time 4.503689
+GPUBICGS:  Solving for p, Initial residual = 0.003690519, Final residual = 3.474091e-05, No Iterations 118
+time step continuity errors : sum local = 8.257966e-12, global = -8.972703e-14, cumulative = -4.035489e-09
+Moving mesh time step continuity errors : sum local = 8.257966e-12, global = -8.972703e-14, cumulative = -4.035579e-09
+GPU: 189 iters: 9.740021 s: 19.99788 GB/s
+Total exec time 263.4123
+ Total comm time 5.033315Pre time 0.367519 Post time 4.665796
+GPUBICGS:  Solving for p, Initial residual = 0.0009328185, Final residual = 9.700416e-06, No Iterations 189
+GPU: 441 iters: 22.70813 s: 20.01425 GB/s
+Total exec time 286.1205
+ Total comm time 5.455365Pre time 0.3995924 Post time 5.055773
+GPUBICGS:  Solving for p, Initial residual = 0.0003282201, Final residual = 4.422858e-08, No Iterations 441
+time step continuity errors : sum local = 1.04936e-14, global = -2.590343e-15, cumulative = -4.035581e-09
+Moving mesh time step continuity errors : sum local = 1.04936e-14, global = -2.590343e-15, cumulative = -4.035584e-09
+smoothSolver:  Solving for k, Initial residual = 0.001554987, Final residual = 9.81288e-10, No Iterations 1
+ExecutionTime = 501.95 s  ClockTime = 507 s
+
+Courant Number mean: 7.68336e-05 max: 0.002854617 velocity magnitude: 0.9516077
+yForce = 1.489682
+Y= 1.648183e-11
+Vy= 1.804076e-06
+Time = 3e-05
+
+GAMGPCG:  Solving for cellDisplacementx, Initial residual = 0, Final residual = 0, No Iterations 0
+Total solver time is 0
+Total solver time is 0
+Total solver time is 1
+GAMGPCG:  Solving for cellDisplacementy, Initial residual = 0.4755636, Final residual = 1.611251e-09, No Iterations 1
+GAMGPCG:  Solving for cellDisplacementz, Initial residual = 0, Final residual = 0, No Iterations 0
+volume continuity errors : volume = 4.535015, max error = 9.148094e-09, sum local = 7.051588e-15, global = -1.86299e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.01761704, Final residual = 8.823246e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.00123876, Final residual = 1.623142e-08, No Iterations 1
+smoothSolver:  Solving for Uz, Initial residual = 0.2000446, Final residual = 1.427772e-06, No Iterations 1
+GPU: 3 iters: 0.1869096 s: 16.54138 GB/s
+Total exec time 286.3074
+ Total comm time 5.458825Pre time 0.3998406 Post time 5.058985
+GPUBICGS:  Solving for p, Initial residual = 0.108844, Final residual = 0.0007001648, No Iterations 3
+GPU: 43 iters: 2.245395 s: 19.73594 GB/s
+Total exec time 288.5528
+ Total comm time 5.497238Pre time 0.4027917 Post time 5.094446
+GPUBICGS:  Solving for p, Initial residual = 0.001321391, Final residual = 1.266208e-05, No Iterations 43
+time step continuity errors : sum local = 2.716372e-12, global = -4.509363e-15, cumulative = -4.035588e-09
+Moving mesh time step continuity errors : sum local = 2.716372e-12, global = -4.509363e-15, cumulative = -4.035593e-09
+GPU: 33 iters: 1.731849 s: 19.63749 GB/s
+Total exec time 290.2846
+ Total comm time 5.526587Pre time 0.4051461 Post time 5.121441
+GPUBICGS:  Solving for p, Initial residual = 0.0002615022, Final residual = 9.951016e-06, No Iterations 33
+GPU: 458 iters: 23.56919 s: 20.0264 GB/s
+Total exec time 313.8538
+ Total comm time 5.942116Pre time 0.4377274 Post time 5.504389
+GPUBICGS:  Solving for p, Initial residual = 0.0001025485, Final residual = 9.173172e-08, No Iterations 458
+time step continuity errors : sum local = 1.967153e-14, global = -1.799609e-14, cumulative = -4.035611e-09
+Moving mesh time step continuity errors : sum local = 1.967153e-14, global = -1.799609e-14, cumulative = -4.035629e-09
+smoothSolver:  Solving for k, Initial residual = 0.001157026, Final residual = 7.629509e-10, No Iterations 1
+ExecutionTime = 562.2 s  ClockTime = 568 s
+
+Courant Number mean: 7.68337e-05 max: 0.002852248 velocity magnitude: 0.9508181
+yForce = -0.8659508
+Y= 2.416527e-11
+Vy= 1.269302e-06
+Time = 3.5e-05
+
+GAMGPCG:  Solving for cellDisplacementx, Initial residual = 0, Final residual = 0, No Iterations 0
+Total solver time is 0
+Total solver time is 0
+Total solver time is 1
+GAMGPCG:  Solving for cellDisplacementy, Initial residual = 0.3901345, Final residual = 1.256662e-09, No Iterations 1
+GAMGPCG:  Solving for cellDisplacementz, Initial residual = 0, Final residual = 0, No Iterations 0
+volume continuity errors : volume = 4.535015, max error = 1.097774e-08, sum local = 7.069498e-15, global = -2.339381e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.01352928, Final residual = 6.939392e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.000961794, Final residual = 1.214032e-08, No Iterations 1
+smoothSolver:  Solving for Uz, Initial residual = 0.4024178, Final residual = 2.810411e-06, No Iterations 1
+GPU: 2 iters: 0.1338931 s: 15.39408 GB/s
+Total exec time 313.9877
+ Total comm time 5.945294Pre time 0.4378939 Post time 5.5074
+GPUBICGS:  Solving for p, Initial residual = 0.09114565, Final residual = 0.0003744167, No Iterations 2
+GPU: 22 iters: 1.155766 s: 19.61711 GB/s
+Total exec time 315.1435
+ Total comm time 5.966933Pre time 0.4395159 Post time 5.527417
+GPUBICGS:  Solving for p, Initial residual = 0.000558309, Final residual = 9.77292e-06, No Iterations 22
+time step continuity errors : sum local = 1.925206e-12, global = -3.800554e-14, cumulative = -4.035667e-09
+Moving mesh time step continuity errors : sum local = 1.925206e-12, global = -3.800554e-14, cumulative = -4.035705e-09
+GPU: 8 iters: 0.4495009 s: 18.34178 GB/s
+Total exec time 315.593
+ Total comm time 5.972902Pre time 0.4401118 Post time 5.53279
+GPUBICGS:  Solving for p, Initial residual = 8.192877e-05, Final residual = 9.482391e-06, No Iterations 8
+GPU: 467 iters: 24.07112 s: 19.99413 GB/s
+Total exec time 339.6641
+ Total comm time 6.440707Pre time 0.474526 Post time 5.966181
+GPUBICGS:  Solving for p, Initial residual = 2.892754e-05, Final residual = 9.939138e-08, No Iterations 467
+time step continuity errors : sum local = 1.957672e-14, global = -1.012139e-14, cumulative = -4.035715e-09
+Moving mesh time step continuity errors : sum local = 1.957672e-14, global = -1.012139e-14, cumulative = -4.035725e-09
+smoothSolver:  Solving for k, Initial residual = 0.0009098162, Final residual = 6.331167e-10, No Iterations 1
+ExecutionTime = 620.73 s  ClockTime = 627 s
+
+Courant Number mean: 7.683375e-05 max: 0.002849504 velocity magnitude: 0.9499033
+yForce = 0.08539481
+Y= 3.064361e-11
+Vy= 1.322036e-06
+Time = 4e-05
+
+GAMGPCG:  Solving for cellDisplacementx, Initial residual = 0, Final residual = 0, No Iterations 0
+Total solver time is 0
+Total solver time is 0
+Total solver time is 1
+GAMGPCG:  Solving for cellDisplacementy, Initial residual = 0.2747548, Final residual = 9.530142e-10, No Iterations 1
+GAMGPCG:  Solving for cellDisplacementz, Initial residual = 0, Final residual = 0, No Iterations 0
+volume continuity errors : volume = 4.535015, max error = 9.635744e-09, sum local = 7.077897e-15, global = 2.070295e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.01095608, Final residual = 5.67771e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0008056566, Final residual = 9.767298e-09, No Iterations 1
+smoothSolver:  Solving for Uz, Initial residual = 0.2637646, Final residual = 2.696297e-06, No Iterations 1
+GPU: 2 iters: 0.1402829 s: 14.6929 GB/s
+Total exec time 339.8044
+ Total comm time 6.444195Pre time 0.4746861 Post time 5.969508
+GPUBICGS:  Solving for p, Initial residual = 0.07497386, Final residual = 0.0001462776, No Iterations 2
+GPU: 9 iters: 0.5005562 s: 18.52984 GB/s
+Total exec time 340.3049
+ Total comm time 6.449854Pre time 0.4753215 Post time 5.974532
+GPUBICGS:  Solving for p, Initial residual = 0.0002943281, Final residual = 9.68826e-06, No Iterations 9
+time step continuity errors : sum local = 1.773094e-12, global = 5.518362e-15, cumulative = -4.03572e-09
+Moving mesh time step continuity errors : sum local = 1.773094e-12, global = 5.518362e-15, cumulative = -4.035714e-09
+GPU: 2 iters: 0.1347405 s: 15.29726 GB/s
+Total exec time 340.4397
+ Total comm time 6.453939Pre time 0.4755226 Post time 5.978416
+GPUBICGS:  Solving for p, Initial residual = 3.582353e-05, Final residual = 9.923196e-06, No Iterations 2
+GPU: 259 iters: 13.36497 s: 19.97165 GB/s
+Total exec time 353.8046
+ Total comm time 6.713151Pre time 0.4949142 Post time 6.218237
+GPUBICGS:  Solving for p, Initial residual = 1.563489e-05, Final residual = 9.983046e-08, No Iterations 259
+time step continuity errors : sum local = 1.82695e-14, global = 1.129466e-14, cumulative = -4.035703e-09
+Moving mesh time step continuity errors : sum local = 1.82695e-14, global = 1.129466e-14, cumulative = -4.035692e-09
+smoothSolver:  Solving for k, Initial residual = 0.000743744, Final residual = 5.397659e-10, No Iterations 1
+ExecutionTime = 667.35 s  ClockTime = 674 s
+
+Courant Number mean: 7.683377e-05 max: 0.002846384 velocity magnitude: 0.9488633
+yForce = 0.2018798
+Y= 3.756547e-11
+Vy= 1.446705e-06
+Time = 4.5e-05
+
+GAMGPCG:  Solving for cellDisplacementx, Initial residual = 0, Final residual = 0, No Iterations 0
+Total solver time is 0
+Total solver time is 0
+Total solver time is 1
+GAMGPCG:  Solving for cellDisplacementy, Initial residual = 0.245504, Final residual = 7.83285e-10, No Iterations 1
+GAMGPCG:  Solving for cellDisplacementz, Initial residual = 0, Final residual = 0, No Iterations 0
+volume continuity errors : volume = 4.535015, max error = 8.015633e-09, sum local = 7.073333e-15, global = 6.785959e-19
+smoothSolver:  Solving for Ux, Initial residual = 0.009362791, Final residual = 4.836519e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0006803517, Final residual = 8.073788e-09, No Iterations 1
+smoothSolver:  Solving for Uz, Initial residual = 0.3191606, Final residual = 1.701703e-06, No Iterations 1
+GPU: 2 iters: 0.1345551 s: 15.31835 GB/s
+Total exec time 353.9392
+ Total comm time 6.716395Pre time 0.4950894 Post time 6.221305
+GPUBICGS:  Solving for p, Initial residual = 0.06277085, Final residual = 0.0001103248, No Iterations 2
+GPU: 8 iters: 0.4425086 s: 18.63161 GB/s
+Total exec time 354.3817
+ Total comm time 6.726489Pre time 0.4956988 Post time 6.230791
+GPUBICGS:  Solving for p, Initial residual = 0.0002191648, Final residual = 9.316052e-06, No Iterations 8
+time step continuity errors : sum local = 1.597774e-12, global = 3.721459e-14, cumulative = -4.035654e-09
+Moving mesh time step continuity errors : sum local = 1.597774e-12, global = 3.721459e-14, cumulative = -4.035617e-09
+GPU: 2 iters: 0.1345912 s: 15.31424 GB/s
+Total exec time 354.5163
+ Total comm time 6.727969Pre time 0.495864 Post time 6.232105
+GPUBICGS:  Solving for p, Initial residual = 2.337408e-05, Final residual = 9.443482e-06, No Iterations 2
+GPU: 375 iters: 19.31912 s: 20.00442 GB/s
+Total exec time 373.8354
+ Total comm time 7.093344Pre time 0.5234003 Post time 6.569943
+GPUBICGS:  Solving for p, Initial residual = 1.14755e-05, Final residual = 9.972248e-08, No Iterations 375
+time step continuity errors : sum local = 1.710259e-14, global = 4.576905e-15, cumulative = -4.035613e-09
+Moving mesh time step continuity errors : sum local = 1.710259e-14, global = 4.576905e-15, cumulative = -4.035608e-09
+smoothSolver:  Solving for k, Initial residual = 0.0006256343, Final residual = 4.717996e-10, No Iterations 1
+ExecutionTime = 719.69 s  ClockTime = 726 s
+
+Courant Number mean: 7.683376e-05 max: 0.002842883 velocity magnitude: 0.9482459
+yForce = -0.1525436
+Y= 4.456348e-11
+Vy= 1.352499e-06
+Time = 5e-05
+
+GAMGPCG:  Solving for cellDisplacementx, Initial residual = 0, Final residual = 0, No Iterations 0
+Total solver time is 0
+Total solver time is 0
+Total solver time is 1
+GAMGPCG:  Solving for cellDisplacementy, Initial residual = 0.2129773, Final residual = 7.065034e-10, No Iterations 1
+GAMGPCG:  Solving for cellDisplacementz, Initial residual = 0, Final residual = 0, No Iterations 0
+volume continuity errors : volume = 4.535015, max error = 7.921985e-09, sum local = 7.068607e-15, global = -1.134737e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.008280926, Final residual = 4.21993e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0005949873, Final residual = 6.847821e-09, No Iterations 1
+smoothSolver:  Solving for Uz, Initial residual = 0.2819686, Final residual = 9.150233e-07, No Iterations 1
+GPU: 2 iters: 0.1335631 s: 15.43212 GB/s
+Total exec time 373.969
+ Total comm time 7.09653Pre time 0.5235834 Post time 6.572947
+GPUBICGS:  Solving for p, Initial residual = 0.05636726, Final residual = 8.505914e-05, No Iterations 2
+GPU: 6 iters: 0.339691 s: 18.20326 GB/s
+Total exec time 374.3087
+ Total comm time 7.103053Pre time 0.524048 Post time 6.579005
+GPUBICGS:  Solving for p, Initial residual = 0.0001704475, Final residual = 8.95507e-06, No Iterations 6
+time step continuity errors : sum local = 1.449121e-12, global = -1.153529e-14, cumulative = -4.03562e-09
+Moving mesh time step continuity errors : sum local = 1.449121e-12, global = -1.153529e-14, cumulative = -4.035631e-09
+GPU: 1 iters: 0.08936477 s: 11.53229 GB/s
+Total exec time 374.398
+ Total comm time 7.103998Pre time 0.5241399 Post time 6.579858
+GPUBICGS:  Solving for p, Initial residual = 1.873263e-05, Final residual = 9.45262e-06, No Iterations 1
+GPU: 446 iters: 22.98547 s: 19.99694 GB/s
+Total exec time 397.3835
+ Total comm time 7.550232Pre time 0.5565151 Post time 6.993716
+GPUBICGS:  Solving for p, Initial residual = 1.047411e-05, Final residual = 9.259035e-08, No Iterations 446
+time step continuity errors : sum local = 1.498272e-14, global = 6.962529e-15, cumulative = -4.035624e-09
+Moving mesh time step continuity errors : sum local = 1.498272e-14, global = 6.962529e-15, cumulative = -4.035617e-09
+smoothSolver:  Solving for k, Initial residual = 0.0005379125, Final residual = 4.204897e-10, No Iterations 1
+ExecutionTime = 775.01 s  ClockTime = 782 s
+
+yForce = 0.04445726
+Y= 5.13946e-11
+Vy= 1.379952e-06
+End
+
+Finalising parallel run

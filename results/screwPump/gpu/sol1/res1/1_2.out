@@ -1,0 +1,1534 @@
+ Data for JOB [27940,1] offset 0
+
+ ========================   JOB MAP   ========================
+
+ Data for node: ivb194	Num slots: 2	Max slots: 0	Num procs: 2
+ 	Process OMPI jobid: [27940,1] App: 0 Process rank: 0
+ 	Process OMPI jobid: [27940,1] App: 0 Process rank: 1
+
+ =============================================================
+[ivb194:03235] MCW rank 1 bound to socket 0[core 1[hwt 0]]: [./B/./././././././.][./././././././././.]
+[ivb194:03235] MCW rank 0 bound to socket 0[core 0[hwt 0]]: [B/././././././././.][./././././././././.]
+1
+0
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     3.1                                |
+|   \\  /    A nd           | Web:         http://www.extend-project.de       |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build    : 3.1-e2da948002a2
+Exec     : pimpleDyMFoam -parallel
+Date     : May 25 2016
+Time     : 06:28:53
+Host     : ivb194
+PID      : 3259
+CtrlDict : /home-2/vplatonov/foam/foam-extend-3.1/etc/controlDict
+Case     : /home/vplatonov/tests/screwPump-8mln
+nProcs   : 2
+Slaves : 
+1
+(
+ivb194.3260
+)
+
+Pstream initialized with:
+    floatTransfer     : 0
+    nProcsSimpleSum   : 0
+    commsType         : blocking
+SigFpe   : Enabling floating point exception trapping (FOAM_SIGFPE).
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create dynamic mesh for time = 0
+
+Selecting dynamicFvMesh mixerGgiFvMesh
+Initializing the GGI interpolator between master/shadow patches: stator-slider/rotor-slider
+void mixerGgiFvMesh::addZonesAndModifiers() : Zones and modifiers already present.  Skipping.
+Mixer mesh:
+    origin: (0 0 0)
+    axis  : (0 1 0)
+    rpm   : 2000
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type LESModel
+Selecting LES turbulence model Smagorinsky
+SmagorinskyCoeffs
+{
+    ce              1.048;
+    ck              0.094;
+}
+
+Reading field rAU if present
+
+
+Starting time loop
+
+Courant Number mean: 0 max: 0 velocity magnitude: 0
+Creating ggi check function object
+Time = 1e-06
+
+volume continuity errors : volume = 0.4378, max error = 5.3993e-07, sum local = 9.49949e-15, global = -3.0311e-18
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 2.41813e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 1, Final residual = 1.94125e-08, No Iterations 1
+smoothSolver:  Solving for Uz, Initial residual = 1, Final residual = 2.37644e-08, No Iterations 1
+Created persistent data with name p
+[0] Building level 0
+[1] Building level 0
+[1] Building level 1
+Creating AMGLevel 
+[0] Building level 1
+[1] Building level 2
+Creating AMGLevel 
+[0] Building level 2
+[1] Building level 3
+Creating AMGLevel 
+[0] Building level 3
+[1] Building level 4
+Creating AMGLevel 
+[0] Building level 4
+[1] Building level 5
+Creating AMGLevel 
+[1] Building level 6
+[0] Building level 5
+[1] Building level 7
+[1] Building level 8
+[1] Building level 9
+Creating AMGLevel 
+[0] Building level 6
+[1] Building level 10
+[1] Building level 11
+[1] Building level 12
+[1] Building level 13
+[1] Building level 14
+Creating AMGLevel 
+[0] Building level 7
+Creating AMGLevel 
+[0] Building level 8
+Creating AMGLevel 
+[0] Building level 9
+Creating AMGLevel 
+[0] Building level 10
+Creating AMGLevel 
+[0] Building level 11
+Creating AMGLevel 
+[0] Building level 12
+Creating AMGLevel 
+[0] Building level 13
+Creating AMGLevel 
+[0] Building level 14
+Creating AMGLevel 
+14 Level construction complete
+initial dot_x = 0
+GMRES:  Solving for topLevelCorr, Initial residual = 0.864231, Final residual = 0.916943, No Iterations 200
+Iter #1 residual = 1.31698
+Iter #2 residual = 0.708776
+Iter #3 residual = 0.314973
+Iter #4 residual = 0.169067
+Iter #5 residual = 0.108218
+Iter #6 residual = 0.0694546
+Iter #7 residual = 0.0477955
+Iter #8 residual = 0.0338061
+Iter #9 residual = 0.0256688
+Iter #10 residual = 0.0196759
+Iter #11 residual = 0.0156709
+Iter #12 residual = 0.0126539
+Iter #13 residual = 0.0102574
+Iter #14 residual = 0.00886944
+Iter #15 residual = 0.00738652
+Iter #16 residual = 0.0062631
+Iter #17 residual = 0.00529081
+Iter #18 residual = 0.00453718
+Iter #19 residual = 0.00377818
+Iter #20 residual = 0.00339394
+Iter #21 residual = 0.00271178
+Iter #22 residual = 0.00264325
+Iter #23 residual = 0.0019781
+Iter #24 residual = 0.00213994
+Iter #25 residual = 0.00144272
+Iter #26 residual = 0.0018386
+Iter #27 residual = 0.00106618
+Iter #28 residual = 0.00141432
+GPU: 28 iters: 6.26011 s: 3.98359 GB/s
+GPUAMG:  Solving for p, Initial residual = 1, Final residual = 0.000748947, No Iterations 28
+[1] Building level 0
+[0] Building level 0
+[1] Building level 1
+[0] Building level 1
+[1] Building level 2
+[0] Building level 2
+[1] Building level 3
+[0] Building level 3
+[1] Building level 4
+[0] Building level 4
+[1] Building level 5
+[0] Building level 5
+[1] Building level 6
+[1] Building level 7
+[0] Building level 6
+[1] Building level 8
+[1] Building level 9
+[1] Building level 10
+[1] Building level 11
+[1] Building level 12
+[1] Building level 13
+[1] Building level 14
+[0] Building level 7
+[0] Building level 8
+[0] Building level 9
+[0] Building level 10
+[0] Building level 11
+[0] Building level 12
+[0] Building level 13
+[0] Building level 14
+14 Level construction complete
+initial dot_x = 2.99792e+16
+Iter #1 residual = 0.327812
+Iter #2 residual = 0.143345
+Iter #3 residual = 0.0873617
+Iter #4 residual = 0.0617935
+Iter #5 residual = 0.046174
+Iter #6 residual = 0.0393392
+Iter #7 residual = 0.0355856
+Iter #8 residual = 0.0293285
+Iter #9 residual = 0.0281055
+Iter #10 residual = 0.0194261
+Iter #11 residual = 0.0192198
+Iter #12 residual = 0.0144555
+Iter #13 residual = 0.0236371
+Iter #14 residual = 0.0130065
+Iter #15 residual = 0.0238331
+Iter #16 residual = 0.010887
+Iter #17 residual = 0.00810487
+Iter #18 residual = 0.00566205
+Iter #19 residual = 0.00514219
+Iter #20 residual = 0.00383973
+Iter #21 residual = 0.00517447
+Iter #22 residual = 0.0030773
+Iter #23 residual = 0.00496036
+Iter #24 residual = 0.0024543
+Iter #25 residual = 0.00264601
+Iter #26 residual = 0.0014421
+Iter #27 residual = 0.00167525
+Iter #28 residual = 0.000888251
+Iter #29 residual = 0.00084755
+Iter #30 residual = 0.000513128
+Iter #31 residual = 0.00055177
+Iter #32 residual = 0.000324002
+Iter #33 residual = 0.000339971
+GPU: 33 iters: 7.21565 s: 4.07321 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.269684, Final residual = 0.000208142, No Iterations 33
+time step continuity errors : sum local = 1.57957e-08, global = -7.32624e-10, cumulative = -7.32624e-10
+Moving mesh time step continuity errors : sum local = 1.57957e-08, global = -7.32624e-10, cumulative = -1.46525e-09
+ExecutionTime = 106.71 s  ClockTime = 112 s
+
+Courant Number mean: 0.00257133 max: 0.137692 velocity magnitude: 107.493
+GGI pair (stator-slider, rotor-slider) : 3.51963 6.99591 Diff = 0.000124533 or 0.00353823 %
+Time = 2e-06
+
+volume continuity errors : volume = 0.4378, max error = 4.33092e-07, sum local = 8.16387e-15, global = -2.72617e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.33498, Final residual = 2.37667e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.302702, Final residual = 4.44062e-09, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.334945, Final residual = 1.4588e-09, No Iterations 2
+[1] Building level 0
+[0] Building level 0
+[1] Building level 1
+[0] Building level 1
+Reconstruction on level 1
+[1] Building level 2
+Creating AMGLevel 
+[0] Building level 2
+Reconstruction on level 2
+Creating AMGLevel 
+[0] Building level 3
+Reconstruction on level 3
+[1] Building level 3
+Creating AMGLevel 
+[0] Building level 4
+Reconstruction on level 4
+[1] Building level 4
+Creating AMGLevel 
+[0] Building level 5
+Reconstruction on level 5
+[1] Building level 5
+Creating AMGLevel 
+[0] Building level 6
+Reconstruction on level 6
+[1] Building level 6
+Creating AMGLevel 
+[0] Building level 7
+Reconstruction on level 7
+[1] Building level 7
+Creating AMGLevel 
+[0] Building level 8
+Reconstruction on level 8
+Creating AMGLevel 
+[0] Building level 9
+Reconstruction on level 9
+[1] Building level 8
+Creating AMGLevel 
+[0] Building level 10
+Reconstruction on level 10
+Creating AMGLevel 
+[0] Building level 11
+Reconstruction on level 11
+[1] Building level 9
+Creating AMGLevel 
+[0] Building level 12
+Reconstruction on level 12
+Creating AMGLevel 
+[0] Building level 13
+Reconstruction on level 13
+Creating AMGLevel 
+[0] Building level 14
+Reconstruction on level 14
+Creating AMGLevel 
+14 Level construction complete
+[1] Building level 10
+[1] Building level 11
+[1] Building level 12
+[1] Building level 13
+[1] Building level 14
+initial dot_x = 2.74435e+18
+Iter #1 residual = 0.211168
+Iter #2 residual = 0.101722
+Iter #3 residual = 0.0505465
+Iter #4 residual = 0.0271403
+Iter #5 residual = 0.0157753
+Iter #6 residual = 0.00965215
+Iter #7 residual = 0.00615583
+Iter #8 residual = 0.0041908
+Iter #9 residual = 0.00291496
+Iter #10 residual = 0.00235083
+Iter #11 residual = 0.00164914
+Iter #12 residual = 0.00258493
+Iter #13 residual = 0.00129472
+Iter #14 residual = 0.00122528
+Iter #15 residual = 0.000744119
+Iter #16 residual = 0.000617588
+Iter #17 residual = 0.000489102
+Iter #18 residual = 0.000475777
+GPU: 18 iters: 4.10784 s: 3.90263 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.443822, Final residual = 0.000380625, No Iterations 18
+[0] Building level 0
+[1] Building level 0
+[1] Building level 1
+[0] Building level 1
+[1] Building level 2
+[0] Building level 2
+[1] Building level 3
+[0] Building level 3
+[1] Building level 4
+[0] Building level 4
+[1] Building level 5
+[0] Building level 5
+[1] Building level 6
+[0] Building level 6
+[1] Building level 7
+[0] Building level 7
+[1] Building level 8
+[0] Building level 8
+[1] Building level 9
+[0] Building level 9
+[1] Building level 10
+[0] Building level 10
+[1] Building level 11
+[0] Building level 11
+[1] Building level 12
+[0] Building level 12
+[1] Building level 13
+[0] Building level 13
+[1] Building level 14
+[0] Building level 14
+14 Level construction complete
+initial dot_x = 2.55462e+18
+Iter #1 residual = 0.0461417
+Iter #2 residual = 0.0243204
+Iter #3 residual = 0.0164737
+Iter #4 residual = 0.0133116
+Iter #5 residual = 0.01022
+Iter #6 residual = 0.00815325
+Iter #7 residual = 0.00665772
+Iter #8 residual = 0.00756221
+Iter #9 residual = 0.00482616
+Iter #10 residual = 0.00658816
+Iter #11 residual = 0.00386975
+Iter #12 residual = 0.00604663
+Iter #13 residual = 0.00291098
+Iter #14 residual = 0.00211557
+Iter #15 residual = 0.00149621
+Iter #16 residual = 0.00144006
+Iter #17 residual = 0.000976832
+Iter #18 residual = 0.00116395
+Iter #19 residual = 0.000705495
+Iter #20 residual = 0.0010791
+Iter #21 residual = 0.00052893
+Iter #22 residual = 0.000655628
+Iter #23 residual = 0.000300736
+Iter #24 residual = 0.000209988
+Iter #25 residual = 0.000144432
+Iter #26 residual = 0.000130001
+GPU: 26 iters: 5.8516 s: 3.95729 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.121092, Final residual = 9.06366e-05, No Iterations 26
+time step continuity errors : sum local = 1.52906e-08, global = 7.66732e-10, cumulative = -6.98516e-10
+Moving mesh time step continuity errors : sum local = 1.52906e-08, global = 7.66732e-10, cumulative = 6.82165e-11
+ExecutionTime = 172.9 s  ClockTime = 179 s
+
+Courant Number mean: 0.0027644 max: 0.226993 velocity magnitude: 112.574
+GGI pair (stator-slider, rotor-slider) : 5.63363 9.37629 Diff = 0.00570215 or 0.101216 %
+Time = 3e-06
+
+volume continuity errors : volume = 0.4378, max error = 4.09919e-07, sum local = 7.36552e-15, global = 4.23975e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.19355, Final residual = 9.7637e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.131539, Final residual = 2.01167e-08, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.173423, Final residual = 5.30493e-09, No Iterations 2
+[1] Building level 0
+[0] Building level 0
+[1] Building level 1
+[0] Building level 1
+Reconstruction on level 1
+[1] Building level 2
+Creating AMGLevel 
+[0] Building level 2
+Reconstruction on level 2
+[1] Building level 3
+Creating AMGLevel 
+[0] Building level 3
+Reconstruction on level 3
+[1] Building level 4
+Creating AMGLevel 
+[0] Building level 4
+Reconstruction on level 4
+[1] Building level 5
+Creating AMGLevel 
+[0] Building level 5
+Reconstruction on level 5
+[1] Building level 6
+Creating AMGLevel 
+[0] Building level 6
+Reconstruction on level 6
+[1] Building level 7
+Creating AMGLevel 
+[0] Building level 7
+Reconstruction on level 7
+[1] Building level 8
+Creating AMGLevel 
+[0] Building level 8
+Reconstruction on level 8
+[1] Building level 9
+[1] Building level 10
+[1] Building level 11
+Creating AMGLevel 
+[0] Building level 9
+Reconstruction on level 9
+[1] Building level 12
+[1] Building level 13
+[1] Building level 14
+Creating AMGLevel 
+[0] Building level 10
+Reconstruction on level 10
+Creating AMGLevel 
+[0] Building level 11
+Reconstruction on level 11
+Creating AMGLevel 
+[0] Building level 12
+Reconstruction on level 12
+Creating AMGLevel 
+[0] Building level 13
+Reconstruction on level 13
+Creating AMGLevel 
+[0] Building level 14
+Reconstruction on level 14
+Creating AMGLevel 
+14 Level construction complete
+initial dot_x = 1.70423e+18
+Iter #1 residual = 0.0900243
+Iter #2 residual = 0.0458961
+Iter #3 residual = 0.0227669
+Iter #4 residual = 0.0131311
+Iter #5 residual = 0.0079917
+Iter #6 residual = 0.00516982
+Iter #7 residual = 0.00337136
+Iter #8 residual = 0.00232773
+Iter #9 residual = 0.0017591
+Iter #10 residual = 0.00133772
+Iter #11 residual = 0.0014658
+Iter #12 residual = 0.000804853
+Iter #13 residual = 0.00104738
+Iter #14 residual = 0.000564251
+Iter #15 residual = 0.000425404
+Iter #16 residual = 0.000394848
+Iter #17 residual = 0.000297093
+GMRES:  Solving for topLevelCorr, Initial residual = 0.889244, Final residual = 0.906944, No Iterations 200
+GPU: 17 iters: 3.89777 s: 3.88446 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.219881, Final residual = 0.000213923, No Iterations 17
+[1] Building level 0
+[0] Building level 0
+[1] Building level 1
+[0] Building level 1
+[1] Building level 2
+[0] Building level 2
+[1] Building level 3
+[0] Building level 3
+[1] Building level 4
+[0] Building level 4
+[1] Building level 5
+[0] Building level 5
+[1] Building level 6
+[0] Building level 6
+[0] Building level 7
+[1] Building level 7
+[0] Building level 8
+[1] Building level 8
+[0] Building level 9
+[1] Building level 9
+[0] Building level 10
+[0] Building level 11
+[1] Building level 10
+[0] Building level 12
+[0] Building level 13
+[0] Building level 14
+14 Level construction complete
+[1] Building level 11
+[1] Building level 12
+[1] Building level 13
+[1] Building level 14
+initial dot_x = 1.71243e+18
+Iter #1 residual = 0.0654807
+Iter #2 residual = 0.0242246
+Iter #3 residual = 0.0219892
+Iter #4 residual = 0.00980996
+Iter #5 residual = 0.00968717
+Iter #6 residual = 0.00507105
+Iter #7 residual = 0.00645641
+Iter #8 residual = 0.00335821
+Iter #9 residual = 0.00305487
+Iter #10 residual = 0.00200768
+Iter #11 residual = 0.0038249
+Iter #12 residual = 0.00175218
+Iter #13 residual = 0.00126269
+Iter #14 residual = 0.000866716
+Iter #15 residual = 0.000922853
+Iter #16 residual = 0.000596193
+Iter #17 residual = 0.00103559
+Iter #18 residual = 0.000500585
+Iter #19 residual = 0.000402058
+Iter #20 residual = 0.000260497
+Iter #21 residual = 0.000315681
+Iter #22 residual = 0.000190889
+Iter #23 residual = 0.000151358
+Iter #24 residual = 0.00011243
+Iter #25 residual = 0.000100972
+Iter #26 residual = 7.36473e-05
+Iter #27 residual = 7.6079e-05
+GPU: 27 iters: 6.01807 s: 3.99581 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.0729756, Final residual = 5.19054e-05, No Iterations 27
+time step continuity errors : sum local = 8.5912e-09, global = 3.27897e-10, cumulative = 3.96114e-10
+Moving mesh time step continuity errors : sum local = 8.5912e-09, global = 3.27897e-10, cumulative = 7.24011e-10
+ExecutionTime = 239.3 s  ClockTime = 247 s
+
+Courant Number mean: 0.00281636 max: 0.274786 velocity magnitude: 137.894
+GGI pair (stator-slider, rotor-slider) : 6.51734 9.75154 Diff = 0.00889691 or 0.136511 %
+Time = 4e-06
+
+volume continuity errors : volume = 0.4378, max error = 3.21144e-07, sum local = 7.13355e-15, global = -1.56724e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.0832231, Final residual = 1.07724e-08, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.0693172, Final residual = 2.11138e-08, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.0760002, Final residual = 5.64645e-09, No Iterations 2
+[1] Building level 0
+[0] Building level 0
+[1] Building level 1
+[0] Building level 1
+Reconstruction on level 1
+[1] Building level 2
+Creating AMGLevel 
+[0] Building level 2
+Reconstruction on level 2
+Creating AMGLevel 
+[1] Building level 3
+[0] Building level 3
+Reconstruction on level 3
+Creating AMGLevel 
+[1] Building level 4
+[0] Building level 4
+Reconstruction on level 4
+[1] Building level 5
+Creating AMGLevel 
+[0] Building level 5
+Reconstruction on level 5
+[1] Building level 6
+Creating AMGLevel 
+[0] Building level 6
+Reconstruction on level 6
+[1] Building level 7
+Creating AMGLevel 
+[0] Building level 7
+Reconstruction on level 7
+[1] Building level 8
+Creating AMGLevel 
+[0] Building level 8
+Reconstruction on level 8
+[1] Building level 9
+Creating AMGLevel 
+[0] Building level 9
+Reconstruction on level 9
+[1] Building level 10
+[1] Building level 11
+[1] Building level 12
+Creating AMGLevel 
+[0] Building level 10
+Reconstruction on level 10
+[1] Building level 13
+[1] Building level 14
+Creating AMGLevel 
+[0] Building level 11
+Reconstruction on level 11
+Creating AMGLevel 
+[0] Building level 12
+Reconstruction on level 12
+Creating AMGLevel 
+[0] Building level 13
+Reconstruction on level 13
+Creating AMGLevel 
+[0] Building level 14
+Reconstruction on level 14
+Creating AMGLevel 
+14 Level construction complete
+initial dot_x = 3.49123e+17
+Iter #1 residual = 0.0750777
+Iter #2 residual = 0.0358261
+Iter #3 residual = 0.0196687
+Iter #4 residual = 0.0114486
+Iter #5 residual = 0.00745519
+Iter #6 residual = 0.00484852
+Iter #7 residual = 0.00338153
+Iter #8 residual = 0.00251035
+Iter #9 residual = 0.00161743
+Iter #10 residual = 0.00222154
+Iter #11 residual = 0.00105276
+Iter #12 residual = 0.000962055
+Iter #13 residual = 0.000604427
+Iter #14 residual = 0.000863308
+Iter #15 residual = 0.000445498
+Iter #16 residual = 0.000298055
+Iter #17 residual = 0.000231266
+GPU: 17 iters: 3.93878 s: 3.84402 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.193749, Final residual = 0.000193284, No Iterations 17
+[1] Building level 0
+[0] Building level 0
+[1] Building level 1
+[0] Building level 1
+[1] Building level 2
+[0] Building level 2
+[1] Building level 3
+[0] Building level 3
+[1] Building level 4
+[0] Building level 4
+[1] Building level 5
+[0] Building level 5
+[1] Building level 6
+[0] Building level 6
+[1] Building level 7
+[1] Building level 8
+[1] Building level 9
+[0] Building level 7
+[1] Building level 10
+[1] Building level 11
+[1] Building level 12
+[1] Building level 13
+[1] Building level 14
+[0] Building level 8
+[0] Building level 9
+[0] Building level 10
+[0] Building level 11
+[0] Building level 12
+[0] Building level 13
+[0] Building level 14
+14 Level construction complete
+initial dot_x = 4.32424e+17
+Iter #1 residual = 0.0677356
+Iter #2 residual = 0.0240446
+Iter #3 residual = 0.0162198
+Iter #4 residual = 0.00763775
+Iter #5 residual = 0.00659269
+Iter #6 residual = 0.00370751
+Iter #7 residual = 0.00503909
+Iter #8 residual = 0.00236686
+Iter #9 residual = 0.00314225
+Iter #10 residual = 0.0014023
+Iter #11 residual = 0.00112793
+Iter #12 residual = 0.000690325
+Iter #13 residual = 0.000645351
+Iter #14 residual = 0.000433576
+Iter #15 residual = 0.00054306
+Iter #16 residual = 0.000296198
+Iter #17 residual = 0.000393733
+Iter #18 residual = 0.00019609
+Iter #19 residual = 0.000163502
+Iter #20 residual = 0.000110981
+Iter #21 residual = 0.000131417
+GPU: 21 iters: 4.75957 s: 3.92961 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.0873352, Final residual = 7.28979e-05, No Iterations 21
+time step continuity errors : sum local = 1.0102e-08, global = 5.42978e-10, cumulative = 1.26699e-09
+Moving mesh time step continuity errors : sum local = 1.0102e-08, global = 5.42978e-10, cumulative = 1.80997e-09
+ExecutionTime = 304.5 s  ClockTime = 313 s
+
+Courant Number mean: 0.00279952 max: 0.291134 velocity magnitude: 153.11
+GGI pair (stator-slider, rotor-slider) : 6.52994 9.28124 Diff = 0.0101481 or 0.155409 %
+Time = 5e-06
+
+volume continuity errors : volume = 0.4378, max error = 3.70513e-07, sum local = 7.00194e-15, global = 1.33928e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.0386488, Final residual = 6.79263e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.0352271, Final residual = 1.06781e-08, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.0270243, Final residual = 3.48273e-09, No Iterations 2
+[1] Building level 0
+[0] Building level 0
+[1] Building level 1
+[0] Building level 1
+Reconstruction on level 1
+[1] Building level 2
+Creating AMGLevel 
+[0] Building level 2
+Reconstruction on level 2
+Creating AMGLevel 
+[1] Building level 3
+[0] Building level 3
+Reconstruction on level 3
+Creating AMGLevel 
+[1] Building level 4
+[0] Building level 4
+Reconstruction on level 4
+[1] Building level 5
+Creating AMGLevel 
+[0] Building level 5
+Reconstruction on level 5
+[1] Building level 6
+Creating AMGLevel 
+[0] Building level 6
+Reconstruction on level 6
+[1] Building level 7
+Creating AMGLevel 
+[0] Building level 7
+Reconstruction on level 7
+[1] Building level 8
+Creating AMGLevel 
+[0] Building level 8
+Reconstruction on level 8
+[1] Building level 9
+Creating AMGLevel 
+[0] Building level 9
+Reconstruction on level 9
+[1] Building level 10
+[1] Building level 11
+Creating AMGLevel 
+[0] Building level 10
+Reconstruction on level 10
+[1] Building level 12
+[1] Building level 13
+Creating AMGLevel 
+[0] Building level 11
+Reconstruction on level 11
+[1] Building level 14
+Creating AMGLevel 
+[0] Building level 12
+Reconstruction on level 12
+Creating AMGLevel 
+[0] Building level 13
+Reconstruction on level 13
+Creating AMGLevel 
+[0] Building level 14
+Reconstruction on level 14
+Creating AMGLevel 
+14 Level construction complete
+initial dot_x = 1.56944e+16
+Iter #1 residual = 0.0495742
+Iter #2 residual = 0.0220718
+Iter #3 residual = 0.011999
+Iter #4 residual = 0.00698111
+Iter #5 residual = 0.0045268
+Iter #6 residual = 0.00305414
+Iter #7 residual = 0.00219129
+Iter #8 residual = 0.00191054
+Iter #9 residual = 0.00120803
+Iter #10 residual = 0.00220002
+Iter #11 residual = 0.000940399
+Iter #12 residual = 0.000774881
+Iter #13 residual = 0.000422459
+Iter #14 residual = 0.000509657
+Iter #15 residual = 0.000249936
+Iter #16 residual = 0.00021832
+GPU: 16 iters: 3.68309 s: 3.86906 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.172522, Final residual = 0.000124408, No Iterations 16
+[0] Building level 0
+[1] Building level 0
+[1] Building level 1
+[0] Building level 1
+[1] Building level 2
+[0] Building level 2
+[1] Building level 3
+[0] Building level 3
+[1] Building level 4
+[0] Building level 4
+[1] Building level 5
+[0] Building level 5
+[1] Building level 6
+[0] Building level 6
+[1] Building level 7
+[0] Building level 7
+[1] Building level 8
+[1] Building level 9
+[1] Building level 10
+[1] Building level 11
+[0] Building level 8
+[1] Building level 12
+[1] Building level 13
+[1] Building level 14
+[0] Building level 9
+[0] Building level 10
+[0] Building level 11
+[0] Building level 12
+[0] Building level 13
+[0] Building level 14
+14 Level construction complete
+initial dot_x = 3.43461e+16
+Iter #1 residual = 0.0413084
+Iter #2 residual = 0.0149258
+Iter #3 residual = 0.0106186
+Iter #4 residual = 0.00500917
+Iter #5 residual = 0.00503566
+Iter #6 residual = 0.00242798
+Iter #7 residual = 0.00188659
+Iter #8 residual = 0.00114682
+Iter #9 residual = 0.00113578
+Iter #10 residual = 0.000699055
+Iter #11 residual = 0.000646261
+Iter #12 residual = 0.000444128
+Iter #13 residual = 0.000577637
+Iter #14 residual = 0.000326753
+Iter #15 residual = 0.00032491
+Iter #16 residual = 0.000213456
+Iter #17 residual = 0.000221431
+Iter #18 residual = 0.000150713
+Iter #19 residual = 0.000192037
+Iter #20 residual = 0.000113199
+Iter #21 residual = 0.000144979
+Iter #22 residual = 8.157e-05
+Iter #23 residual = 8.25031e-05
+GPU: 23 iters: 5.1818 s: 3.95317 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.0725331, Final residual = 5.31774e-05, No Iterations 23
+time step continuity errors : sum local = 6.15166e-09, global = 3.50567e-10, cumulative = 2.16053e-09
+Moving mesh time step continuity errors : sum local = 6.15166e-09, global = 3.50567e-10, cumulative = 2.5111e-09
+ExecutionTime = 401.18 s  ClockTime = 441 s
+
+Courant Number mean: 0.00276489 max: 0.289805 velocity magnitude: 158.495
+GGI pair (stator-slider, rotor-slider) : 6.31853 8.66155 Diff = 0.010271 or 0.162554 %
+Time = 6e-06
+
+volume continuity errors : volume = 0.4378, max error = 3.39157e-07, sum local = 6.93542e-15, global = -1.5037e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.0365351, Final residual = 4.2875e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.0258863, Final residual = 3.40302e-09, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.0186036, Final residual = 2.20077e-09, No Iterations 2
+[0] Building level 0
+[1] Building level 0
+[1] Building level 1
+[0] Building level 1
+Reconstruction on level 1
+[1] Building level 2
+Creating AMGLevel 
+[0] Building level 2
+Reconstruction on level 2
+Creating AMGLevel 
+[0] Building level 3
+Reconstruction on level 3
+[1] Building level 3
+Creating AMGLevel 
+[1] Building level 4
+[0] Building level 4
+Reconstruction on level 4
+Creating AMGLevel 
+[1] Building level 5
+[0] Building level 5
+Reconstruction on level 5
+Creating AMGLevel 
+[1] Building level 6
+[0] Building level 6
+Reconstruction on level 6
+[1] Building level 7
+Creating AMGLevel 
+[0] Building level 7
+Reconstruction on level 7
+[1] Building level 8
+Creating AMGLevel 
+[0] Building level 8
+Reconstruction on level 8
+[1] Building level 9
+Creating AMGLevel 
+[0] Building level 9
+Reconstruction on level 9
+[1] Building level 10
+Creating AMGLevel 
+[0] Building level 10
+Reconstruction on level 10
+[1] Building level 11
+Creating AMGLevel 
+[0] Building level 11
+Reconstruction on level 11
+[1] Building level 12
+Creating AMGLevel 
+[0] Building level 12
+Reconstruction on level 12
+[1] Building level 13
+Creating AMGLevel 
+[0] Building level 13
+Reconstruction on level 13
+[1] Building level 14
+Creating AMGLevel 
+[0] Building level 14
+Reconstruction on level 14
+Creating AMGLevel 
+14 Level construction complete
+initial dot_x = 1.21179e+15
+Iter #1 residual = 0.0291739
+Iter #2 residual = 0.0115877
+Iter #3 residual = 0.00632783
+Iter #4 residual = 0.00386027
+Iter #5 residual = 0.00186156
+Iter #6 residual = 0.00150945
+GMRES:  Solving for topLevelCorr, Initial residual = 0.82483, Final residual = 0.862712, No Iterations 200
+Iter #7 residual = 0.000710738
+GMRES:  Solving for topLevelCorr, Initial residual = 0.858775, Final residual = 0.944731, No Iterations 200
+Iter #8 residual = 0.000454396
+Iter #9 residual = 0.000487439
+Iter #10 residual = 0.000272086
+Iter #11 residual = 0.000373569
+Iter #12 residual = 0.000183097
+GPU: 12 iters: 2.80487 s: 3.81037 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.128531, Final residual = 0.00012851, No Iterations 12
+[0] Building level 0
+[1] Building level 0
+[1] Building level 1
+[0] Building level 1
+[1] Building level 2
+[0] Building level 2
+[1] Building level 3
+[0] Building level 3
+[1] Building level 4
+[0] Building level 4
+[1] Building level 5
+[0] Building level 5
+[1] Building level 6
+[1] Building level 7
+[0] Building level 6
+[1] Building level 8
+[1] Building level 9
+[1] Building level 10
+[1] Building level 11
+[0] Building level 7
+[1] Building level 12
+[1] Building level 13
+[1] Building level 14
+[0] Building level 8
+[0] Building level 9
+[0] Building level 10
+[0] Building level 11
+[0] Building level 12
+[0] Building level 13
+[0] Building level 14
+14 Level construction complete
+initial dot_x = 6.96599e+14
+Iter #1 residual = 0.0127959
+Iter #2 residual = 0.00518588
+Iter #3 residual = 0.00246649
+Iter #4 residual = 0.00148441
+Iter #5 residual = 0.00108241
+Iter #6 residual = 0.000669856
+Iter #7 residual = 0.000705892
+Iter #8 residual = 0.000406434
+Iter #9 residual = 0.000294957
+Iter #10 residual = 0.000220238
+Iter #11 residual = 0.000189502
+Iter #12 residual = 0.000145168
+Iter #13 residual = 0.000143999
+Iter #14 residual = 0.00010238
+Iter #15 residual = 0.000139062
+Iter #16 residual = 7.83044e-05
+Iter #17 residual = 0.000154997
+Iter #18 residual = 6.75659e-05
+GPU: 18 iters: 4.09391 s: 3.91591 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.050204, Final residual = 4.3559e-05, No Iterations 18
+time step continuity errors : sum local = 4.26928e-09, global = 3.07692e-10, cumulative = 2.81879e-09
+Moving mesh time step continuity errors : sum local = 4.26928e-09, global = 3.07692e-10, cumulative = 3.12648e-09
+ExecutionTime = 466.25 s  ClockTime = 507 s
+
+Courant Number mean: 0.00273959 max: 0.282742 velocity magnitude: 159.354
+GGI pair (stator-slider, rotor-slider) : 6.21802 8.2322 Diff = 0.0100672 or 0.161904 %
+Time = 7e-06
+
+volume continuity errors : volume = 0.4378, max error = 3.67109e-07, sum local = 6.88129e-15, global = 5.88756e-20
+smoothSolver:  Solving for Ux, Initial residual = 0.0281373, Final residual = 2.70122e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.0193949, Final residual = 1.08695e-09, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.0141054, Final residual = 1.3999e-09, No Iterations 2
+[0] Building level 0
+[1] Building level 0
+[1] Building level 1
+[0] Building level 1
+Reconstruction on level 1
+Creating AMGLevel 
+[0] Building level 2
+Reconstruction on level 2
+[1] Building level 2
+Creating AMGLevel 
+[0] Building level 3
+Reconstruction on level 3
+[1] Building level 3
+Creating AMGLevel 
+[0] Building level 4
+Reconstruction on level 4
+[1] Building level 4
+Creating AMGLevel 
+[0] Building level 5
+Reconstruction on level 5
+[1] Building level 5
+Creating AMGLevel 
+[0] Building level 6
+Reconstruction on level 6
+[1] Building level 6
+Creating AMGLevel 
+[0] Building level 7
+Reconstruction on level 7
+[1] Building level 7
+Creating AMGLevel 
+[0] Building level 8
+Reconstruction on level 8
+[1] Building level 8
+Creating AMGLevel 
+[0] Building level 9
+Reconstruction on level 9
+[1] Building level 9
+Creating AMGLevel 
+[0] Building level 10
+Reconstruction on level 10
+Creating AMGLevel 
+[0] Building level 11
+Reconstruction on level 11
+[1] Building level 10
+Creating AMGLevel 
+[0] Building level 12
+Reconstruction on level 12
+Creating AMGLevel 
+[0] Building level 13
+Reconstruction on level 13
+[1] Building level 11
+Creating AMGLevel 
+[0] Building level 14
+Reconstruction on level 14
+Creating AMGLevel 
+14 Level construction complete
+[1] Building level 12
+[1] Building level 13
+[1] Building level 14
+initial dot_x = 5.18598e+14
+Iter #1 residual = 0.0286664
+Iter #2 residual = 0.0136926
+Iter #3 residual = 0.00753802
+Iter #4 residual = 0.00460872
+Iter #5 residual = 0.00297825
+Iter #6 residual = 0.00198434
+Iter #7 residual = 0.00149031
+Iter #8 residual = 0.000936109
+Iter #9 residual = 0.0010144
+Iter #10 residual = 0.000498686
+Iter #11 residual = 0.000642443
+Iter #12 residual = 0.000326198
+Iter #13 residual = 0.000212756
+Iter #14 residual = 0.000171667
+Iter #15 residual = 0.000133699
+Iter #16 residual = 0.000171696
+GPU: 16 iters: 3.73554 s: 3.81474 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.11228, Final residual = 0.000109721, No Iterations 16
+[1] Building level 0
+[0] Building level 0
+[1] Building level 1
+[0] Building level 1
+[1] Building level 2
+[0] Building level 2
+[1] Building level 3
+[0] Building level 3
+[0] Building level 4
+[1] Building level 4
+[0] Building level 5
+[1] Building level 5
+[0] Building level 6
+[1] Building level 6
+[0] Building level 7
+[1] Building level 7
+[0] Building level 8
+[1] Building level 8
+[0] Building level 9
+[1] Building level 9
+[0] Building level 10
+[1] Building level 10
+[0] Building level 11
+[0] Building level 12
+[1] Building level 11
+[0] Building level 13
+[0] Building level 14
+[1] Building level 12
+14 Level construction complete
+[1] Building level 13
+[1] Building level 14
+initial dot_x = 2.94459e+15
+Iter #1 residual = 0.0195086
+Iter #2 residual = 0.00765249
+Iter #3 residual = 0.00510391
+Iter #4 residual = 0.00291804
+Iter #5 residual = 0.00318923
+Iter #6 residual = 0.0015866
+Iter #7 residual = 0.00229081
+Iter #8 residual = 0.000970013
+Iter #9 residual = 0.000679402
+Iter #10 residual = 0.000385993
+Iter #11 residual = 0.000360572
+Iter #12 residual = 0.000235174
+Iter #13 residual = 0.000273453
+Iter #14 residual = 0.000148031
+Iter #15 residual = 0.000212564
+Iter #16 residual = 0.000101238
+Iter #17 residual = 8.50351e-05
+Iter #18 residual = 5.19092e-05
+Iter #19 residual = 6.85781e-05
+GPU: 19 iters: 4.36941 s: 3.87284 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.046367, Final residual = 3.55832e-05, No Iterations 19
+time step continuity errors : sum local = 3.01451e-09, global = 1.41242e-10, cumulative = 3.26773e-09
+Moving mesh time step continuity errors : sum local = 3.01451e-09, global = 1.41242e-10, cumulative = 3.40897e-09
+ExecutionTime = 531.24 s  ClockTime = 573 s
+
+Courant Number mean: 0.00272981 max: 0.277091 velocity magnitude: 159.676
+GGI pair (stator-slider, rotor-slider) : 6.25166 8.05598 Diff = 0.00990597 or 0.158453 %
+Time = 8e-06
+
+volume continuity errors : volume = 0.4378, max error = 3.70593e-07, sum local = 6.84127e-15, global = -1.08745e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.016719, Final residual = 1.79718e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.0127374, Final residual = 8.17379e-10, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.0100445, Final residual = 9.18865e-10, No Iterations 2
+[1] Building level 0
+[0] Building level 0
+[1] Building level 1
+[0] Building level 1
+Reconstruction on level 1
+[1] Building level 2
+[1] Building level 3
+Creating AMGLevel 
+[0] Building level 2
+Reconstruction on level 2
+[1] Building level 4
+[1] Building level 5
+[1] Building level 6
+Creating AMGLevel 
+[0] Building level 3
+Reconstruction on level 3
+[1] Building level 7
+[1] Building level 8
+[1] Building level 9
+[1] Building level 10
+[1] Building level 11
+[1] Building level 12
+[1] Building level 13
+[1] Building level 14
+Creating AMGLevel 
+[0] Building level 4
+Reconstruction on level 4
+Creating AMGLevel 
+[0] Building level 5
+Reconstruction on level 5
+Creating AMGLevel 
+[0] Building level 6
+Reconstruction on level 6
+Creating AMGLevel 
+[0] Building level 7
+Reconstruction on level 7
+Creating AMGLevel 
+[0] Building level 8
+Reconstruction on level 8
+Creating AMGLevel 
+[0] Building level 9
+Reconstruction on level 9
+Creating AMGLevel 
+[0] Building level 10
+Reconstruction on level 10
+Creating AMGLevel 
+[0] Building level 11
+Reconstruction on level 11
+Creating AMGLevel 
+[0] Building level 12
+Reconstruction on level 12
+Creating AMGLevel 
+[0] Building level 13
+Reconstruction on level 13
+Creating AMGLevel 
+[0] Building level 14
+Reconstruction on level 14
+Creating AMGLevel 
+14 Level construction complete
+initial dot_x = 1.02279e+15
+Iter #1 residual = 0.025532
+Iter #2 residual = 0.0125087
+Iter #3 residual = 0.00652412
+Iter #4 residual = 0.0038398
+Iter #5 residual = 0.00245178
+Iter #6 residual = 0.00186742
+Iter #7 residual = 0.00112894
+Iter #8 residual = 0.00151258
+Iter #9 residual = 0.000696359
+Iter #10 residual = 0.000780335
+Iter #11 residual = 0.000391921
+Iter #12 residual = 0.000259965
+Iter #13 residual = 0.000202176
+Iter #14 residual = 0.000144406
+Iter #15 residual = 0.000129575
+GPU: 15 iters: 3.48967 s: 3.82829 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.100907, Final residual = 9.25336e-05, No Iterations 15
+[0] Building level 0
+[1] Building level 0
+[1] Building level 1
+[0] Building level 1
+[1] Building level 2
+[0] Building level 2
+[1] Building level 3
+[0] Building level 3
+[1] Building level 4
+[0] Building level 4
+[1] Building level 5
+[0] Building level 5
+[1] Building level 6
+[1] Building level 7
+[0] Building level 6
+[1] Building level 8
+[1] Building level 9
+[1] Building level 10
+[1] Building level 11
+[1] Building level 12
+[1] Building level 13
+[1] Building level 14
+[0] Building level 7
+[0] Building level 8
+[0] Building level 9
+[0] Building level 10
+[0] Building level 11
+[0] Building level 12
+[0] Building level 13
+[0] Building level 14
+14 Level construction complete
+initial dot_x = 1.78325e+14
+Iter #1 residual = 0.0216206
+Iter #2 residual = 0.0080766
+Iter #3 residual = 0.00444732
+Iter #4 residual = 0.00394095
+Iter #5 residual = 0.00199144
+Iter #6 residual = 0.00314997
+Iter #7 residual = 0.0012919
+Iter #8 residual = 0.000868575
+Iter #9 residual = 0.000581839
+Iter #10 residual = 0.000372104
+Iter #11 residual = 0.000312894
+Iter #12 residual = 0.000213961
+Iter #13 residual = 0.000202995
+Iter #14 residual = 0.000135708
+Iter #15 residual = 0.000158064
+Iter #16 residual = 9.55743e-05
+Iter #17 residual = 0.000121653
+Iter #18 residual = 6.7314e-05
+Iter #19 residual = 8.3849e-05
+GPU: 19 iters: 4.3704 s: 3.87196 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.0439453, Final residual = 4.36327e-05, No Iterations 19
+time step continuity errors : sum local = 3.26036e-09, global = -1.11847e-10, cumulative = 3.29712e-09
+Moving mesh time step continuity errors : sum local = 3.26036e-09, global = -1.11847e-10, cumulative = 3.18527e-09
+ExecutionTime = 595.66 s  ClockTime = 638 s
+
+Courant Number mean: 0.0027302 max: 0.27428 velocity magnitude: 160.05
+GGI pair (stator-slider, rotor-slider) : 6.35841 8.04432 Diff = 0.0098762 or 0.155325 %
+Time = 9e-06
+
+volume continuity errors : volume = 0.4378, max error = 3.38546e-07, sum local = 6.82906e-15, global = -9.20131e-19
+smoothSolver:  Solving for Ux, Initial residual = 0.0116571, Final residual = 1.41544e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.00911508, Final residual = 9.12108e-10, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.00993324, Final residual = 7.24795e-10, No Iterations 2
+[0] Building level 0
+[1] Building level 0
+[1] Building level 1
+[0] Building level 1
+Reconstruction on level 1
+Creating AMGLevel 
+[1] Building level 2
+[0] Building level 2
+Reconstruction on level 2
+[1] Building level 3
+Creating AMGLevel 
+[0] Building level 3
+Reconstruction on level 3
+[1] Building level 4
+Creating AMGLevel 
+[0] Building level 4
+Reconstruction on level 4
+[1] Building level 5
+Creating AMGLevel 
+[0] Building level 5
+Reconstruction on level 5
+[1] Building level 6
+Creating AMGLevel 
+[0] Building level 6
+Reconstruction on level 6
+[1] Building level 7
+Creating AMGLevel 
+[0] Building level 7
+Reconstruction on level 7
+[1] Building level 8
+Creating AMGLevel 
+[0] Building level 8
+Reconstruction on level 8
+[1] Building level 9
+[1] Building level 10
+Creating AMGLevel 
+[0] Building level 9
+Reconstruction on level 9
+[1] Building level 11
+[1] Building level 12
+Creating AMGLevel 
+[0] Building level 10
+Reconstruction on level 10
+[1] Building level 13
+[1] Building level 14
+Creating AMGLevel 
+[0] Building level 11
+Reconstruction on level 11
+Creating AMGLevel 
+[0] Building level 12
+Reconstruction on level 12
+Creating AMGLevel 
+[0] Building level 13
+Reconstruction on level 13
+Creating AMGLevel 
+[0] Building level 14
+Reconstruction on level 14
+Creating AMGLevel 
+14 Level construction complete
+initial dot_x = 3.77342e+15
+Iter #1 residual = 0.0163551
+Iter #2 residual = 0.00742643
+Iter #3 residual = 0.0038112
+Iter #4 residual = 0.00236268
+Iter #5 residual = 0.00148665
+Iter #6 residual = 0.00103717
+Iter #7 residual = 0.000738006
+Iter #8 residual = 0.000529445
+Iter #9 residual = 0.000486639
+Iter #10 residual = 0.000308452
+Iter #11 residual = 0.000426888
+Iter #12 residual = 0.00021229
+Iter #13 residual = 0.000252425
+Iter #14 residual = 0.000145678
+Iter #15 residual = 8.95259e-05
+GPU: 15 iters: 3.50685 s: 3.80954 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.0791722, Final residual = 7.44429e-05, No Iterations 15
+[0] Building level 0
+[1] Building level 0
+[1] Building level 1
+[0] Building level 1
+[1] Building level 2
+[0] Building level 2
+[1] Building level 3
+[0] Building level 3
+[1] Building level 4
+[0] Building level 4
+[1] Building level 5
+[0] Building level 5
+[1] Building level 6
+[1] Building level 7
+[1] Building level 8
+[0] Building level 6
+[1] Building level 9
+[1] Building level 10
+[1] Building level 11
+[1] Building level 12
+[1] Building level 13
+[1] Building level 14
+[0] Building level 7
+[0] Building level 8
+[0] Building level 9
+[0] Building level 10
+[0] Building level 11
+[0] Building level 12
+[0] Building level 13
+[0] Building level 14
+14 Level construction complete
+initial dot_x = 1.43217e+15
+Iter #1 residual = 0.0121645
+Iter #2 residual = 0.00476881
+Iter #3 residual = 0.00260064
+Iter #4 residual = 0.00205586
+Iter #5 residual = 0.00112651
+Iter #6 residual = 0.00153227
+Iter #7 residual = 0.000706843
+Iter #8 residual = 0.000477809
+Iter #9 residual = 0.000305232
+Iter #10 residual = 0.00022891
+Iter #11 residual = 0.000183165
+Iter #12 residual = 0.000139276
+Iter #13 residual = 0.000135464
+Iter #14 residual = 9.49972e-05
+Iter #15 residual = 0.000122101
+Iter #16 residual = 7.09564e-05
+Iter #17 residual = 9.93316e-05
+Iter #18 residual = 4.96096e-05
+Iter #19 residual = 4.1735e-05
+GPU: 19 iters: 4.34867 s: 3.89131 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.0344163, Final residual = 2.90153e-05, No Iterations 19
+time step continuity errors : sum local = 1.96146e-09, global = 1.12591e-10, cumulative = 3.29786e-09
+Moving mesh time step continuity errors : sum local = 1.96146e-09, global = 1.12591e-10, cumulative = 3.41046e-09
+ExecutionTime = 660.62 s  ClockTime = 704 s
+
+Courant Number mean: 0.00273406 max: 0.273051 velocity magnitude: 160.271
+GGI pair (stator-slider, rotor-slider) : 6.48149 8.08944 Diff = 0.00998546 or 0.154061 %
+Time = 1e-05
+
+volume continuity errors : volume = 0.4378, max error = 2.82957e-07, sum local = 6.82901e-15, global = -1.57534e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.0107988, Final residual = 1.21624e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.00839263, Final residual = 8.99375e-10, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.0094254, Final residual = 6.24319e-10, No Iterations 2
+[1] Building level 0
+[0] Building level 0
+[1] Building level 1
+[0] Building level 1
+Reconstruction on level 1
+[1] Building level 2
+Creating AMGLevel 
+[0] Building level 2
+Reconstruction on level 2
+[1] Building level 3
+Creating AMGLevel 
+[0] Building level 3
+Reconstruction on level 3
+[1] Building level 4
+Creating AMGLevel 
+[0] Building level 4
+Reconstruction on level 4
+[1] Building level 5
+Creating AMGLevel 
+[0] Building level 5
+Reconstruction on level 5
+[1] Building level 6
+Creating AMGLevel 
+[0] Building level 6
+Reconstruction on level 6
+[1] Building level 7
+Creating AMGLevel 
+[0] Building level 7
+Reconstruction on level 7
+[1] Building level 8
+[1] Building level 9
+[1] Building level 10
+Creating AMGLevel 
+[0] Building level 8
+Reconstruction on level 8
+[1] Building level 11
+[1] Building level 12
+[1] Building level 13
+[1] Building level 14
+Creating AMGLevel 
+[0] Building level 9
+Reconstruction on level 9
+Creating AMGLevel 
+[0] Building level 10
+Reconstruction on level 10
+Creating AMGLevel 
+[0] Building level 11
+Reconstruction on level 11
+Creating AMGLevel 
+[0] Building level 12
+Reconstruction on level 12
+Creating AMGLevel 
+[0] Building level 13
+Reconstruction on level 13
+Creating AMGLevel 
+[0] Building level 14
+Reconstruction on level 14
+Creating AMGLevel 
+14 Level construction complete
+initial dot_x = 4.27312e+15
+Iter #1 residual = 0.008603
+Iter #2 residual = 0.003188
+Iter #3 residual = 0.00144439
+Iter #4 residual = 0.000747286
+Iter #5 residual = 0.000464276
+Iter #6 residual = 0.000276544
+Iter #7 residual = 0.000233223
+Iter #8 residual = 0.000131896
+Iter #9 residual = 0.00012878
+Iter #10 residual = 6.72139e-05
+GPU: 10 iters: 2.42826 s: 3.66778 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.0618426, Final residual = 5.20213e-05, No Iterations 10
+[1] Building level 0
+[0] Building level 0
+[1] Building level 1
+[0] Building level 1
+[1] Building level 2
+[0] Building level 2
+[1] Building level 3
+[0] Building level 3
+[1] Building level 4
+[0] Building level 4
+[1] Building level 5
+[0] Building level 5
+[1] Building level 6
+[0] Building level 6
+[1] Building level 7
+[1] Building level 8
+[1] Building level 9
+[0] Building level 7
+[1] Building level 10
+[1] Building level 11
+[1] Building level 12
+[1] Building level 13
+[1] Building level 14
+[0] Building level 8
+[0] Building level 9
+[0] Building level 10
+[0] Building level 11
+[0] Building level 12
+[0] Building level 13
+[0] Building level 14
+14 Level construction complete
+initial dot_x = 4.02048e+15
+Iter #1 residual = 0.00538415
+Iter #2 residual = 0.00209131
+Iter #3 residual = 0.000968679
+Iter #4 residual = 0.000596517
+Iter #5 residual = 0.000391489
+Iter #6 residual = 0.000331785
+Iter #7 residual = 0.000229493
+Iter #8 residual = 0.000206136
+Iter #9 residual = 0.000139906
+Iter #10 residual = 0.000198917
+Iter #11 residual = 0.000106635
+Iter #12 residual = 0.000178128
+Iter #13 residual = 8.02922e-05
+Iter #14 residual = 0.000106819
+Iter #15 residual = 4.64437e-05
+Iter #16 residual = 3.25553e-05
+GPU: 16 iters: 3.70791 s: 3.84316 GB/s
+GPUAMG:  Solving for p, Initial residual = 0.0237861, Final residual = 2.23177e-05, No Iterations 16
+time step continuity errors : sum local = 1.39109e-09, global = 1.03738e-10, cumulative = 3.51419e-09
+Moving mesh time step continuity errors : sum local = 1.39109e-09, global = 1.03738e-10, cumulative = 3.61793e-09
+ExecutionTime = 754.77 s  ClockTime = 826 s
+
+GGI pair (stator-slider, rotor-slider) : 6.58854 9.00464 Diff = 0.0101144 or 0.153515 %
+End
+
+Finalising parallel run

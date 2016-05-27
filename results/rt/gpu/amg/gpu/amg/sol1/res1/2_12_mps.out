@@ -1,0 +1,141 @@
+ Data for JOB [8958,1] offset 0
+
+ ========================   JOB MAP   ========================
+
+ Data for node: ivb112	Num slots: 6	Max slots: 0	Num procs: 6
+ 	Process OMPI jobid: [8958,1] App: 0 Process rank: 0
+ 	Process OMPI jobid: [8958,1] App: 0 Process rank: 1
+ 	Process OMPI jobid: [8958,1] App: 0 Process rank: 2
+ 	Process OMPI jobid: [8958,1] App: 0 Process rank: 3
+ 	Process OMPI jobid: [8958,1] App: 0 Process rank: 4
+ 	Process OMPI jobid: [8958,1] App: 0 Process rank: 5
+
+ Data for node: ivb113	Num slots: 6	Max slots: 0	Num procs: 6
+ 	Process OMPI jobid: [8958,1] App: 0 Process rank: 6
+ 	Process OMPI jobid: [8958,1] App: 0 Process rank: 7
+ 	Process OMPI jobid: [8958,1] App: 0 Process rank: 8
+ 	Process OMPI jobid: [8958,1] App: 0 Process rank: 9
+ 	Process OMPI jobid: [8958,1] App: 0 Process rank: 10
+ 	Process OMPI jobid: [8958,1] App: 0 Process rank: 11
+
+ =============================================================
+[ivb112:32008] MCW rank 0 bound to socket 0[core 0[hwt 0]]: [B/././././././././.][./././././././././.]
+[ivb112:32008] MCW rank 1 bound to socket 0[core 1[hwt 0]]: [./B/./././././././.][./././././././././.]
+[ivb112:32008] MCW rank 2 bound to socket 0[core 2[hwt 0]]: [././B/././././././.][./././././././././.]
+[ivb112:32008] MCW rank 3 bound to socket 0[core 3[hwt 0]]: [./././B/./././././.][./././././././././.]
+[ivb112:32008] MCW rank 4 bound to socket 0[core 4[hwt 0]]: [././././B/././././.][./././././././././.]
+[ivb112:32008] MCW rank 5 bound to socket 0[core 5[hwt 0]]: [./././././B/./././.][./././././././././.]
+[ivb113:04164] MCW rank 9 bound to socket 0[core 3[hwt 0]]: [./././B/./././././.][./././././././././.]
+[ivb113:04164] MCW rank 10 bound to socket 0[core 4[hwt 0]]: [././././B/././././.][./././././././././.]
+[ivb113:04164] MCW rank 11 bound to socket 0[core 5[hwt 0]]: [./././././B/./././.][./././././././././.]
+[ivb113:04164] MCW rank 6 bound to socket 0[core 0[hwt 0]]: [B/././././././././.][./././././././././.]
+[ivb113:04164] MCW rank 7 bound to socket 0[core 1[hwt 0]]: [./B/./././././././.][./././././././././.]
+[ivb113:04164] MCW rank 8 bound to socket 0[core 2[hwt 0]]: [././B/././././././.][./././././././././.]
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     3.1                                |
+|   \\  /    A nd           | Web:         http://www.extend-project.de       |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build    : 3.1-e2da948002a2
+Exec     : interFoam -parallel
+Date     : May 25 2016
+Time     : 20:55:12
+Host     : ivb112
+PID      : 32073
+CtrlDict : /home-2/vplatonov/foam/foam-extend-3.1/etc/controlDict
+Case     : /home/vplatonov/tests/rt12mln
+nProcs   : 12
+Slaves : 
+11
+(
+ivb112.32067
+ivb112.32068
+ivb112.32070
+ivb112.32076
+ivb112.32078
+ivb113.4206
+ivb113.4215
+ivb113.4207
+ivb113.4212
+ivb113.4209
+ivb113.4217
+)
+
+Pstream initialized with:
+    floatTransfer     : 0
+    nProcsSimpleSum   : 0
+    commsType         : blocking
+SigFpe   : Enabling floating point exception trapping (FOAM_SIGFPE).
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+Reading g
+Reading field pd
+
+Reading field alpha1
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Reading transportProperties
+
+Selecting incompressible transport model Newtonian
+Selecting incompressible transport model Newtonian
+Calculating field g.h
+
+Selecting turbulence model type laminar
+time step continuity errors : sum local = 0, global = 0, cumulative = 0
+CUDA error 2e: all CUDA-capable devices are busy or unavailable
+[ivb112:32078] *** Process received signal ***
+[ivb112:32078] Signal: Aborted (6)
+[ivb112:32078] Signal code:  (-6)
+CUDA error 2e: all CUDA-capable devices are busy or unavailable
+[ivb112:32070] *** Process received signal ***
+[ivb112:32070] Signal: Aborted (6)
+[ivb112:32070] Signal code:  (-6)
+[ivb112:32070] [ 0] /lib64/libc.so.6(+0x35670)[0x2aaaaea03670]
+[ivb112:32070] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2aaaaea035f7]
+[ivb112:32070] [ 2] /lib64/libc.so.6(abort+0x148)[0x2aaaaea04ce8]
+[ivb112:32070] [ 3] /home-2/vplatonov/foam/foam-extend-3.1/lib/linux64GccDPOpt/libispmCudaSolvers.so(+0x1bd36)[0x2aaad401cd36]
+[ivb112:32070] [ 4] /home-2/vplatonov/foam/foam-extend-3.1/lib/linux64GccDPOpt/libispmCudaSolvers.so(_ZNSt6vectorId21cuda_pinned_allocatorIdEE17_M_default_appendEm+0x17d)[0x2aaad404cc3d]
+[ivb112:32070] [ 5] /home-2/vplatonov/foam/foam-extend-3.1/lib/linux64GccDPOpt/libispmCudaSolvers.so(_ZNK4Foam20solverPersistentDataINS_7lduMeshENS_10GPUAMGDataEEclERKNS_4wordE+0x1fb)[0x2aaad404dc4b]
+[ivb112:32070] [ 6] /home-2/vplatonov/foam/foam-extend-3.1/lib/linux64GccDPOpt/libispmCudaSolvers.so(_ZNK4Foam6GPUAMG5solveERNS_5FieldIdEERKS2_j+0x94)[0x2aaad404baa4]
+[ivb112:32070] [ 7] [ivb112:32078] [ 0] /lib64/libc.so.6(+0x35670)[0x2aaaaea03670]
+[ivb112:32078] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2aaaaea035f7]
+[ivb112:32078] [ 2] /lib64/libc.so.6(abort+0x148)[0x2aaaaea04ce8]
+[ivb112:32078] [ 3] /home-2/vplatonov/foam/foam-extend-3.1/lib/linux64GccDPOpt/libispmCudaSolvers.so(+0x1bd36)[0x2aaad801bd36]
+[ivb112:32078] [ 4] /home-2/vplatonov/foam/foam-extend-3.1/lib/linux64GccDPOpt/libispmCudaSolvers.so(_ZNSt6vectorId21cuda_pinned_allocatorIdEE17_M_default_appendEm+0x17d)[0x2aaad804bc3d]
+[ivb112:32078] [ 5] /home-2/vplatonov/foam/foam-extend-3.1/lib/linux64GccDPOpt/libispmCudaSolvers.so(_ZNK4Foam20solverPersistentDataINS_7lduMeshENS_10GPUAMGDataEEclERKNS_4wordE+0x1fb)[0x2aaad804cc4b]
+[ivb112:32078] [ 6] /home-2/vplatonov/foam/foam-extend-3.1/lib/linux64GccDPOpt/libispmCudaSolvers.so(_ZNK4Foam6GPUAMG5solveERNS_5FieldIdEERKS2_j+0x94)[0x2aaad804aaa4]
+[ivb112:32078] [ 7] /home-2/vplatonov/foam/foam-extend-3.1/lib/linux64GccDPOpt/libfiniteVolume.so(_ZN4Foam8fvMatrixIdE5solveERKNS_10dictionaryE+0x195)[0x2aaaac4f6335]
+[ivb112:32070] [ 8] interFoam[0x424ee2]
+[ivb112:32070] [ 9] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2aaaae9efb15]
+[ivb112:32070] [10] interFoam[0x4299dd]
+[ivb112:32070] *** End of error message ***
+/home-2/vplatonov/foam/foam-extend-3.1/lib/linux64GccDPOpt/libfiniteVolume.so(_ZN4Foam8fvMatrixIdE5solveERKNS_10dictionaryE+0x195)[0x2aaaac4f6335]
+[ivb112:32078] [ 8] interFoam[0x424ee2]
+[ivb112:32078] [ 9] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2aaaae9efb15]
+[ivb112:32078] [10] interFoam[0x4299dd]
+[ivb112:32078] *** End of error message ***
+/home-2/vplatonov/bin/nvmps: line 33: 32070 Aborted                 "$@"
+/home-2/vplatonov/bin/nvmps: line 33: 32078 Aborted                 "$@"
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+Created persistent data with name pcorr
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[8958,1],3]
+  Exit code:    134
+--------------------------------------------------------------------------
+slurmstepd: *** JOB 7871 ON ivb112 CANCELLED AT 2016-05-25T21:12:29 DUE TO TIME LIMIT ***

@@ -1,0 +1,260 @@
+ Data for JOB [24468,1] offset 0
+
+ ========================   JOB MAP   ========================
+
+ Data for node: ivb105	Num slots: 10	Max slots: 0	Num procs: 10
+ 	Process OMPI jobid: [24468,1] App: 0 Process rank: 0
+ 	Process OMPI jobid: [24468,1] App: 0 Process rank: 1
+ 	Process OMPI jobid: [24468,1] App: 0 Process rank: 2
+ 	Process OMPI jobid: [24468,1] App: 0 Process rank: 3
+ 	Process OMPI jobid: [24468,1] App: 0 Process rank: 4
+ 	Process OMPI jobid: [24468,1] App: 0 Process rank: 5
+ 	Process OMPI jobid: [24468,1] App: 0 Process rank: 6
+ 	Process OMPI jobid: [24468,1] App: 0 Process rank: 7
+ 	Process OMPI jobid: [24468,1] App: 0 Process rank: 8
+ 	Process OMPI jobid: [24468,1] App: 0 Process rank: 9
+
+ =============================================================
+[ivb105:25580] MCW rank 2 bound to socket 0[core 2[hwt 0]]: [././B/././././././.][./././././././././.]
+[ivb105:25580] MCW rank 3 bound to socket 0[core 3[hwt 0]]: [./././B/./././././.][./././././././././.]
+[ivb105:25580] MCW rank 4 bound to socket 0[core 4[hwt 0]]: [././././B/././././.][./././././././././.]
+[ivb105:25580] MCW rank 5 bound to socket 0[core 5[hwt 0]]: [./././././B/./././.][./././././././././.]
+[ivb105:25580] MCW rank 6 bound to socket 0[core 6[hwt 0]]: [././././././B/././.][./././././././././.]
+[ivb105:25580] MCW rank 7 bound to socket 0[core 7[hwt 0]]: [./././././././B/./.][./././././././././.]
+[ivb105:25580] MCW rank 8 bound to socket 0[core 8[hwt 0]]: [././././././././B/.][./././././././././.]
+[ivb105:25580] MCW rank 9 bound to socket 0[core 9[hwt 0]]: [./././././././././B][./././././././././.]
+[ivb105:25580] MCW rank 0 bound to socket 0[core 0[hwt 0]]: [B/././././././././.][./././././././././.]
+[ivb105:25580] MCW rank 1 bound to socket 0[core 1[hwt 0]]: [./B/./././././././.][./././././././././.]
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     3.1                                |
+|   \\  /    A nd           | Web:         http://www.extend-project.de       |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build    : 3.1-e2da948002a2
+Exec     : pimpleDyMFoam -parallel
+Date     : May 25 2016
+Time     : 17:40:18
+Host     : ivb105
+PID      : 25589
+CtrlDict : /home-2/vplatonov/foam/foam-extend-3.1/etc/controlDict
+Case     : /home/vplatonov/tests/screwPump-8mln
+nProcs   : 10
+Slaves : 
+9
+(
+ivb105.25590
+ivb105.25591
+ivb105.25592
+ivb105.25593
+ivb105.25594
+ivb105.25595
+ivb105.25596
+ivb105.25597
+ivb105.25598
+)
+
+Pstream initialized with:
+    floatTransfer     : 0
+    nProcsSimpleSum   : 0
+    commsType         : blocking
+SigFpe   : Enabling floating point exception trapping (FOAM_SIGFPE).
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create dynamic mesh for time = 0
+
+Selecting dynamicFvMesh mixerGgiFvMesh
+Initializing the GGI interpolator between master/shadow patches: stator-slider/rotor-slider
+void mixerGgiFvMesh::addZonesAndModifiers() : Zones and modifiers already present.  Skipping.
+Mixer mesh:
+    origin: (0 0 0)
+    axis  : (0 1 0)
+    rpm   : 2000
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type LESModel
+Selecting LES turbulence model Smagorinsky
+SmagorinskyCoeffs
+{
+    ce              1.048;
+    ck              0.094;
+}
+
+Reading field rAU if present
+
+
+Starting time loop
+
+Courant Number mean: 0 max: 0 velocity magnitude: 0
+Creating ggi check function object
+Time = 1e-06
+
+volume continuity errors : volume = 0.4378, max error = 5.3993e-07, sum local = 9.4995e-15, global = -2.4573e-18
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 6.24572e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 1, Final residual = 3.39938e-08, No Iterations 1
+smoothSolver:  Solving for Uz, Initial residual = 1, Final residual = 4.94327e-08, No Iterations 1
+GMRES:  Solving for topLevelCorr, Initial residual = 0.878204, Final residual = 0.880775, No Iterations 200
+Total solver time is 23
+amgSolver:  Solving for p, Initial residual = 1, Final residual = 0.000815224, No Iterations 22
+Total solver time is 30
+amgSolver:  Solving for p, Initial residual = 0.269846, Final residual = 0.000268729, No Iterations 28
+time step continuity errors : sum local = 2.03759e-08, global = -6.68156e-10, cumulative = -6.68156e-10
+Moving mesh time step continuity errors : sum local = 2.03759e-08, global = -6.68156e-10, cumulative = -1.33631e-09
+ExecutionTime = 81.77 s  ClockTime = 92 s
+
+Courant Number mean: 0.0025593 max: 0.137688 velocity magnitude: 107.496
+GGI pair (stator-slider, rotor-slider) : 3.51936 6.99547 Diff = 0.000121977 or 0.00346588 %
+Time = 2e-06
+
+volume continuity errors : volume = 0.4378, max error = 4.33092e-07, sum local = 8.16428e-15, global = -2.99542e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.334977, Final residual = 2.56011e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.302698, Final residual = 4.87291e-09, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.334943, Final residual = 1.50384e-09, No Iterations 2
+Total solver time is 18
+amgSolver:  Solving for p, Initial residual = 0.443851, Final residual = 0.00027812, No Iterations 17
+Total solver time is 29
+amgSolver:  Solving for p, Initial residual = 0.121079, Final residual = 0.000103517, No Iterations 27
+time step continuity errors : sum local = 1.7455e-08, global = -5.81401e-10, cumulative = -1.91771e-09
+Moving mesh time step continuity errors : sum local = 1.7455e-08, global = -5.81401e-10, cumulative = -2.49912e-09
+ExecutionTime = 148.24 s  ClockTime = 158 s
+
+Courant Number mean: 0.00275269 max: 0.226908 velocity magnitude: 112.545
+GGI pair (stator-slider, rotor-slider) : 5.63137 9.37334 Diff = 0.00569368 or 0.101107 %
+Time = 3e-06
+
+volume continuity errors : volume = 0.4378, max error = 3.45396e-07, sum local = 7.36604e-15, global = 4.19065e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.193503, Final residual = 1.02031e-08, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.131549, Final residual = 2.14277e-08, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.173359, Final residual = 5.4451e-09, No Iterations 2
+Total solver time is 18
+amgSolver:  Solving for p, Initial residual = 0.219404, Final residual = 0.000190855, No Iterations 17
+Total solver time is 36
+amgSolver:  Solving for p, Initial residual = 0.0726448, Final residual = 7.24558e-05, No Iterations 34
+time step continuity errors : sum local = 1.20061e-08, global = 1.26556e-09, cumulative = -1.23355e-09
+Moving mesh time step continuity errors : sum local = 1.20061e-08, global = 1.26556e-09, cumulative = 3.20066e-11
+ExecutionTime = 222.15 s  ClockTime = 232 s
+
+Courant Number mean: 0.00280476 max: 0.2747 velocity magnitude: 137.863
+GGI pair (stator-slider, rotor-slider) : 6.51528 9.74935 Diff = 0.00889218 or 0.136482 %
+Time = 4e-06
+
+volume continuity errors : volume = 0.4378, max error = 3.21144e-07, sum local = 7.13353e-15, global = -1.39491e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.083217, Final residual = 1.14119e-08, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.0691877, Final residual = 2.27611e-08, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.0760835, Final residual = 5.72776e-09, No Iterations 2
+Total solver time is 19
+amgSolver:  Solving for p, Initial residual = 0.193449, Final residual = 0.000159311, No Iterations 18
+Total solver time is 26
+amgSolver:  Solving for p, Initial residual = 0.0870208, Final residual = 7.62758e-05, No Iterations 25
+time step continuity errors : sum local = 1.05743e-08, global = -8.41724e-10, cumulative = -8.09717e-10
+Moving mesh time step continuity errors : sum local = 1.05743e-08, global = -8.41724e-10, cumulative = -1.65144e-09
+ExecutionTime = 287.22 s  ClockTime = 297 s
+
+Courant Number mean: 0.00278797 max: 0.291086 velocity magnitude: 153.09
+GGI pair (stator-slider, rotor-slider) : 6.5293 9.28077 Diff = 0.0101467 or 0.155403 %
+Time = 5e-06
+
+volume continuity errors : volume = 0.4378, max error = 2.89986e-07, sum local = 7.00178e-15, global = 1.37836e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.0385983, Final residual = 7.33707e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.0352331, Final residual = 1.17234e-08, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.0270141, Final residual = 3.56668e-09, No Iterations 2
+Total solver time is 19
+amgSolver:  Solving for p, Initial residual = 0.172378, Final residual = 9.74109e-05, No Iterations 18
+Total solver time is 28
+amgSolver:  Solving for p, Initial residual = 0.0725043, Final residual = 4.83595e-05, No Iterations 26
+time step continuity errors : sum local = 5.59134e-09, global = -2.19609e-10, cumulative = -1.87105e-09
+Moving mesh time step continuity errors : sum local = 5.59134e-09, global = -2.19609e-10, cumulative = -2.09066e-09
+ExecutionTime = 392.6 s  ClockTime = 406 s
+
+Courant Number mean: 0.00275331 max: 0.289804 velocity magnitude: 158.487
+GGI pair (stator-slider, rotor-slider) : 6.31876 8.66201 Diff = 0.0102727 or 0.162575 %
+Time = 6e-06
+
+volume continuity errors : volume = 0.4378, max error = 3.64704e-07, sum local = 6.93472e-15, global = -1.04016e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.0364734, Final residual = 4.59324e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.0258511, Final residual = 3.76247e-09, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.0186047, Final residual = 2.45695e-09, No Iterations 2
+Total solver time is 16
+amgSolver:  Solving for p, Initial residual = 0.128455, Final residual = 8.59207e-05, No Iterations 15
+Total solver time is 18
+amgSolver:  Solving for p, Initial residual = 0.0501594, Final residual = 3.30148e-05, No Iterations 17
+time step continuity errors : sum local = 3.23463e-09, global = -1.07537e-10, cumulative = -2.1982e-09
+Moving mesh time step continuity errors : sum local = 3.23463e-09, global = -1.07537e-10, cumulative = -2.30573e-09
+ExecutionTime = 446.18 s  ClockTime = 459 s
+
+Courant Number mean: 0.00272793 max: 0.282758 velocity magnitude: 159.353
+GGI pair (stator-slider, rotor-slider) : 6.21836 8.23279 Diff = 0.0100672 or 0.161895 %
+Time = 7e-06
+
+volume continuity errors : volume = 0.4378, max error = 3.28215e-07, sum local = 6.88146e-15, global = -4.9618e-19
+smoothSolver:  Solving for Ux, Initial residual = 0.0281324, Final residual = 2.82873e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.0193818, Final residual = 1.15801e-09, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.0140924, Final residual = 1.63024e-09, No Iterations 2
+Total solver time is 17
+amgSolver:  Solving for p, Initial residual = 0.112075, Final residual = 9.30235e-05, No Iterations 16
+Total solver time is 21
+amgSolver:  Solving for p, Initial residual = 0.0462314, Final residual = 4.47246e-05, No Iterations 20
+time step continuity errors : sum local = 3.7879e-09, global = -3.57806e-10, cumulative = -2.66354e-09
+Moving mesh time step continuity errors : sum local = 3.7879e-09, global = -3.57806e-10, cumulative = -3.02134e-09
+ExecutionTime = 504.29 s  ClockTime = 517 s
+
+Courant Number mean: 0.00271811 max: 0.277101 velocity magnitude: 159.676
+GGI pair (stator-slider, rotor-slider) : 6.2518 8.05626 Diff = 0.00990635 or 0.158456 %
+Time = 8e-06
+
+volume continuity errors : volume = 0.4378, max error = 2.78573e-07, sum local = 6.84159e-15, global = -1.13743e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.0167239, Final residual = 1.84719e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.0127357, Final residual = 8.53988e-10, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.0100344, Final residual = 1.0673e-09, No Iterations 2
+Total solver time is 19
+amgSolver:  Solving for p, Initial residual = 0.100807, Final residual = 9.17128e-05, No Iterations 18
+Total solver time is 22
+amgSolver:  Solving for p, Initial residual = 0.0438705, Final residual = 3.8163e-05, No Iterations 21
+time step continuity errors : sum local = 2.85124e-09, global = 1.25439e-10, cumulative = -2.89591e-09
+Moving mesh time step continuity errors : sum local = 2.85124e-09, global = 1.25439e-10, cumulative = -2.77047e-09
+ExecutionTime = 565.15 s  ClockTime = 578 s
+
+Courant Number mean: 0.00271847 max: 0.274282 velocity magnitude: 160.049
+GGI pair (stator-slider, rotor-slider) : 6.35829 8.04418 Diff = 0.00987579 or 0.155322 %
+Time = 9e-06
+
+volume continuity errors : volume = 0.4378, max error = 2.8452e-07, sum local = 6.82905e-15, global = -6.95461e-19
+smoothSolver:  Solving for Ux, Initial residual = 0.0116408, Final residual = 1.44118e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.00910841, Final residual = 9.15417e-10, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.00994186, Final residual = 8.1531e-10, No Iterations 2
+Total solver time is 16
+amgSolver:  Solving for p, Initial residual = 0.0791553, Final residual = 7.08823e-05, No Iterations 15
+Total solver time is 20
+amgSolver:  Solving for p, Initial residual = 0.0344058, Final residual = 3.0914e-05, No Iterations 19
+time step continuity errors : sum local = 2.08936e-09, global = 1.07435e-10, cumulative = -2.66303e-09
+Moving mesh time step continuity errors : sum local = 2.08936e-09, global = 1.07435e-10, cumulative = -2.5556e-09
+ExecutionTime = 620.58 s  ClockTime = 634 s
+
+Courant Number mean: 0.00272233 max: 0.273048 velocity magnitude: 160.27
+GGI pair (stator-slider, rotor-slider) : 6.48132 8.08925 Diff = 0.00998495 or 0.154057 %
+Time = 1e-05
+
+volume continuity errors : volume = 0.4378, max error = 2.82957e-07, sum local = 6.82869e-15, global = -1.77278e-18
+smoothSolver:  Solving for Ux, Initial residual = 0.0108041, Final residual = 1.24126e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.00839075, Final residual = 9.06213e-10, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.00943312, Final residual = 6.88812e-10, No Iterations 2
+Total solver time is 11
+amgSolver:  Solving for p, Initial residual = 0.0617844, Final residual = 6.12412e-05, No Iterations 11
+Total solver time is 18
+amgSolver:  Solving for p, Initial residual = 0.0237605, Final residual = 1.60142e-05, No Iterations 17
+time step continuity errors : sum local = 9.97978e-10, global = 4.30812e-11, cumulative = -2.51252e-09
+Moving mesh time step continuity errors : sum local = 9.97978e-10, global = 4.30812e-11, cumulative = -2.46943e-09
+ExecutionTime = 694.76 s  ClockTime = 713 s
+
+GGI pair (stator-slider, rotor-slider) : 6.58842 9.00452 Diff = 0.0101142 or 0.153515 %
+End
+
+Finalising parallel run
