@@ -1,0 +1,255 @@
+ Data for JOB [65514,1] offset 0
+
+ ========================   JOB MAP   ========================
+
+ Data for node: ivb194	Num slots: 10	Max slots: 0	Num procs: 10
+ 	Process OMPI jobid: [65514,1] App: 0 Process rank: 0
+ 	Process OMPI jobid: [65514,1] App: 0 Process rank: 1
+ 	Process OMPI jobid: [65514,1] App: 0 Process rank: 2
+ 	Process OMPI jobid: [65514,1] App: 0 Process rank: 3
+ 	Process OMPI jobid: [65514,1] App: 0 Process rank: 4
+ 	Process OMPI jobid: [65514,1] App: 0 Process rank: 5
+ 	Process OMPI jobid: [65514,1] App: 0 Process rank: 6
+ 	Process OMPI jobid: [65514,1] App: 0 Process rank: 7
+ 	Process OMPI jobid: [65514,1] App: 0 Process rank: 8
+ 	Process OMPI jobid: [65514,1] App: 0 Process rank: 9
+
+ =============================================================
+[ivb194:40557] MCW rank 2 bound to socket 0[core 2[hwt 0]]: [././B/././././././.][./././././././././.]
+[ivb194:40557] MCW rank 3 bound to socket 0[core 3[hwt 0]]: [./././B/./././././.][./././././././././.]
+[ivb194:40557] MCW rank 4 bound to socket 0[core 4[hwt 0]]: [././././B/././././.][./././././././././.]
+[ivb194:40557] MCW rank 5 bound to socket 0[core 5[hwt 0]]: [./././././B/./././.][./././././././././.]
+[ivb194:40557] MCW rank 6 bound to socket 0[core 6[hwt 0]]: [././././././B/././.][./././././././././.]
+[ivb194:40557] MCW rank 7 bound to socket 0[core 7[hwt 0]]: [./././././././B/./.][./././././././././.]
+[ivb194:40557] MCW rank 8 bound to socket 0[core 8[hwt 0]]: [././././././././B/.][./././././././././.]
+[ivb194:40557] MCW rank 9 bound to socket 0[core 9[hwt 0]]: [./././././././././B][./././././././././.]
+[ivb194:40557] MCW rank 0 bound to socket 0[core 0[hwt 0]]: [B/././././././././.][./././././././././.]
+[ivb194:40557] MCW rank 1 bound to socket 0[core 1[hwt 0]]: [./B/./././././././.][./././././././././.]
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     3.1                                |
+|   \\  /    A nd           | Web:         http://www.extend-project.de       |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build    : 3.1-e2da948002a2
+Exec     : interFoam -parallel
+Date     : May 26 2016
+Time     : 08:34:30
+Host     : ivb194
+PID      : 40559
+CtrlDict : /home-2/vplatonov/foam/foam-extend-3.1/etc/controlDict
+Case     : /home/vplatonov/tests/rt12mln
+nProcs   : 10
+Slaves : 
+9
+(
+ivb194.40560
+ivb194.40561
+ivb194.40562
+ivb194.40563
+ivb194.40564
+ivb194.40565
+ivb194.40566
+ivb194.40567
+ivb194.40568
+)
+
+Pstream initialized with:
+    floatTransfer     : 0
+    nProcsSimpleSum   : 0
+    commsType         : blocking
+SigFpe   : Enabling floating point exception trapping (FOAM_SIGFPE).
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+Reading g
+Reading field pd
+
+Reading field alpha1
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Reading transportProperties
+
+Selecting incompressible transport model Newtonian
+Selecting incompressible transport model Newtonian
+Calculating field g.h
+
+Selecting turbulence model type laminar
+time step continuity errors : sum local = 0, global = 0, cumulative = 0
+amgSolver:  Solving for pcorr, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 0, global = 0, cumulative = 0
+Courant Number mean: 0 max: 0 velocity magnitude: 0
+
+Starting time loop
+
+Courant Number mean: 0 max: 0 velocity magnitude: 0
+Time = 0.001
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = 0  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = 0  Max(alpha1) = 1
+Total solver time is 2
+amgSolver:  Solving for pd, Initial residual = 1, Final residual = 0.0272045, No Iterations 2
+Total solver time is 5
+amgSolver:  Solving for pd, Initial residual = 0.0195672, Final residual = 0.00065697, No Iterations 5
+Total solver time is 32
+amgSolver:  Solving for pd, Initial residual = 0.00626511, Final residual = 8.55743e-08, No Iterations 30
+time step continuity errors : sum local = 6.37148e-12, global = 1.83127e-24, cumulative = 1.83127e-24
+ExecutionTime = 72.76 s  ClockTime = 86 s
+
+Courant Number mean: 4.87998e-06 max: 0.00216213 velocity magnitude: 0.0337833
+Time = 0.002
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = 0  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = 0  Max(alpha1) = 1
+Total solver time is 5
+amgSolver:  Solving for pd, Initial residual = 0.00336688, Final residual = 0.000110662, No Iterations 5
+Total solver time is 5
+amgSolver:  Solving for pd, Initial residual = 0.00209959, Final residual = 6.74602e-05, No Iterations 5
+Total solver time is 33
+amgSolver:  Solving for pd, Initial residual = 0.00192516, Final residual = 5.51363e-08, No Iterations 30
+time step continuity errors : sum local = 2.60129e-12, global = -1.11483e-24, cumulative = 7.16446e-25
+ExecutionTime = 137.65 s  ClockTime = 150 s
+
+Courant Number mean: 7.68271e-06 max: 0.00313308 velocity magnitude: 0.0489544
+Time = 0.003
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = -5.91646e-33  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = -1.32351e-30  Max(alpha1) = 1
+Total solver time is 6
+amgSolver:  Solving for pd, Initial residual = 0.00424339, Final residual = 0.000183655, No Iterations 6
+Total solver time is 5
+amgSolver:  Solving for pd, Initial residual = 0.00307591, Final residual = 0.000149028, No Iterations 5
+Total solver time is 23
+amgSolver:  Solving for pd, Initial residual = 0.00264349, Final residual = 6.77056e-08, No Iterations 21
+time step continuity errors : sum local = 3.18891e-12, global = 5.30865e-24, cumulative = 6.02509e-24
+ExecutionTime = 193.52 s  ClockTime = 206 s
+
+Courant Number mean: 1.35867e-05 max: 0.00482754 velocity magnitude: 0.0754303
+Time = 0.004
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = -1.01535e-33  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = -5.88313e-30  Max(alpha1) = 1
+Total solver time is 6
+amgSolver:  Solving for pd, Initial residual = 0.00342994, Final residual = 0.00012181, No Iterations 6
+Total solver time is 7
+amgSolver:  Solving for pd, Initial residual = 0.00320099, Final residual = 0.000107706, No Iterations 7
+Total solver time is 26
+amgSolver:  Solving for pd, Initial residual = 0.00239769, Final residual = 9.33394e-08, No Iterations 24
+time step continuity errors : sum local = 4.44091e-12, global = -1.86366e-24, cumulative = 4.16144e-24
+ExecutionTime = 254.79 s  ClockTime = 268 s
+
+Courant Number mean: 1.9268e-05 max: 0.0059819 velocity magnitude: 0.0934672
+Time = 0.005
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = -8.5905e-30  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = -2.09048e-32  Max(alpha1) = 1
+Total solver time is 7
+amgSolver:  Solving for pd, Initial residual = 0.00215714, Final residual = 7.82491e-05, No Iterations 7
+Total solver time is 7
+amgSolver:  Solving for pd, Initial residual = 0.00178793, Final residual = 6.54816e-05, No Iterations 7
+Total solver time is 37
+amgSolver:  Solving for pd, Initial residual = 0.00145224, Final residual = 5.87681e-08, No Iterations 34
+time step continuity errors : sum local = 2.81821e-12, global = 3.19324e-24, cumulative = 7.35467e-24
+ExecutionTime = 328.4 s  ClockTime = 341 s
+
+Courant Number mean: 2.44117e-05 max: 0.00684016 velocity magnitude: 0.106878
+Time = 0.006
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = -3.70915e-31  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = -1.30642e-31  Max(alpha1) = 1
+Total solver time is 7
+amgSolver:  Solving for pd, Initial residual = 0.00228022, Final residual = 8.45344e-05, No Iterations 7
+Total solver time is 8
+amgSolver:  Solving for pd, Initial residual = 0.00117197, Final residual = 4.86742e-05, No Iterations 8
+Total solver time is 26
+amgSolver:  Solving for pd, Initial residual = 0.000707443, Final residual = 9.62649e-08, No Iterations 24
+time step continuity errors : sum local = 4.53667e-12, global = 9.42331e-25, cumulative = 8.297e-24
+ExecutionTime = 392.03 s  ClockTime = 405 s
+
+Courant Number mean: 2.95314e-05 max: 0.00764212 velocity magnitude: 0.119408
+Time = 0.007
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = -1.27825e-30  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = -8.74643e-31  Max(alpha1) = 1
+Total solver time is 7
+amgSolver:  Solving for pd, Initial residual = 0.00232561, Final residual = 8.89619e-05, No Iterations 7
+Total solver time is 8
+amgSolver:  Solving for pd, Initial residual = 0.0010976, Final residual = 5.48633e-05, No Iterations 8
+Total solver time is 47
+amgSolver:  Solving for pd, Initial residual = 0.000550879, Final residual = 5.05445e-08, No Iterations 43
+time step continuity errors : sum local = 2.48088e-12, global = -2.77049e-24, cumulative = 5.52651e-24
+ExecutionTime = 476.83 s  ClockTime = 490 s
+
+Courant Number mean: 3.4656e-05 max: 0.00834936 velocity magnitude: 0.130459
+Time = 0.008
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = -2.03977e-30  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = -3.35542e-30  Max(alpha1) = 1
+Total solver time is 6
+amgSolver:  Solving for pd, Initial residual = 0.00236556, Final residual = 0.000114588, No Iterations 6
+Total solver time is 8
+amgSolver:  Solving for pd, Initial residual = 0.00109331, Final residual = 3.46772e-05, No Iterations 8
+Total solver time is 25
+amgSolver:  Solving for pd, Initial residual = 0.000467852, Final residual = 9.11877e-08, No Iterations 23
+time step continuity errors : sum local = 4.25059e-12, global = -1.01921e-23, cumulative = -4.66564e-24
+ExecutionTime = 538.29 s  ClockTime = 552 s
+
+Courant Number mean: 3.97947e-05 max: 0.0090324 velocity magnitude: 0.140373
+Time = 0.009
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = -5.36355e-30  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = -6.85659e-30  Max(alpha1) = 1
+Total solver time is 7
+amgSolver:  Solving for pd, Initial residual = 0.00241863, Final residual = 8.16043e-05, No Iterations 7
+Total solver time is 9
+amgSolver:  Solving for pd, Initial residual = 0.00101218, Final residual = 3.55555e-05, No Iterations 9
+Total solver time is 25
+amgSolver:  Solving for pd, Initial residual = 0.000381609, Final residual = 8.24517e-08, No Iterations 23
+time step continuity errors : sum local = 3.79185e-12, global = 3.53731e-24, cumulative = -1.12833e-24
+ExecutionTime = 601.98 s  ClockTime = 615 s
+
+Courant Number mean: 4.4953e-05 max: 0.00971336 velocity magnitude: 0.149368
+Time = 0.01
+
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = -1.39422e-29  Max(alpha1) = 1
+MULES: Solving for alpha1
+Liquid phase volume fraction = 0.00275421  Min(alpha1) = -2.55433e-29  Max(alpha1) = 1
+Total solver time is 7
+amgSolver:  Solving for pd, Initial residual = 0.0025842, Final residual = 8.90497e-05, No Iterations 7
+Total solver time is 9
+amgSolver:  Solving for pd, Initial residual = 0.00100313, Final residual = 3.93653e-05, No Iterations 9
+Total solver time is 32
+amgSolver:  Solving for pd, Initial residual = 0.000339, Final residual = 6.74584e-08, No Iterations 29
+time step continuity errors : sum local = 3.15421e-12, global = -1.31797e-23, cumulative = -1.4308e-23
+ExecutionTime = 672.38 s  ClockTime = 686 s
+
+End
+
+Finalising parallel run
